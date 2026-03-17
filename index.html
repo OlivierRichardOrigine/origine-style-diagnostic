@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Style Diagnostic — Origine Paris</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400;500&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+  :root {
+    --gold: #B8976A;
+    --gold-light: #D4B896;
+    --black: #1A1A1A;
+    --white: #FAFAF8;
+    --gray-light: #F2F0EC;
+    --gray-mid: #E0DDD8;
+    --gray-text: #8A8580;
+    --radius: 12px;
+  }
+
+  html, body {
+    height: 100%;
+    background: var(--white);
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    overflow: hidden;
+  }
+
+  #app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* SCREENS */
+  .screen { display: none; flex-direction: column; height: 100%; }
+  .screen.active { display: flex; }
+
+  /* HEADER */
+  .header {
+    padding: 20px 24px 0;
+    flex-shrink: 0;
+  }
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+  .screen-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-top: 8px;
+    color: var(--black);
+  }
+  .screen-sub {
+    font-size: 12px;
+    color: var(--gray-text);
+    margin-top: 6px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+
+  /* SCROLL CONTENT */
+  .scroll-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 24px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 16px 24px 32px;
+    flex-shrink: 0;
+    background: var(--white);
+  }
+
+  /* BUTTONS */
+  .btn-primary {
+    width: 100%;
+    padding: 16px;
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .btn-primary:active { opacity: 0.8; transform: scale(0.99); }
+
+  .btn-secondary {
+    width: 100%;
+    padding: 14px;
+    background: transparent;
+    color: var(--gray-text);
+    border: 1px solid var(--gray-mid);
+    border-radius: var(--radius);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  /* PROGRESS */
+  .progress-wrap {
+    padding: 16px 24px 0;
+    flex-shrink: 0;
+  }
+  .progress-steps {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+  .step-dot {
+    height: 2px;
+    flex: 1;
+    background: var(--gray-mid);
+    border-radius: 1px;
+    transition: background 0.3s;
+  }
+  .step-dot.active { background: var(--gold); }
+  .step-dot.done { background: var(--black); }
+  .step-label {
+    font-size: 10px;
+    color: var(--gray-text);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* HOME SCREEN */
+  .home-hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    text-align: center;
+  }
+  .home-emblem {
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--gold-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .home-emblem svg { width: 36px; height: 36px; }
+  .home-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+  .home-title em { font-style: italic; color: var(--gold); }
+  .home-desc {
+    font-size: 12px;
+    color: var(--gray-text);
+    line-height: 1.8;
+    max-width: 280px;
+    margin: 0 auto 32px;
+    letter-spacing: 0.03em;
+  }
+
+  /* CATEGORY GRID */
+  .cat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .cat-card {
+    border: 1px solid var(--gray-mid);
+    border-radius: var(--radius);
+    padding: 20px 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  .cat-card.featured {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, #FDFBF7 0%, #F8F4EE 100%);
+  }
+  .cat-card.featured::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+  }
+  .cat-card.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .cat-card:not(.disabled):active { transform: scale(0.98); }
+  .cat-icon {
+    font-size: 20px;
+    margin-bottom: 8px;
+    display: block;
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+  }
+  .cat-name {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--black);
+    display: block;
+  }
+  .cat-soon {
+    font-size: 9px;
+    color: var(--gray-text);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 2px;
+    display: block;
+  }
+  .cat-full { grid-column: span 2; }
+
+  /* CLIENT SCREEN */
+  .input-row { display: flex; gap: 10px; }
+  .input-wrap { flex: 1; }
+  .input-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray-text);
+    margin-bottom: 6px;
+    display: block;
+  }
+  .input-field {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--gray-mid);
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    background: var(--white);
+    color: var(--black);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .input-field:focus { border-color: var(--gold); }
+
+  /* STYLE CHIPS */
+  .chip-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .chip {
+    padding: 9px 16px;
+    border: 1px solid var(--gray-mid);
+    border-radius: 20px;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: var(--gray-text);
+    cursor: pointer;
+    transition: all 0.15s;
+    background: var(--white);
+    font-family: 'Montserrat', sans-serif;
+  }
+  .chip.selected {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+  }
+  .chip:active { transform: scale(0.97); }
+
+  /* MODEL GRID */
+  .model-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .model-card {
+    border: 1px solid var(--gray-mid);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--white);
+  }
+  .model-card.selected {
+    border-color: var(--gold);
+    border-width: 1.5px;
+  }
+  .model-card:active { transform: scale(0.98); }
+  .model-img {
+    width: 100%;
+    aspect-ratio: 1;
+    background: var(--gray-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .model-img img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+  }
+  .model-img .placeholder-ring {
+    color: var(--gray-mid);
+  }
+  .model-name {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--black);
+    text-align: center;
+    padding: 8px 6px 10px;
+    line-height: 1.3;
+  }
+  .model-card.selected .model-name { color: var(--gold); }
+  .sel-count {
+    font-size: 11px;
+    color: var(--gray-text);
+    margin-bottom: 14px;
+    letter-spacing: 0.05em;
+  }
+
+  /* SWIPE SCREEN */
+  .swipe-area {
+    flex: 1;
+    padding: 0 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .swipe-card {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+    background: var(--white);
+    border: 1px solid var(--gray-mid);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.35s;
+    touch-action: none;
+    user-select: none;
+  }
+  .swipe-card.dragging { transition: none; }
+  .swipe-img-wrap {
+    flex: 1;
+    background: var(--gray-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .swipe-img-wrap img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+  .swipe-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .swipe-placeholder svg { color: var(--gray-mid); }
+  .swipe-id {
+    font-size: 10px;
+    color: var(--gray-text);
+    letter-spacing: 0.1em;
+  }
+  .swipe-tags {
+    padding: 12px 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    background: var(--white);
+  }
+  .swipe-tag {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    color: var(--gray-text);
+    background: var(--gray-light);
+    border-radius: 10px;
+    padding: 3px 8px;
+    text-transform: uppercase;
+  }
+
+  /* LIKE / PASS OVERLAY */
+  .vote-overlay {
+    position: absolute;
+    top: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: 300;
+    opacity: 0;
+    transition: opacity 0.1s;
+    pointer-events: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 2px solid;
+  }
+  .vote-overlay.like { left: 20px; color: #2D7A4F; border-color: #2D7A4F; }
+  .vote-overlay.pass { right: 20px; color: #C0392B; border-color: #C0392B; }
+
+  /* SWIPE ACTIONS */
+  .swipe-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 24px;
+    flex-shrink: 0;
+  }
+  .action-btn {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1.5px solid var(--gray-mid);
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-size: 22px;
+  }
+  .action-btn.pass-btn { border-color: #E8C5C2; color: #C0392B; }
+  .action-btn.like-btn { border-color: #B8D4C4; color: #2D7A4F; }
+  .action-btn:active { transform: scale(0.92); }
+  .swipe-hint {
+    font-size: 10px;
+    color: var(--gray-text);
+    text-align: center;
+    letter-spacing: 0.08em;
+    padding-bottom: 8px;
+    flex-shrink: 0;
+  }
+
+  /* PROFILE SCREEN */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray-mid);
+    margin-bottom: 20px;
+  }
+  .profile-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gray-light);
+    border: 1px solid var(--gray-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .profile-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+  }
+  .profile-date {
+    font-size: 10px;
+    color: var(--gray-text);
+    letter-spacing: 0.08em;
+    margin-top: 2px;
+  }
+
+  .radar-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .radar-card {
+    background: var(--gray-light);
+    border-radius: var(--radius);
+    padding: 14px;
+  }
+  .radar-label {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray-text);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .section-label {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray-text);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .moodboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  .moodboard-item {
+    aspect-ratio: 1;
+    background: var(--gray-light);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .moodboard-item img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+  }
+  .moodboard-item .mb-id {
+    font-size: 9px;
+    color: var(--gray-text);
+    letter-spacing: 0.05em;
+  }
+
+  .profile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  .profile-tag {
+    font-size: 10px;
+    color: var(--gold);
+    background: #FDF8F2;
+    border: 1px solid var(--gold-light);
+    border-radius: 12px;
+    padding: 4px 12px;
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <!-- HOME -->
+  <div id="screen-home" class="screen active">
+    <div class="home-hero">
+      <div class="home-emblem">
+        <svg viewBox="0 0 36 36" fill="none" stroke="#B8976A" stroke-width="0.8">
+          <polygon points="18,4 32,28 4,28" fill="none"/>
+          <circle cx="18" cy="16" r="5"/>
+          <line x1="18" y1="4" x2="18" y2="11"/>
+          <line x1="18" y1="21" x2="18" y2="28"/>
+        </svg>
+      </div>
+      <h1 class="home-title">Style<br><em>Diagnostic</em></h1>
+      <p class="home-desc">Découvrez le profil esthétique de votre cliente pour guider la création de son bijou sur-mesure.</p>
+    </div>
+    <div style="padding: 0 24px 32px;">
+      <div class="cat-grid">
+        <div class="cat-card featured" onclick="startCategory('bdf')" style="grid-column: span 2;">
+          <span class="cat-icon">◇</span>
+          <span class="cat-name">Bagues de fiançailles</span>
+        </div>
+        <div class="cat-card disabled">
+          <span class="cat-icon">◇</span>
+          <span class="cat-name">Bagues</span>
+          <span class="cat-soon">bientôt</span>
+        </div>
+        <div class="cat-card disabled">
+          <span class="cat-icon">◈</span>
+          <span class="cat-name">Boucles d'oreilles</span>
+          <span class="cat-soon">bientôt</span>
+        </div>
+        <div class="cat-card disabled">
+          <span class="cat-icon">○</span>
+          <span class="cat-name">Colliers</span>
+          <span class="cat-soon">bientôt</span>
+        </div>
+        <div class="cat-card disabled">
+          <span class="cat-icon">⌀</span>
+          <span class="cat-name">Bracelets</span>
+          <span class="cat-soon">bientôt</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLIENT -->
+  <div id="screen-client" class="screen">
+    <div class="header">
+      <div class="logo">Origine Paris · Bagues de fiançailles</div>
+      <h2 class="screen-title">La cliente</h2>
+      <p class="screen-sub">Commençons par noter son identité.</p>
+    </div>
+    <div class="scroll-content">
+      <div class="input-row">
+        <div class="input-wrap">
+          <label class="input-label">Prénom</label>
+          <input class="input-field" id="client-prenom" placeholder="Sophie" autocomplete="off"/>
+        </div>
+        <div class="input-wrap">
+          <label class="input-label">Nom</label>
+          <input class="input-field" id="client-nom" placeholder="Martin" autocomplete="off"/>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="btn-primary" onclick="goStep1()">Commencer le diagnostic →</button>
+    </div>
+  </div>
+
+  <!-- STEP 1 — STYLE -->
+  <div id="screen-step1" class="screen">
+    <div class="progress-wrap">
+      <div class="progress-steps">
+        <div class="step-dot active" id="dot1"></div>
+        <div class="step-dot" id="dot2"></div>
+        <div class="step-dot" id="dot3"></div>
+        <div class="step-dot" id="dot4"></div>
+      </div>
+      <div class="step-label">Étape 1 sur 4 — Style</div>
+    </div>
+    <div class="header">
+      <div class="logo">Origine Paris</div>
+      <h2 class="screen-title">Quel est son style ?</h2>
+      <p class="screen-sub">Sélectionnez tous les mots qui lui correspondent.</p>
+    </div>
+    <div class="scroll-content">
+      <div class="chip-grid" id="style-chips"></div>
+    </div>
+    <div class="footer">
+      <button class="btn-primary" onclick="goStep2()">Suivant →</button>
+    </div>
+  </div>
+
+  <!-- STEP 2 — MODÈLES -->
+  <div id="screen-step2" class="screen">
+    <div class="progress-wrap">
+      <div class="progress-steps">
+        <div class="step-dot done"></div>
+        <div class="step-dot active"></div>
+        <div class="step-dot"></div>
+        <div class="step-dot"></div>
+      </div>
+      <div class="step-label">Étape 2 sur 4 — Modèles</div>
+    </div>
+    <div class="header">
+      <div class="logo">Origine Paris</div>
+      <h2 class="screen-title">Quels modèles l'attirent ?</h2>
+      <p class="screen-sub">Sélectionnez tous les types qui l'intéressent.</p>
+    </div>
+    <div class="scroll-content">
+      <div class="sel-count" id="model-sel-count">0 sélectionné(s)</div>
+      <div class="model-grid" id="model-grid"></div>
+    </div>
+    <div class="footer">
+      <button class="btn-primary" onclick="goSwipe()">Suivant →</button>
+    </div>
+  </div>
+
+  <!-- STEP 3 — SWIPE -->
+  <div id="screen-swipe" class="screen">
+    <div class="progress-wrap">
+      <div class="progress-steps">
+        <div class="step-dot done"></div>
+        <div class="step-dot done"></div>
+        <div class="step-dot active"></div>
+        <div class="step-dot"></div>
+      </div>
+      <div class="step-label" id="swipe-step-label">Étape 3 sur 4 — Swipe · 0 / 0</div>
+    </div>
+    <div class="swipe-area" id="swipe-area">
+      <div class="swipe-card" id="swipe-card">
+        <div class="swipe-img-wrap" id="swipe-img-wrap">
+          <div class="swipe-placeholder">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.8">
+              <circle cx="24" cy="20" r="12"/>
+              <circle cx="24" cy="20" r="5"/>
+              <path d="M12,20 Q8,36 12,42 L24,46 L36,42 Q40,36 36,20"/>
+            </svg>
+            <div class="swipe-id" id="swipe-img-id">FIA-001</div>
+          </div>
+        </div>
+        <div class="swipe-tags" id="swipe-card-tags"></div>
+        <div class="vote-overlay like" id="overlay-like">J'aime</div>
+        <div class="vote-overlay pass" id="overlay-pass">Passer</div>
+      </div>
+    </div>
+    <div class="swipe-actions">
+      <button class="action-btn pass-btn" onclick="swipeAction(false)">✕</button>
+      <button class="action-btn like-btn" onclick="swipeAction(true)">♥</button>
+    </div>
+    <div class="swipe-hint">Glissez ou utilisez les boutons</div>
+  </div>
+
+  <!-- STEP 4 — PROFILE -->
+  <div id="screen-profile" class="screen">
+    <div class="progress-wrap">
+      <div class="progress-steps">
+        <div class="step-dot done"></div>
+        <div class="step-dot done"></div>
+        <div class="step-dot done"></div>
+        <div class="step-dot active"></div>
+      </div>
+      <div class="step-label">Étape 4 sur 4 — Profil goût</div>
+    </div>
+    <div class="scroll-content">
+      <div class="profile-header">
+        <div class="profile-avatar" id="profile-avatar">?</div>
+        <div>
+          <div class="profile-name" id="profile-name">—</div>
+          <div class="profile-date" id="profile-date">—</div>
+        </div>
+      </div>
+
+      <span class="section-label">Profil style</span>
+      <div class="profile-tags" id="profile-style-tags"></div>
+
+      <span class="section-label">Modèles préférés</span>
+      <div class="profile-tags" id="profile-model-tags"></div>
+
+      <div class="radar-grid">
+        <div class="radar-card">
+          <span class="radar-label">Style</span>
+          <canvas id="radar-style" width="160" height="140"></canvas>
+        </div>
+        <div class="radar-card">
+          <span class="radar-label">Modèles</span>
+          <canvas id="radar-models" width="160" height="140"></canvas>
+        </div>
+      </div>
+
+      <span class="section-label">Images likées</span>
+      <div class="moodboard" id="moodboard"></div>
+    </div>
+    <div class="footer">
+      <button class="btn-primary" onclick="exportProfile()">Exporter la fiche cliente</button>
+      <button class="btn-secondary" onclick="restart()">Nouveau diagnostic</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ============================================================
+// DATA
+// ============================================================
+const STYLES = [
+  'Intricate','Minimalistic','Delicate','Volumous',
+  'Symmetrical','Asymmetrical','Graphic','Organic','Rounded','Edgy'
+];
+
+// MODÈLES BdF — mettre à jour les chemins img quand les fichiers sont en place
+const MODELS = [
+  { id: 'FIA-LA-01', name: 'Solitaire classique',           img: 'images/line-art/Solitaire Classique.png' },
+  { id: 'FIA-LA-02', name: 'Solitaire cathédrale',          img: 'images/line-art/Solitaire Cathédrale.png' },
+  { id: 'FIA-LA-03', name: 'Halo',                          img: 'images/line-art/Halo.jpeg' },
+  { id: 'FIA-LA-04', name: 'Double halo',                   img: 'images/line-art/Double Halo.jpeg' },
+  { id: 'FIA-LA-05', name: 'Trois pierres',                 img: 'images/line-art/Trois Pierres.jpeg' },
+  { id: 'FIA-LA-06', name: 'Cinq pierres',                  img: 'images/line-art/Cinq Pierres.jpeg' },
+  { id: 'FIA-LA-07', name: 'Toi et Moi',                   img: 'images/line-art/Toi et Moi.jpeg' },
+  { id: 'FIA-LA-08', name: 'Pavé band',                     img: 'images/line-art/Anneau serti.jpeg' },
+  { id: 'FIA-LA-09', name: 'Hidden halo',                   img: 'images/line-art/Halo Caché.jpeg' },
+  { id: 'FIA-LA-10', name: 'Split shank',                   img: 'images/line-art/Split Shank.jpeg' },
+  { id: 'FIA-LA-11', name: 'Bypass',                        img: 'images/line-art/By Pass.jpeg' },
+  { id: 'FIA-LA-12', name: 'Tension',                       img: 'images/line-art/Serti tension.jpeg' },
+  { id: 'FIA-LA-13', name: 'Bezel / Clos',                  img: 'images/line-art/Serti Clos.jpeg' },
+  { id: 'FIA-LA-14', name: 'East-West',                     img: 'images/line-art/East-West.png' },
+  { id: 'FIA-LA-15', name: 'Cluster',                       img: 'images/line-art/Grappe.jpeg' },
+  { id: 'FIA-LA-16', name: 'Vintage filigrane',             img: 'images/line-art/Retro Filigrain.jpeg' },
+  { id: 'FIA-LA-17', name: 'Nature / Floral',               img: 'images/line-art/Nature - Floral.jpeg' },
+  { id: 'FIA-LA-18', name: 'Sculptural moderne',            img: 'images/line-art/Sculpturale moderne.jpeg' },
+  { id: 'FIA-LA-19', name: 'Solitaire organique asymétrique', img: 'images/line-art/Solitaire assymetrique.jpeg' },
+  { id: 'FIA-LA-20', name: 'Organique fin structuré',       img: 'images/line-art/Diamants de chaque coté.jpeg' },
+];
+
+// Images FIA pour le swipe — sera remplacé par le JSON généré par exiftool
+// Format attendu du JSON : [{ id: "FIA-001", img: "images/fia/FIA-001.jpeg", tags: ["tag1","tag2",...] }, ...]
+// Données de démo en attendant le vrai JSON
+const DEMO_IMAGES = [
+  { id:'FIA-001', img:'', tags:['solitaire classique','or blanc','rond brillant','griffes 6','minimaliste','bridal'] },
+  { id:'FIA-002', img:'', tags:['halo','or jaune','ovale','pavé','romantique','bridal'] },
+  { id:'FIA-003', img:'', tags:['toi et moi','or rose','marquise','poire','asymétrique'] },
+  { id:'FIA-004', img:'', tags:['nature floral','or blanc','griffes florales','organique','bridal'] },
+  { id:'FIA-005', img:'', tags:['sculptural','or gris','tension','diamant','moderne'] },
+  { id:'FIA-006', img:'', tags:['vintage filigrane','or jaune','milgrain','coussin','romantique'] },
+  { id:'FIA-007', img:'', tags:['pavé band','or blanc','diamants','minimaliste','bridal'] },
+  { id:'FIA-008', img:'', tags:['bezel','or rose','serti clos','rond','épuré'] },
+  { id:'FIA-009', img:'', tags:['trois pierres','or blanc','émeraude','baguettes','classique'] },
+  { id:'FIA-010', img:'', tags:['split shank','or jaune','halo','ovale','statement'] },
+  { id:'FIA-011', img:'', tags:['cluster','or blanc','diamants','vintage','graphique'] },
+  { id:'FIA-012', img:'', tags:['east-west','or rose','marquise','horizontal','moderne'] },
+];
+
+// ============================================================
+// STATE
+// ============================================================
+let state = {
+  clientPrenom: '', clientNom: '',
+  selectedStyles: [], selectedModels: [],
+  swipeQueue: [], swipeLiked: [], swipeCurrent: 0,
+  styleCounts: {}, modelCounts: {},
+  touchStartX: 0, touchStartY: 0, isDragging: false, currentDragX: 0
+};
+
+// ============================================================
+// NAVIGATION
+// ============================================================
+function show(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+function startCategory(cat) {
+  if (cat === 'bdf') show('screen-client');
+}
+
+function goStep1() {
+  state.clientPrenom = document.getElementById('client-prenom').value.trim() || 'Cliente';
+  state.clientNom    = document.getElementById('client-nom').value.trim();
+  buildStyleChips();
+  show('screen-step1');
+}
+
+function goStep2() {
+  state.selectedStyles = [...document.querySelectorAll('#style-chips .chip.selected')].map(e => e.textContent);
+  buildModelGrid();
+  show('screen-step2');
+}
+
+function goSwipe() {
+  state.selectedModels = [...document.querySelectorAll('#model-grid .model-card.selected .model-name')].map(e => e.textContent);
+
+  // Initialise les compteurs
+  STYLES.forEach(s => state.styleCounts[s] = state.selectedStyles.includes(s) ? 2 : 0);
+  MODELS.forEach(m => state.modelCounts[m.name] = state.selectedModels.includes(m.name) ? 2 : 0);
+
+  // Charge les images — tente de lire images.json, sinon démo
+  loadImages().then(imgs => {
+    state.swipeQueue = imgs;
+    state.swipeLiked = [];
+    state.swipeCurrent = 0;
+    renderSwipeCard();
+    show('screen-swipe');
+  });
+}
+
+async function loadImages() {
+  try {
+    const resp = await fetch('data/images.json');
+    if (!resp.ok) throw new Error();
+    const raw = await resp.json();
+    // Normalise le format exiftool
+    return raw.map(item => ({
+      id:   item.FileName || item.id || '?',
+      img:  'images/fia/' + (item.FileName || item.id),
+      tags: [].concat(item.Keywords || item.Subject || item.tags || [])
+    }));
+  } catch {
+    return DEMO_IMAGES;
+  }
+}
+
+// ============================================================
+// STEP 1 — STYLE CHIPS
+// ============================================================
+function buildStyleChips() {
+  const c = document.getElementById('style-chips');
+  c.innerHTML = '';
+  STYLES.forEach(s => {
+    const el = document.createElement('div');
+    el.className = 'chip';
+    el.textContent = s;
+    el.onclick = () => el.classList.toggle('selected');
+    c.appendChild(el);
+  });
+}
+
+// ============================================================
+// STEP 2 — MODEL GRID
+// ============================================================
+function buildModelGrid() {
+  const g = document.getElementById('model-grid');
+  g.innerHTML = '';
+  MODELS.forEach(m => {
+    const card = document.createElement('div');
+    card.className = 'model-card';
+    card.innerHTML = `
+      <div class="model-img">
+        <img src="${m.img}" alt="${m.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+        <svg class="placeholder-ring" style="display:none" width="60" height="60" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="0.8">
+          <circle cx="30" cy="22" r="14"/><circle cx="30" cy="22" r="6"/>
+          <path d="M16,22 L14,50 L30,56 L46,50 L44,22"/>
+        </svg>
+      </div>
+      <div class="model-name">${m.name}</div>`;
+    card.onclick = () => {
+      card.classList.toggle('selected');
+      const count = document.querySelectorAll('#model-grid .model-card.selected').length;
+      document.getElementById('model-sel-count').textContent = count + ' sélectionné(s)';
+    };
+    g.appendChild(card);
+  });
+}
+
+// ============================================================
+// STEP 3 — SWIPE
+// ============================================================
+function renderSwipeCard() {
+  const total   = state.swipeQueue.length;
+  const current = state.swipeCurrent;
+
+  if (current >= total) { showProfile(); return; }
+
+  const img = state.swipeQueue[current];
+  document.getElementById('swipe-step-label').textContent =
+    `Étape 3 sur 4 — Swipe · ${current + 1} / ${total}`;
+
+  const wrap = document.getElementById('swipe-img-wrap');
+  const idEl = document.getElementById('swipe-img-id');
+  idEl.textContent = img.id;
+
+  // Image
+  if (img.img) {
+    wrap.innerHTML = `
+      <img src="${img.img}" alt="${img.id}" style="width:80%;height:80%;object-fit:contain"
+           onerror="this.outerHTML='<div class=swipe-placeholder><div class=swipe-id>${img.id}</div></div>'"/>`;
+  } else {
+    wrap.innerHTML = `<div class="swipe-placeholder">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.8">
+        <circle cx="24" cy="18" r="11"/><circle cx="24" cy="18" r="5"/>
+        <path d="M13,18 L11,42 L24,47 L37,42 L35,18"/>
+      </svg>
+      <div class="swipe-id">${img.id}</div></div>`;
+  }
+
+  // Tags
+  const tagsEl = document.getElementById('swipe-card-tags');
+  tagsEl.innerHTML = img.tags.slice(0, 6).map(t =>
+    `<span class="swipe-tag">${t}</span>`).join('');
+
+  // Reset overlays
+  document.getElementById('overlay-like').style.opacity = '0';
+  document.getElementById('overlay-pass').style.opacity = '0';
+
+  // Reset card position
+  const card = document.getElementById('swipe-card');
+  card.style.transform = '';
+  card.style.opacity   = '1';
+
+  setupSwipeTouch(card);
+}
+
+function swipeAction(liked) {
+  const img = state.swipeQueue[state.swipeCurrent];
+  if (!img) return;
+
+  if (liked) {
+    state.swipeLiked.push(img);
+    img.tags.forEach(tag => {
+      const t = tag.toLowerCase();
+      STYLES.forEach(s => {
+        if (t.includes(s.toLowerCase())) state.styleCounts[s] = (state.styleCounts[s] || 0) + 3;
+      });
+      MODELS.forEach(m => {
+        const key = m.name.split(' ')[0].toLowerCase();
+        if (t.includes(key)) state.modelCounts[m.name] = (state.modelCounts[m.name] || 0) + 3;
+      });
+    });
+  }
+
+  const card = document.getElementById('swipe-card');
+  card.classList.remove('dragging');
+  card.style.transform = liked
+    ? 'translateX(120%) rotate(15deg)'
+    : 'translateX(-120%) rotate(-15deg)';
+  card.style.opacity = '0';
+
+  setTimeout(() => {
+    state.swipeCurrent++;
+    renderSwipeCard();
+  }, 320);
+}
+
+function setupSwipeTouch(card) {
+  let startX = 0, startY = 0, isDragging = false;
+
+  card.ontouchstart = e => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    isDragging = false;
+    card.classList.add('dragging');
+  };
+
+  card.ontouchmove = e => {
+    const dx = e.touches[0].clientX - startX;
+    const dy = e.touches[0].clientY - startY;
+    if (Math.abs(dx) < 8 && !isDragging) return;
+    isDragging = true;
+    e.preventDefault();
+    const rotation = dx * 0.08;
+    card.style.transform = `translateX(${dx}px) rotate(${rotation}deg)`;
+    const likeEl = document.getElementById('overlay-like');
+    const passEl = document.getElementById('overlay-pass');
+    if (dx > 30) { likeEl.style.opacity = Math.min((dx - 30) / 80, 1); passEl.style.opacity = 0; }
+    else if (dx < -30) { passEl.style.opacity = Math.min((-dx - 30) / 80, 1); likeEl.style.opacity = 0; }
+    else { likeEl.style.opacity = 0; passEl.style.opacity = 0; }
+  };
+
+  card.ontouchend = e => {
+    card.classList.remove('dragging');
+    if (!isDragging) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    if (dx > 60) swipeAction(true);
+    else if (dx < -60) swipeAction(false);
+    else { card.style.transform = ''; document.getElementById('overlay-like').style.opacity = 0; document.getElementById('overlay-pass').style.opacity = 0; }
+  };
+}
+
+// ============================================================
+// STEP 4 — PROFILE
+// ============================================================
+function showProfile() {
+  const prenom = state.clientPrenom;
+  const nom    = state.clientNom;
+  document.getElementById('profile-name').textContent   = prenom + (nom ? ' ' + nom : '');
+  document.getElementById('profile-avatar').textContent = (prenom[0] || '?') + (nom ? nom[0] : '');
+  document.getElementById('profile-date').textContent   =
+    new Date().toLocaleDateString('fr-FR', { day:'numeric', month:'long', year:'numeric' });
+
+  // Top styles
+  const topStyles = Object.entries(state.styleCounts)
+    .filter(([,v]) => v > 0).sort((a,b) => b[1]-a[1]).slice(0, 5).map(([k]) => k);
+  document.getElementById('profile-style-tags').innerHTML =
+    topStyles.map(s => `<span class="profile-tag">${s}</span>`).join('');
+
+  // Top models
+  const topModels = Object.entries(state.modelCounts)
+    .filter(([,v]) => v > 0).sort((a,b) => b[1]-a[1]).slice(0, 5).map(([k]) => k);
+  document.getElementById('profile-model-tags').innerHTML =
+    topModels.map(m => `<span class="profile-tag">${m}</span>`).join('');
+
+  // Radars
+  drawRadar('radar-style',  STYLES,                STYLES.map(s => state.styleCounts[s] || 0));
+  drawRadar('radar-models', MODELS.map(m => m.name), MODELS.map(m => state.modelCounts[m.name] || 0));
+
+  // Moodboard
+  const mb   = document.getElementById('moodboard');
+  const shown = state.swipeLiked.length ? state.swipeLiked : state.swipeQueue.slice(0, 6);
+  mb.innerHTML = shown.slice(0, 9).map(img => `
+    <div class="moodboard-item">
+      ${img.img
+        ? `<img src="${img.img}" alt="${img.id}" onerror="this.outerHTML='<div class=mb-id>${img.id}</div>'">`
+        : `<div class="mb-id">${img.id}</div>`}
+    </div>`).join('');
+
+  show('screen-profile');
+}
+
+// ============================================================
+// RADAR
+// ============================================================
+function drawRadar(canvasId, labels, values) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const cx = 80, cy = 72, r = 50;
+  const n   = labels.length;
+  const max = Math.max(...values, 1);
+
+  ctx.clearRect(0, 0, 160, 140);
+
+  // Grille
+  for (let ring = 1; ring <= 3; ring++) {
+    ctx.beginPath();
+    for (let i = 0; i < n; i++) {
+      const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
+      const rr    = r * (ring / 3);
+      i === 0
+        ? ctx.moveTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle))
+        : ctx.lineTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle));
+    }
+    ctx.closePath();
+    ctx.strokeStyle = 'rgba(0,0,0,0.07)';
+    ctx.lineWidth   = 0.5;
+    ctx.stroke();
+  }
+
+  // Axes + labels
+  for (let i = 0; i < n; i++) {
+    const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.lineTo(cx + r * Math.cos(angle), cy + r * Math.sin(angle));
+    ctx.strokeStyle = 'rgba(0,0,0,0.07)';
+    ctx.lineWidth   = 0.5;
+    ctx.stroke();
+    ctx.font        = '7px Montserrat, sans-serif';
+    ctx.fillStyle   = '#8A8580';
+    ctx.textAlign   = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(labels[i].substring(0, 9), cx + (r + 14) * Math.cos(angle), cy + (r + 14) * Math.sin(angle));
+  }
+
+  // Forme
+  ctx.beginPath();
+  values.forEach((v, i) => {
+    const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
+    const rr    = r * (v / max);
+    i === 0
+      ? ctx.moveTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle))
+      : ctx.lineTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle));
+  });
+  ctx.closePath();
+  ctx.fillStyle   = 'rgba(184,151,106,0.15)';
+  ctx.fill();
+  ctx.strokeStyle = '#B8976A';
+  ctx.lineWidth   = 1.5;
+  ctx.stroke();
+}
+
+// ============================================================
+// EXPORT
+// ============================================================
+function exportProfile() {
+  const name    = state.clientPrenom + ' ' + state.clientNom;
+  const styles  = Object.entries(state.styleCounts).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k])=>k).join(', ');
+  const models  = Object.entries(state.modelCounts).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k])=>k).join(', ');
+  const liked   = state.swipeLiked.map(i=>i.id).join(', ') || '—';
+  const date    = new Date().toLocaleDateString('fr-FR');
+
+  const text = `ORIGINE PARIS — Profil Goût\n${'─'.repeat(32)}\n\nCliente   : ${name}\nDate      : ${date}\n\nStyle dominant   : ${styles}\nModèles préférés : ${models}\n\nImages likées (${state.swipeLiked.length}) :\n${liked}\n\n${'─'.repeat(32)}\nOrigine Paris · Bijoux sur-mesure`;
+
+  const blob = new Blob([text], { type: 'text/plain' });
+  const a    = document.createElement('a');
+  a.href     = URL.createObjectURL(blob);
+  a.download = `profil-${state.clientPrenom.toLowerCase()}-${Date.now()}.txt`;
+  a.click();
+}
+
+function restart() {
+  state = {
+    clientPrenom:'', clientNom:'',
+    selectedStyles:[], selectedModels:[],
+    swipeQueue:[], swipeLiked:[], swipeCurrent:0,
+    styleCounts:{}, modelCounts:{},
+    touchStartX:0, touchStartY:0, isDragging:false, currentDragX:0
+  };
+  show('screen-home');
+}
+</script>
+</body>
+</html>
