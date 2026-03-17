@@ -305,7 +305,8 @@
   .profile-date { font-size: 10px; color: var(--gray-text); letter-spacing: 0.08em; margin-top: 2px; }
 
   .radar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
-  .radar-card { background: var(--white); border-radius: var(--radius); padding: 14px; }
+  .radar-card { background: transparent; border-radius: var(--radius); padding: 4px; }
+  .radar-card canvas { width: 100%; height: auto; }
   .radar-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-text); margin-bottom: 10px; display: block; }
 
   .section-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-text); margin-bottom: 10px; display: block; }
@@ -328,7 +329,7 @@
         <img src="logo_origine_paris.png" alt="Origine Paris">
       </div>
       <h2 class="home-subtitle">Style Diagnostic</h2>
-      <p class="home-desc">Découvrez le profil esthétique de votre cliente pour guider la création de son bijou sur-mesure.</p>
+      <p class="home-desc">Votre goût est unique. Prenez un instant pour le découvrir et le garder en mémoire.</p>
     </div>
     <div style="padding: 0 24px 32px;">
       <div class="cat-grid">
@@ -670,11 +671,16 @@ function goSwipe() {
   state.seenIds = new Set();
 
   loadImages().then(allImages => {
-    // Point 7 — Deduplicate images
+    // Deduplicate by id AND img path
     const unique = [];
-    const ids = new Set();
+    const seenIds = new Set();
+    const seenPaths = new Set();
     allImages.forEach(img => {
-      if (!ids.has(img.id)) { ids.add(img.id); unique.push(img); }
+      if (!seenIds.has(img.id) && !seenPaths.has(img.img)) {
+        seenIds.add(img.id);
+        seenPaths.add(img.img);
+        unique.push(img);
+      }
     });
 
     state.swipeQueue = filterAndSort(unique);
@@ -818,10 +824,15 @@ function buildModelGrid() {
 // ============================================================
 function renderSwipeCard() {
   const total = state.swipeQueue.length;
+  // Skip any already-shown images
+  while (state.swipeCurrent < total && state.seenIds.has(state.swipeQueue[state.swipeCurrent].id)) {
+    state.swipeCurrent++;
+  }
   const current = state.swipeCurrent;
   if (current >= total) { showProfile(); return; }
 
   const img = state.swipeQueue[current];
+  state.seenIds.add(img.id);
   document.getElementById('swipe-step-label').textContent =
     `Étape 3 sur 4 — Swipe · ${current + 1} / ${total}`;
 
