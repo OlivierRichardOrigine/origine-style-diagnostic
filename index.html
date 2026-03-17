@@ -43,11 +43,9 @@
     position: relative;
   }
 
-  /* SCREENS */
   .screen { display: none; flex-direction: column; height: 100%; }
   .screen.active { display: flex; }
 
-  /* BACK BUTTON */
   .back-btn {
     display: inline-flex;
     align-items: center;
@@ -65,7 +63,6 @@
   }
   .back-btn:active { opacity: 0.6; }
 
-  /* HEADER */
   .header {
     padding: 20px 24px 0;
     flex-shrink: 0;
@@ -94,7 +91,6 @@
     letter-spacing: 0.03em;
   }
 
-  /* SCROLL CONTENT */
   .scroll-content {
     flex: 1;
     overflow-y: auto;
@@ -102,14 +98,12 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  /* FOOTER */
   .footer {
     padding: 16px 24px 32px;
     flex-shrink: 0;
     background: var(--beige);
   }
 
-  /* BUTTONS */
   .btn-primary {
     width: 100%;
     padding: 16px;
@@ -160,33 +154,14 @@
   }
   .btn-gold:active { background: var(--gold); color: var(--white); }
 
-  /* PROGRESS */
-  .progress-wrap {
-    padding: 16px 24px 0;
-    flex-shrink: 0;
-  }
-  .progress-steps {
-    display: flex;
-    gap: 4px;
-    margin-bottom: 4px;
-  }
-  .step-dot {
-    height: 2px;
-    flex: 1;
-    background: var(--gray-mid);
-    border-radius: 1px;
-    transition: background 0.3s;
-  }
+  .progress-wrap { padding: 16px 24px 0; flex-shrink: 0; }
+  .progress-steps { display: flex; gap: 4px; margin-bottom: 4px; }
+  .step-dot { height: 2px; flex: 1; background: var(--gray-mid); border-radius: 1px; transition: background 0.3s; }
   .step-dot.active { background: var(--gold); }
   .step-dot.done { background: var(--black); }
-  .step-label {
-    font-size: 10px;
-    color: var(--gray-text);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
+  .step-label { font-size: 10px; color: var(--gray-text); letter-spacing: 0.1em; text-transform: uppercase; }
 
-  /* HOME SCREEN */
+  /* HOME */
   .home-hero {
     flex: 1;
     display: flex;
@@ -197,18 +172,16 @@
     text-align: center;
   }
   .logo-block {
-    background: var(--black);
-    border-radius: var(--radius);
-    padding: 36px 48px;
+    background: var(--beige);
+    padding: 24px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 28px;
   }
   .logo-block img {
-    width: 200px;
+    width: 220px;
     height: auto;
-    filter: brightness(0) invert(1);
   }
   .home-subtitle {
     font-family: 'QuinnDisplay', 'Cormorant Garamond', serif;
@@ -228,16 +201,11 @@
     letter-spacing: 0.03em;
   }
 
-  /* CATEGORY GRID */
-  .cat-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
+  .cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .cat-card {
     border: 1px solid var(--gray-mid);
     border-radius: var(--radius);
-    padding: 20px 14px;
+    padding: 18px 14px;
     text-align: center;
     cursor: pointer;
     transition: all 0.2s;
@@ -245,377 +213,107 @@
     position: relative;
     overflow: hidden;
   }
-  .cat-card.featured {
-    border-color: var(--gold);
-    background: var(--white);
-  }
-  .cat-card.featured::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--gold);
-  }
-  .cat-card.disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-  }
+  .cat-card.featured { border-color: var(--gold); }
+  .cat-card.featured::after { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--gold); }
+  .cat-card.disabled { opacity: 0.4; cursor: not-allowed; }
   .cat-card:not(.disabled):active { transform: scale(0.98); }
-  .cat-icon {
-    font-size: 20px;
-    margin-bottom: 8px;
-    display: block;
-    color: var(--gold);
-    font-family: 'QuinnDisplay', 'Cormorant Garamond', serif;
-    font-style: italic;
-  }
-  .cat-name {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    color: var(--black);
-    display: block;
-  }
-  .cat-soon {
-    font-size: 9px;
-    color: var(--gray-text);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-top: 2px;
-    display: block;
-  }
-  .cat-full { grid-column: span 2; }
+  .cat-name { font-size: 11px; font-weight: 500; letter-spacing: 0.05em; color: var(--black); display: block; }
+  .cat-soon { font-size: 9px; color: var(--gray-text); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; display: block; }
 
-  /* CLIENT SCREEN */
+  /* CLIENT */
   .input-row { display: flex; gap: 10px; }
   .input-wrap { flex: 1; }
-  .input-label {
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gray-text);
-    margin-bottom: 6px;
-    display: block;
-  }
+  .input-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-text); margin-bottom: 6px; display: block; }
   .input-field {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1px solid var(--gray-mid);
-    border-radius: 8px;
-    font-family: 'Avenir Next', 'Avenir', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    background: var(--white);
-    color: var(--black);
-    outline: none;
-    transition: border-color 0.2s;
+    width: 100%; padding: 12px 14px; border: 1px solid var(--gray-mid); border-radius: 8px;
+    font-family: 'Avenir Next', 'Avenir', sans-serif; font-size: 14px; font-weight: 400;
+    background: var(--white); color: var(--black); outline: none; transition: border-color 0.2s;
   }
   .input-field:focus { border-color: var(--gold); }
 
-  /* STYLE CHIPS */
-  .chip-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
+  .chip-grid { display: flex; flex-wrap: wrap; gap: 8px; }
   .chip {
-    padding: 9px 16px;
-    border: 1px solid var(--gray-mid);
-    border-radius: 20px;
-    font-size: 11px;
-    letter-spacing: 0.05em;
-    color: var(--gray-text);
-    cursor: pointer;
-    transition: all 0.15s;
-    background: var(--white);
-    font-family: 'Avenir Next', 'Avenir', sans-serif;
+    padding: 9px 16px; border: 1px solid var(--gray-mid); border-radius: 20px; font-size: 11px;
+    letter-spacing: 0.05em; color: var(--gray-text); cursor: pointer; transition: all 0.15s;
+    background: var(--white); font-family: 'Avenir Next', 'Avenir', sans-serif;
   }
-  .chip.selected {
-    background: var(--black);
-    color: var(--white);
-    border-color: var(--black);
-  }
+  .chip.selected { background: var(--black); color: var(--white); border-color: var(--black); }
   .chip:active { transform: scale(0.97); }
 
-  /* MODEL GRID */
-  .model-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
+  .model-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .model-card {
-    border: 1px solid var(--gray-mid);
-    border-radius: var(--radius);
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.2s;
-    background: var(--white);
+    border: 1px solid var(--gray-mid); border-radius: var(--radius); overflow: hidden;
+    cursor: pointer; transition: all 0.2s; background: var(--white);
   }
-  .model-card.selected {
-    border-color: var(--gold);
-    border-width: 1.5px;
-  }
+  .model-card.selected { border-color: var(--gold); border-width: 1.5px; }
   .model-card:active { transform: scale(0.98); }
-  .model-img {
-    width: 100%;
-    aspect-ratio: 1;
-    background: var(--gray-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  .model-img img {
-    width: 85%;
-    height: 85%;
-    object-fit: contain;
-  }
-  .model-img .placeholder-ring {
-    color: var(--gray-mid);
-  }
-  .model-name {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    color: var(--black);
-    text-align: center;
-    padding: 8px 6px 10px;
-    line-height: 1.3;
-  }
+  .model-img { width: 100%; aspect-ratio: 1; background: var(--gray-light); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .model-img img { width: 85%; height: 85%; object-fit: contain; }
+  .model-img .placeholder-ring { color: var(--gray-mid); }
+  .model-name { font-size: 10px; font-weight: 500; letter-spacing: 0.05em; color: var(--black); text-align: center; padding: 8px 6px 10px; line-height: 1.3; }
   .model-card.selected .model-name { color: var(--gold); }
-  .sel-count {
-    font-size: 11px;
-    color: var(--gray-text);
-    margin-bottom: 14px;
-    letter-spacing: 0.05em;
-  }
+  .sel-count { font-size: 11px; color: var(--gray-text); margin-bottom: 14px; letter-spacing: 0.05em; }
 
-  /* SWIPE SCREEN */
-  .swipe-area {
-    flex: 1;
-    padding: 0 24px;
-    position: relative;
-    overflow: hidden;
-  }
+  /* SWIPE */
+  .swipe-area { flex: 1; padding: 0 24px; position: relative; overflow: hidden; }
   .swipe-card {
-    position: absolute;
-    inset: 0;
-    border-radius: var(--radius);
-    background: var(--white);
-    border: 1px solid var(--gray-mid);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    position: absolute; inset: 0; border-radius: var(--radius); background: var(--white);
+    border: 1px solid var(--gray-mid); overflow: hidden; display: flex; flex-direction: column;
     transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.35s;
-    touch-action: none;
-    user-select: none;
+    touch-action: none; user-select: none;
   }
   .swipe-card.dragging { transition: none; }
-  .swipe-img-wrap {
-    flex: 1;
-    background: var(--gray-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-  }
-  .swipe-img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .swipe-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
+  .swipe-img-wrap { flex: 1; background: var(--gray-light); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+  .swipe-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .swipe-placeholder { display: flex; flex-direction: column; align-items: center; gap: 8px; }
   .swipe-placeholder svg { color: var(--gray-mid); }
-  .swipe-id {
-    font-size: 10px;
-    color: var(--gray-text);
-    letter-spacing: 0.1em;
-  }
-  .swipe-tags {
-    padding: 12px 14px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    background: var(--white);
-  }
-  .swipe-tag {
-    font-size: 9px;
-    letter-spacing: 0.08em;
-    color: var(--gray-text);
-    background: var(--gray-light);
-    border-radius: 10px;
-    padding: 3px 8px;
-  }
+  .swipe-id { font-size: 10px; color: var(--gray-text); letter-spacing: 0.1em; }
+  .swipe-tags { padding: 12px 14px; display: flex; flex-wrap: wrap; gap: 4px; background: var(--white); }
+  .swipe-tag { font-size: 9px; letter-spacing: 0.08em; color: var(--gray-text); background: var(--gray-light); border-radius: 10px; padding: 3px 8px; }
 
-  /* LIKE / PASS OVERLAY */
   .vote-overlay {
-    position: absolute;
-    top: 20px;
-    font-family: 'QuinnDisplay', 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 28px;
-    font-weight: 300;
-    opacity: 0;
-    transition: opacity 0.1s;
-    pointer-events: none;
-    padding: 6px 14px;
-    border-radius: 6px;
-    border: 2px solid;
+    position: absolute; top: 20px; font-family: 'QuinnDisplay', 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 28px; font-weight: 300; opacity: 0; transition: opacity 0.1s;
+    pointer-events: none; padding: 6px 14px; border-radius: 6px; border: 2px solid;
   }
   .vote-overlay.like { left: 20px; color: #2D7A4F; border-color: #2D7A4F; }
   .vote-overlay.pass { right: 20px; color: #C0392B; border-color: #C0392B; }
 
-  /* SWIPE ACTIONS */
-  .swipe-actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    padding: 12px 24px;
-    flex-shrink: 0;
-  }
+  .swipe-actions { display: flex; justify-content: center; align-items: center; gap: 24px; padding: 12px 24px; flex-shrink: 0; }
   .action-btn {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    border: 1.5px solid var(--gray-mid);
-    background: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform 0.1s;
-    font-size: 26px;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
+    width: 72px; height: 72px; border-radius: 50%; border: 1.5px solid var(--gray-mid);
+    background: var(--white); display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: transform 0.1s; font-size: 26px;
+    -webkit-tap-highlight-color: transparent; touch-action: manipulation;
   }
   .action-btn.pass-btn { border-color: #E8C5C2; color: #C0392B; }
   .action-btn.like-btn { border-color: #B8D4C4; color: #2D7A4F; }
   .action-btn:active { transform: scale(0.88); }
-  .swipe-footer {
-    padding: 0 24px 24px;
-    flex-shrink: 0;
-  }
-  .swipe-hint {
-    font-size: 10px;
-    color: var(--gray-text);
-    text-align: center;
-    letter-spacing: 0.08em;
-    padding-bottom: 4px;
-    flex-shrink: 0;
-  }
+  .swipe-footer { padding: 0 24px 24px; flex-shrink: 0; }
+  .swipe-hint { font-size: 10px; color: var(--gray-text); text-align: center; letter-spacing: 0.08em; padding-bottom: 4px; flex-shrink: 0; }
 
-  /* PROFILE SCREEN */
-  .profile-header {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--gray-mid);
-    margin-bottom: 20px;
-  }
+  /* PROFILE */
+  .profile-header { display: flex; align-items: center; gap: 14px; padding-bottom: 20px; border-bottom: 1px solid var(--gray-mid); margin-bottom: 20px; }
   .profile-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--gray-light);
-    border: 1px solid var(--gray-mid);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'QuinnDisplay', 'Cormorant Garamond', serif;
-    font-size: 18px;
-    font-style: italic;
-    color: var(--gold);
-    flex-shrink: 0;
+    width: 50px; height: 50px; border-radius: 50%; background: var(--gray-light); border: 1px solid var(--gray-mid);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'QuinnDisplay', 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; color: var(--gold); flex-shrink: 0;
   }
-  .profile-name {
-    font-family: 'QuinnDisplay', 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 300;
-  }
-  .profile-date {
-    font-size: 10px;
-    color: var(--gray-text);
-    letter-spacing: 0.08em;
-    margin-top: 2px;
-  }
+  .profile-name { font-family: 'QuinnDisplay', 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; }
+  .profile-date { font-size: 10px; color: var(--gray-text); letter-spacing: 0.08em; margin-top: 2px; }
 
-  .radar-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 20px;
-  }
-  .radar-card {
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 14px;
-  }
-  .radar-label {
-    font-size: 9px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gray-text);
-    margin-bottom: 10px;
-    display: block;
-  }
+  .radar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .radar-card { background: var(--white); border-radius: var(--radius); padding: 14px; }
+  .radar-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-text); margin-bottom: 10px; display: block; }
 
-  .section-label {
-    font-size: 9px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gray-text);
-    margin-bottom: 10px;
-    display: block;
-  }
-  .moodboard {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
-    margin-bottom: 20px;
-  }
-  .moodboard-item {
-    aspect-ratio: 1;
-    background: var(--white);
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .moodboard-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .moodboard-item .mb-id {
-    font-size: 9px;
-    color: var(--gray-text);
-    letter-spacing: 0.05em;
-  }
+  .section-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-text); margin-bottom: 10px; display: block; }
+  .moodboard { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-bottom: 20px; padding-bottom: 20px; }
+  .moodboard-item { aspect-ratio: 1; background: var(--white); border-radius: 6px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .moodboard-item img { width: 100%; height: 100%; object-fit: cover; }
+  .moodboard-item .mb-id { font-size: 8px; color: var(--gray-text); letter-spacing: 0.05em; }
 
-  .profile-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 20px;
-  }
-  .profile-tag {
-    font-size: 10px;
-    color: var(--gold);
-    background: var(--white);
-    border: 1px solid var(--gold-light);
-    border-radius: 12px;
-    padding: 4px 12px;
-    letter-spacing: 0.05em;
-  }
+  .profile-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+  .profile-tag { font-size: 10px; color: var(--gold); background: var(--white); border: 1px solid var(--gold-light); border-radius: 12px; padding: 4px 12px; letter-spacing: 0.05em; }
 </style>
 </head>
 <body>
@@ -633,26 +331,21 @@
     <div style="padding: 0 24px 32px;">
       <div class="cat-grid">
         <div class="cat-card featured" onclick="startCategory('bdf')" style="grid-column: span 2;">
-          <span class="cat-icon">◇</span>
           <span class="cat-name">Bagues de fiançailles</span>
         </div>
         <div class="cat-card disabled">
-          <span class="cat-icon">◇</span>
           <span class="cat-name">Bagues</span>
           <span class="cat-soon">bientôt</span>
         </div>
         <div class="cat-card disabled">
-          <span class="cat-icon">◈</span>
           <span class="cat-name">Boucles d'oreilles</span>
           <span class="cat-soon">bientôt</span>
         </div>
         <div class="cat-card disabled">
-          <span class="cat-icon">○</span>
           <span class="cat-name">Colliers</span>
           <span class="cat-soon">bientôt</span>
         </div>
         <div class="cat-card disabled">
-          <span class="cat-icon">⌀</span>
           <span class="cat-name">Bracelets</span>
           <span class="cat-soon">bientôt</span>
         </div>
@@ -689,12 +382,7 @@
   <div id="screen-step1" class="screen">
     <button class="back-btn" onclick="show('screen-client')">← Retour</button>
     <div class="progress-wrap">
-      <div class="progress-steps">
-        <div class="step-dot active" id="dot1"></div>
-        <div class="step-dot" id="dot2"></div>
-        <div class="step-dot" id="dot3"></div>
-        <div class="step-dot" id="dot4"></div>
-      </div>
+      <div class="progress-steps"><div class="step-dot active"></div><div class="step-dot"></div><div class="step-dot"></div><div class="step-dot"></div></div>
       <div class="step-label">Étape 1 sur 4 — Style</div>
     </div>
     <div class="header">
@@ -702,24 +390,15 @@
       <h2 class="screen-title">Quel est son style ?</h2>
       <p class="screen-sub">Sélectionnez tous les mots qui lui correspondent.</p>
     </div>
-    <div class="scroll-content">
-      <div class="chip-grid" id="style-chips"></div>
-    </div>
-    <div class="footer">
-      <button class="btn-primary" onclick="goStep2()">Suivant →</button>
-    </div>
+    <div class="scroll-content"><div class="chip-grid" id="style-chips"></div></div>
+    <div class="footer"><button class="btn-primary" onclick="goStep2()">Suivant →</button></div>
   </div>
 
   <!-- STEP 2 — MODÈLES -->
   <div id="screen-step2" class="screen">
     <button class="back-btn" onclick="show('screen-step1')">← Retour</button>
     <div class="progress-wrap">
-      <div class="progress-steps">
-        <div class="step-dot done"></div>
-        <div class="step-dot active"></div>
-        <div class="step-dot"></div>
-        <div class="step-dot"></div>
-      </div>
+      <div class="progress-steps"><div class="step-dot done"></div><div class="step-dot active"></div><div class="step-dot"></div><div class="step-dot"></div></div>
       <div class="step-label">Étape 2 sur 4 — Modèles</div>
     </div>
     <div class="header">
@@ -731,21 +410,14 @@
       <div class="sel-count" id="model-sel-count">0 sélectionné(s)</div>
       <div class="model-grid" id="model-grid"></div>
     </div>
-    <div class="footer">
-      <button class="btn-primary" onclick="goSwipe()">Suivant →</button>
-    </div>
+    <div class="footer"><button class="btn-primary" onclick="goSwipe()">Suivant →</button></div>
   </div>
 
   <!-- STEP 3 — SWIPE -->
   <div id="screen-swipe" class="screen">
     <button class="back-btn" onclick="show('screen-step2')">← Retour</button>
     <div class="progress-wrap">
-      <div class="progress-steps">
-        <div class="step-dot done"></div>
-        <div class="step-dot done"></div>
-        <div class="step-dot active"></div>
-        <div class="step-dot"></div>
-      </div>
+      <div class="progress-steps"><div class="step-dot done"></div><div class="step-dot done"></div><div class="step-dot active"></div><div class="step-dot"></div></div>
       <div class="step-label" id="swipe-step-label">Étape 3 sur 4 — Swipe · 0 / 0</div>
     </div>
     <div class="swipe-area" id="swipe-area">
@@ -753,8 +425,7 @@
         <div class="swipe-img-wrap" id="swipe-img-wrap">
           <div class="swipe-placeholder">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.8">
-              <circle cx="24" cy="20" r="12"/>
-              <circle cx="24" cy="20" r="5"/>
+              <circle cx="24" cy="20" r="12"/><circle cx="24" cy="20" r="5"/>
               <path d="M12,20 Q8,36 12,42 L24,46 L36,42 Q40,36 36,20"/>
             </svg>
             <div class="swipe-id" id="swipe-img-id">FIA-001</div>
@@ -770,20 +441,13 @@
       <button class="action-btn like-btn" onclick="swipeAction(true)">♥</button>
     </div>
     <div class="swipe-hint">Glissez ou utilisez les boutons</div>
-    <div class="swipe-footer">
-      <button class="btn-gold" onclick="skipToProfile()">Voir mon profil →</button>
-    </div>
+    <div class="swipe-footer"><button class="btn-gold" onclick="skipToProfile()">Voir mon profil →</button></div>
   </div>
 
   <!-- STEP 4 — PROFILE -->
   <div id="screen-profile" class="screen">
     <div class="progress-wrap">
-      <div class="progress-steps">
-        <div class="step-dot done"></div>
-        <div class="step-dot done"></div>
-        <div class="step-dot done"></div>
-        <div class="step-dot active"></div>
-      </div>
+      <div class="progress-steps"><div class="step-dot done"></div><div class="step-dot done"></div><div class="step-dot done"></div><div class="step-dot active"></div></div>
       <div class="step-label">Étape 4 sur 4 — Profil goût</div>
     </div>
     <div class="scroll-content">
@@ -794,24 +458,14 @@
           <div class="profile-date" id="profile-date">—</div>
         </div>
       </div>
-
       <span class="section-label">Profil style</span>
       <div class="profile-tags" id="profile-style-tags"></div>
-
       <span class="section-label">Modèles préférés</span>
       <div class="profile-tags" id="profile-model-tags"></div>
-
       <div class="radar-grid">
-        <div class="radar-card">
-          <span class="radar-label">Style</span>
-          <canvas id="radar-style" width="160" height="140"></canvas>
-        </div>
-        <div class="radar-card">
-          <span class="radar-label">Modèles</span>
-          <canvas id="radar-models" width="160" height="140"></canvas>
-        </div>
+        <div class="radar-card"><span class="radar-label">Style</span><canvas id="radar-style" width="160" height="140"></canvas></div>
+        <div class="radar-card"><span class="radar-label">Modèles</span><canvas id="radar-models" width="200" height="200"></canvas></div>
       </div>
-
       <span class="section-label">Images likées</span>
       <div class="moodboard" id="moodboard"></div>
     </div>
@@ -832,40 +486,139 @@ const STYLES = [
   'Symmetrical','Asymmetrical','Graphic','Organic','Rounded','Edgy'
 ];
 
+const STYLE_TAG_MAPPING = {
+  'Minimalistic': [
+    'thin band','plain band','plain round band','solitaire',
+    'moderne épuré','minimaliste','épuré','bezel','serti clos',
+    'tension','east-west','simple'
+  ],
+  'Intricate': [
+    'pavé','pavé griffes','micro-pavé','filigrane','milgrain',
+    'vintage','retro','cluster','grappe','nature floral',
+    'floral prongs','leaf','feuilles','art déco','ornate'
+  ],
+  'Delicate': [
+    'thin band','fine','délicate','griffes 4','griffes 6',
+    'solitaire classique','cathédrale','romantique','feminine'
+  ],
+  'Volumous': [
+    'double halo','halo','statement','cluster','grappe',
+    'coussin','cushion','bold','volumineuse','bombée',
+    'cinq pierres','trois pierres'
+  ],
+  'Symmetrical': [
+    'solitaire classique','halo','trois pierres','cinq pierres',
+    'double halo','classique intemporel','classique','symétrique'
+  ],
+  'Asymmetrical': [
+    'toi et moi','bypass','by pass','asymétrique',
+    'solitaire asymétrique','organique asymétrique',
+    'east-west','wrap'
+  ],
+  'Graphic': [
+    'east-west','tension','serti tension','géométrique',
+    'bezel','serti clos','moderne','avant-garde',
+    'architectural','graphique'
+  ],
+  'Organic': [
+    'nature floral','nature - floral','floral prongs',
+    'leaf','feuilles','organique','botanique',
+    'nature organique','nature inspired','sculptural',
+    'bypass','asymétrique'
+  ],
+  'Rounded': [
+    'halo','coussin','cushion','rond brillant','ovale',
+    'double halo','hidden halo','halo caché','romantique',
+    'bombée','pavé band'
+  ],
+  'Edgy': [
+    'tension','serti tension','avant-garde','sculptural moderne',
+    'brutaliste','géométrique','east-west','bypass',
+    'architectural','moderne épuré'
+  ]
+};
+
 const MODELS = [
-  { id: 'FIA-LA-01', name: 'Solitaire classique',           img: 'images/line-art/Solitaire Classique.png' },
-  { id: 'FIA-LA-02', name: 'Solitaire cathédrale',          img: 'images/line-art/Solitaire Cathédrale.png' },
-  { id: 'FIA-LA-03', name: 'Halo',                          img: 'images/line-art/Halo.jpeg' },
-  { id: 'FIA-LA-04', name: 'Double halo',                   img: 'images/line-art/Double Halo.jpeg' },
-  { id: 'FIA-LA-05', name: 'Trois pierres',                 img: 'images/line-art/Trois Pierres.jpeg' },
-  { id: 'FIA-LA-06', name: 'Cinq pierres',                  img: 'images/line-art/Cinq Pierres.jpeg' },
-  { id: 'FIA-LA-07', name: 'Toi et Moi',                   img: 'images/line-art/Toi et Moi.jpeg' },
-  { id: 'FIA-LA-08', name: 'Pavé band',                     img: 'images/line-art/Anneau serti.jpeg' },
-  { id: 'FIA-LA-09', name: 'Hidden halo',                   img: 'images/line-art/Halo Caché.jpeg' },
-  { id: 'FIA-LA-10', name: 'Split shank',                   img: 'images/line-art/Split Shank.jpeg' },
-  { id: 'FIA-LA-11', name: 'Bypass',                        img: 'images/line-art/By Pass.jpeg' },
-  { id: 'FIA-LA-12', name: 'Tension',                       img: 'images/line-art/Serti tension.jpeg' },
-  { id: 'FIA-LA-13', name: 'Bezel / Clos',                  img: 'images/line-art/Serti Clos.jpeg' },
-  { id: 'FIA-LA-14', name: 'East-West',                     img: 'images/line-art/East-West.png' },
-  { id: 'FIA-LA-15', name: 'Cluster',                       img: 'images/line-art/Grappe.jpeg' },
-  { id: 'FIA-LA-16', name: 'Vintage filigrane',             img: 'images/line-art/Retro Filigrain.jpeg' },
-  { id: 'FIA-LA-17', name: 'Nature / Floral',               img: 'images/line-art/Nature - Floral.jpeg' },
-  { id: 'FIA-LA-18', name: 'Sculptural moderne',            img: 'images/line-art/Sculpturale moderne.jpeg' },
-  { id: 'FIA-LA-19', name: 'Solitaire organique asymétrique', img: 'images/line-art/Solitaire assymetrique.jpeg' },
-  { id: 'FIA-LA-20', name: 'Organique fin structuré',       img: 'images/line-art/Bohème.png' },
+  { id:'FIA-LA-01', name:'Solitaire classique',              img:'images/line-art/Solitaire Classique.png' },
+  { id:'FIA-LA-02', name:'Solitaire cathédrale',             img:'images/line-art/Solitaire Cathédrale.png' },
+  { id:'FIA-LA-03', name:'Halo',                             img:'images/line-art/Halo.jpeg' },
+  { id:'FIA-LA-04', name:'Double halo',                      img:'images/line-art/Double Halo.jpeg' },
+  { id:'FIA-LA-05', name:'Trois pierres',                    img:'images/line-art/Trois Pierres.jpeg' },
+  { id:'FIA-LA-06', name:'Cinq pierres',                     img:'images/line-art/Cinq Pierres.jpeg' },
+  { id:'FIA-LA-07', name:'Toi et Moi',                       img:'images/line-art/Toi et Moi.jpeg' },
+  { id:'FIA-LA-08', name:'Pavé band',                        img:'images/line-art/Anneau serti.jpeg' },
+  { id:'FIA-LA-09', name:'Hidden halo',                      img:'images/line-art/Halo Caché.jpeg' },
+  { id:'FIA-LA-10', name:'Split shank',                      img:'images/line-art/Split Shank.jpeg' },
+  { id:'FIA-LA-11', name:'Bypass',                           img:'images/line-art/By Pass.jpeg' },
+  { id:'FIA-LA-12', name:'Tension',                          img:'images/line-art/Serti tension.jpeg' },
+  { id:'FIA-LA-13', name:'Bezel / Clos',                     img:'images/line-art/Serti Clos.jpeg' },
+  { id:'FIA-LA-14', name:'East-West',                        img:'images/line-art/East-West.png' },
+  { id:'FIA-LA-15', name:'Cluster',                          img:'images/line-art/Grappe.jpeg' },
+  { id:'FIA-LA-16', name:'Vintage filigrane',                img:'images/line-art/Retro Filigrain.jpeg' },
+  { id:'FIA-LA-17', name:'Nature / Floral',                  img:'images/line-art/Nature - Floral.jpeg' },
+  { id:'FIA-LA-18', name:'Sculptural moderne',               img:'images/line-art/Sculpturale moderne.jpeg' },
+  { id:'FIA-LA-19', name:'Solitaire organique asymétrique',  img:'images/line-art/Solitaire assymetrique.jpeg' },
+  { id:'FIA-LA-20', name:'Organique fin structuré',          img:'images/line-art/Bohème.png' },
 ];
 
 // ============================================================
 // STATE
 // ============================================================
 let state = {
-  clientPrenom: '', clientNom: '',
-  selectedStyles: [], selectedModels: [],
-  swipeQueue: [], swipeLiked: [], swipeCurrent: 0,
-  styleCounts: {}, modelCounts: {},
-  tagScores: {},
-  touchStartX: 0, touchStartY: 0, isDragging: false, currentDragX: 0
+  clientPrenom:'', clientNom:'',
+  selectedStyles:[], selectedModels:[],
+  swipeQueue:[], swipeLiked:[], swipeCurrent:0,
+  styleCounts:{}, modelCounts:{}, tagScores:{},
+  seenIds: new Set()
 };
+
+// ============================================================
+// HELPERS
+// ============================================================
+function parseTagValue(tag) {
+  const idx = tag.indexOf(':');
+  return idx >= 0 ? tag.substring(idx + 1).trim().toLowerCase() : tag.toLowerCase();
+}
+
+function parseTagKey(tag) {
+  const idx = tag.indexOf(':');
+  return idx >= 0 ? tag.substring(0, idx).trim().toLowerCase() : '';
+}
+
+// Compute style scores for an image based on STYLE_TAG_MAPPING
+function computeStyleScores(img) {
+  const scores = {};
+  const tagValues = img.tags.map(parseTagValue);
+  STYLES.forEach(style => {
+    const keywords = STYLE_TAG_MAPPING[style] || [];
+    let score = 0;
+    tagValues.forEach(val => {
+      keywords.forEach(kw => {
+        if (val.includes(kw) || kw.includes(val)) score++;
+      });
+    });
+    if (score > 0) scores[style] = score;
+  });
+  return scores;
+}
+
+// Compute model scores for an image based on famille: tag
+function computeModelScores(img) {
+  const scores = {};
+  img.tags.forEach(tag => {
+    const key = parseTagKey(tag);
+    const val = parseTagValue(tag);
+    if (key === 'famille') {
+      MODELS.forEach(m => {
+        const modelWords = m.name.toLowerCase().split(/[\s\/]+/);
+        if (modelWords.some(w => w.length > 2 && val.includes(w)) || val.includes(m.name.toLowerCase())) {
+          scores[m.name] = (scores[m.name] || 0) + 1;
+        }
+      });
+    }
+  });
+  return scores;
+}
 
 // ============================================================
 // NAVIGATION
@@ -873,12 +626,9 @@ let state = {
 function show(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  window.scrollTo(0, 0);
 }
 
-function startCategory(cat) {
-  if (cat === 'bdf') show('screen-client');
-}
+function startCategory(cat) { if (cat === 'bdf') show('screen-client'); }
 
 function goStep1() {
   state.clientPrenom = document.getElementById('client-prenom').value.trim() || 'Cliente';
@@ -896,15 +646,21 @@ function goStep2() {
 function goSwipe() {
   state.selectedModels = [...document.querySelectorAll('#model-grid .model-card.selected .model-name')].map(e => e.textContent);
 
-  // Initialise les compteurs
+  // Init counters from filter selections (step 1 + step 2)
   STYLES.forEach(s => state.styleCounts[s] = state.selectedStyles.includes(s) ? 2 : 0);
   MODELS.forEach(m => state.modelCounts[m.name] = state.selectedModels.includes(m.name) ? 2 : 0);
   state.tagScores = {};
+  state.seenIds = new Set();
 
-  // Charge les images — filtre selon les choix des étapes 1 et 2
   loadImages().then(allImages => {
-    const filtered = filterImages(allImages);
-    state.swipeQueue = filtered;
+    // Point 7 — Deduplicate images
+    const unique = [];
+    const ids = new Set();
+    allImages.forEach(img => {
+      if (!ids.has(img.id)) { ids.add(img.id); unique.push(img); }
+    });
+
+    state.swipeQueue = filterAndSort(unique);
     state.swipeLiked = [];
     state.swipeCurrent = 0;
     renderSwipeCard();
@@ -913,18 +669,8 @@ function goSwipe() {
 }
 
 // ============================================================
-// IMAGE LOADING & FILTERING (points 4, 5, 7)
+// IMAGE LOADING, FILTERING, ADAPTIVE SORTING
 // ============================================================
-function parseTagValue(tag) {
-  const idx = tag.indexOf(':');
-  return idx >= 0 ? tag.substring(idx + 1).trim().toLowerCase() : tag.toLowerCase();
-}
-
-function parseTagKey(tag) {
-  const idx = tag.indexOf(':');
-  return idx >= 0 ? tag.substring(0, idx).trim().toLowerCase() : '';
-}
-
 async function loadImages() {
   try {
     const resp = await fetch('data/images.json');
@@ -935,109 +681,92 @@ async function loadImages() {
       img:  'images/fia/' + (item.FileName || item.id),
       tags: [].concat(item.Keywords || item.Subject || item.tags || [])
     }));
-  } catch {
-    return [];
-  }
+  } catch { return []; }
 }
 
-function filterImages(allImages) {
+function filterAndSort(allImages) {
   const selStyles = state.selectedStyles.map(s => s.toLowerCase());
   const selModels = state.selectedModels.map(m => m.toLowerCase());
 
-  // Score each image by how well it matches selections
   const scored = allImages.map(img => {
     let score = 0;
     const tagValues = img.tags.map(parseTagValue);
-    const tagKeys   = img.tags.map(parseTagKey);
 
-    // Match model families (via "famille:" tag)
-    img.tags.forEach((tag, i) => {
-      if (tagKeys[i] === 'famille') {
-        const val = tagValues[i];
+    // Match via STYLE_TAG_MAPPING
+    selStyles.forEach(style => {
+      const keywords = STYLE_TAG_MAPPING[style.charAt(0).toUpperCase() + style.slice(1)] || [];
+      tagValues.forEach(val => {
+        keywords.forEach(kw => { if (val.includes(kw) || kw.includes(val)) score += 5; });
+      });
+    });
+
+    // Match model families
+    img.tags.forEach(tag => {
+      if (parseTagKey(tag) === 'famille') {
+        const val = parseTagValue(tag);
         selModels.forEach(m => {
-          // Fuzzy match: check if model name words appear in the tag value
           const words = m.split(/[\s\/]+/);
           if (words.some(w => w.length > 2 && val.includes(w))) score += 10;
         });
       }
-      // Match styles (via "style:" or "silhouette:" tags)
-      if (tagKeys[i] === 'style' || tagKeys[i] === 'silhouette') {
-        const val = tagValues[i];
-        selStyles.forEach(s => {
-          if (val.includes(s)) score += 10;
-        });
-      }
-      // General keyword matching
-      const val = tagValues[i];
-      selStyles.forEach(s => { if (val.includes(s)) score += 3; });
-      selModels.forEach(m => {
-        const words = m.split(/[\s\/]+/);
-        if (words.some(w => w.length > 2 && val.includes(w))) score += 3;
-      });
     });
+
+    // Adaptive boost from previous likes
+    tagValues.forEach(val => { score += (state.tagScores[val] || 0) * 2; });
 
     return { ...img, _score: score };
   });
 
-  // If we have selections, put matching images first then the rest
   if (selStyles.length > 0 || selModels.length > 0) {
-    const matching = scored.filter(img => img._score > 0);
-    const rest     = scored.filter(img => img._score === 0);
-    // Shuffle matching by score (higher first) with some randomness
+    const matching = scored.filter(i => i._score > 0);
+    const rest     = scored.filter(i => i._score === 0);
     matching.sort((a, b) => b._score - a._score + (Math.random() - 0.5) * 4);
-    // Shuffle the rest randomly
     rest.sort(() => Math.random() - 0.5);
     return [...matching, ...rest];
   }
-
-  // No filters: random shuffle
   return scored.sort(() => Math.random() - 0.5);
 }
 
-// Point 7 — Adaptive re-sorting: boost images similar to liked ones
+// Point 9 — Adaptive re-sort after each like
 function adaptiveResort() {
   const remaining = state.swipeQueue.slice(state.swipeCurrent);
   if (remaining.length < 2) return;
-
   remaining.forEach(img => {
     let boost = 0;
-    img.tags.forEach(tag => {
-      const val = parseTagValue(tag);
-      boost += (state.tagScores[val] || 0);
+    img.tags.forEach(tag => { boost += (state.tagScores[parseTagValue(tag)] || 0); });
+    // Also boost by style mapping match
+    STYLES.forEach(style => {
+      if ((state.styleCounts[style] || 0) > 0) {
+        const kws = STYLE_TAG_MAPPING[style] || [];
+        img.tags.forEach(tag => {
+          const val = parseTagValue(tag);
+          kws.forEach(kw => { if (val.includes(kw)) boost += state.styleCounts[style]; });
+        });
+      }
     });
     img._boost = boost;
   });
-
-  // Sort by boost with randomness to keep variety
   remaining.sort((a, b) => (b._boost || 0) - (a._boost || 0) + (Math.random() - 0.5) * 3);
-
-  // Write back
   for (let i = 0; i < remaining.length; i++) {
     state.swipeQueue[state.swipeCurrent + i] = remaining[i];
   }
 }
 
 // ============================================================
-// STEP 1 — STYLE CHIPS
+// CHIPS & GRID
 // ============================================================
 function buildStyleChips() {
-  const c = document.getElementById('style-chips');
-  c.innerHTML = '';
+  const c = document.getElementById('style-chips'); c.innerHTML = '';
   STYLES.forEach(s => {
     const el = document.createElement('div');
-    el.className = 'chip';
-    el.textContent = s;
+    el.className = 'chip'; el.textContent = s;
     el.onclick = () => el.classList.toggle('selected');
     c.appendChild(el);
   });
 }
 
-// ============================================================
-// STEP 2 — MODEL GRID
-// ============================================================
 function buildModelGrid() {
-  const g = document.getElementById('model-grid');
-  g.innerHTML = '';
+  const g = document.getElementById('model-grid'); g.innerHTML = '';
   MODELS.forEach(m => {
     const card = document.createElement('div');
     card.className = 'model-card';
@@ -1045,27 +774,25 @@ function buildModelGrid() {
       <div class="model-img">
         <img src="${m.img}" alt="${m.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
         <svg class="placeholder-ring" style="display:none" width="60" height="60" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="0.8">
-          <circle cx="30" cy="22" r="14"/><circle cx="30" cy="22" r="6"/>
-          <path d="M16,22 L14,50 L30,56 L46,50 L44,22"/>
+          <circle cx="30" cy="22" r="14"/><circle cx="30" cy="22" r="6"/><path d="M16,22 L14,50 L30,56 L46,50 L44,22"/>
         </svg>
       </div>
       <div class="model-name">${m.name}</div>`;
     card.onclick = () => {
       card.classList.toggle('selected');
-      const count = document.querySelectorAll('#model-grid .model-card.selected').length;
-      document.getElementById('model-sel-count').textContent = count + ' sélectionné(s)';
+      document.getElementById('model-sel-count').textContent =
+        document.querySelectorAll('#model-grid .model-card.selected').length + ' sélectionné(s)';
     };
     g.appendChild(card);
   });
 }
 
 // ============================================================
-// STEP 3 — SWIPE
+// SWIPE
 // ============================================================
 function renderSwipeCard() {
-  const total   = state.swipeQueue.length;
+  const total = state.swipeQueue.length;
   const current = state.swipeCurrent;
-
   if (current >= total) { showProfile(); return; }
 
   const img = state.swipeQueue[current];
@@ -1073,40 +800,22 @@ function renderSwipeCard() {
     `Étape 3 sur 4 — Swipe · ${current + 1} / ${total}`;
 
   const wrap = document.getElementById('swipe-img-wrap');
-
-  // Image
   if (img.img) {
     const safeId = (img.id || '').replace(/'/g, '');
-    wrap.innerHTML = `
-      <img src="${img.img}" alt="${img.id}" style="width:100%;height:100%;object-fit:cover"
-           onerror="this.outerHTML='<div class=swipe-placeholder><div class=swipe-id>${safeId}</div></div>'"/>`;
+    wrap.innerHTML = `<img src="${img.img}" alt="${img.id}" style="width:100%;height:100%;object-fit:cover"
+      onerror="this.outerHTML='<div class=swipe-placeholder><div class=swipe-id>${safeId}</div></div>'"/>`;
   } else {
-    wrap.innerHTML = `<div class="swipe-placeholder">
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.8">
-        <circle cx="24" cy="18" r="11"/><circle cx="24" cy="18" r="5"/>
-        <path d="M13,18 L11,42 L24,47 L37,42 L35,18"/>
-      </svg>
-      <div class="swipe-id">${img.id}</div></div>`;
+    wrap.innerHTML = `<div class="swipe-placeholder"><div class="swipe-id">${img.id}</div></div>`;
   }
 
-  // Tags — show cleaned values (strip key prefix)
   const tagsEl = document.getElementById('swipe-card-tags');
-  const displayTags = img.tags
-    .filter(t => !t.startsWith('categorie:'))
-    .map(parseTagValue)
-    .slice(0, 6);
-  tagsEl.innerHTML = displayTags.map(t =>
-    `<span class="swipe-tag">${t}</span>`).join('');
+  tagsEl.innerHTML = img.tags.filter(t => !t.startsWith('categorie:')).map(parseTagValue).slice(0, 6)
+    .map(t => `<span class="swipe-tag">${t}</span>`).join('');
 
-  // Reset overlays
   document.getElementById('overlay-like').style.opacity = '0';
   document.getElementById('overlay-pass').style.opacity = '0';
-
-  // Reset card position
   const card = document.getElementById('swipe-card');
-  card.style.transform = '';
-  card.style.opacity   = '1';
-
+  card.style.transform = ''; card.style.opacity = '1';
   setupSwipeTouch(card);
 }
 
@@ -1116,66 +825,48 @@ function swipeAction(liked) {
 
   if (liked) {
     state.swipeLiked.push(img);
-    // Update tag scores for adaptive algorithm
+    // Update tag scores for adaptive algo
     img.tags.forEach(tag => {
       const val = parseTagValue(tag);
       state.tagScores[val] = (state.tagScores[val] || 0) + 1;
-
-      const t = tag.toLowerCase();
-      STYLES.forEach(s => {
-        if (t.includes(s.toLowerCase())) state.styleCounts[s] = (state.styleCounts[s] || 0) + 3;
-      });
-      MODELS.forEach(m => {
-        const words = m.name.toLowerCase().split(/[\s\/]+/);
-        if (words.some(w => w.length > 2 && t.includes(w))) {
-          state.modelCounts[m.name] = (state.modelCounts[m.name] || 0) + 3;
-        }
-      });
+    });
+    // Update style counts via mapping
+    const sScores = computeStyleScores(img);
+    Object.entries(sScores).forEach(([style, score]) => {
+      state.styleCounts[style] = (state.styleCounts[style] || 0) + score * 2;
+    });
+    // Update model counts via famille
+    const mScores = computeModelScores(img);
+    Object.entries(mScores).forEach(([model, score]) => {
+      state.modelCounts[model] = (state.modelCounts[model] || 0) + score * 3;
     });
   }
 
   const card = document.getElementById('swipe-card');
   card.classList.remove('dragging');
-  card.style.transform = liked
-    ? 'translateX(120%) rotate(15deg)'
-    : 'translateX(-120%) rotate(-15deg)';
+  card.style.transform = liked ? 'translateX(120%) rotate(15deg)' : 'translateX(-120%) rotate(-15deg)';
   card.style.opacity = '0';
 
   setTimeout(() => {
     state.swipeCurrent++;
-    // Point 7 — Adaptive: re-sort remaining queue after each swipe
-    if (liked && Object.keys(state.tagScores).length > 0) {
-      adaptiveResort();
-    }
+    if (liked) adaptiveResort();
     renderSwipeCard();
   }, 320);
 }
 
-function skipToProfile() {
-  showProfile();
-}
+function skipToProfile() { showProfile(); }
 
 function setupSwipeTouch(card) {
   let startX = 0, startY = 0, isDragging = false, locked = false;
 
-  function onStart(x, y) {
-    startX = x; startY = y;
-    isDragging = false; locked = false;
-    card.classList.add('dragging');
-  }
+  function onStart(x, y) { startX = x; startY = y; isDragging = false; locked = false; card.classList.add('dragging'); }
 
   function onMove(x, y, e) {
-    const dx = x - startX;
-    const dy = y - startY;
-    // Lock direction on first significant movement
-    if (!locked && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) {
-      locked = true;
-      isDragging = Math.abs(dx) >= Math.abs(dy);
-    }
+    const dx = x - startX, dy = y - startY;
+    if (!locked && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) { locked = true; isDragging = Math.abs(dx) >= Math.abs(dy); }
     if (!isDragging) return;
     if (e && e.cancelable) e.preventDefault();
-    const rotation = dx * 0.1;
-    card.style.transform = `translateX(${dx}px) rotate(${rotation}deg)`;
+    card.style.transform = `translateX(${dx}px) rotate(${dx * 0.1}deg)`;
     const likeEl = document.getElementById('overlay-like');
     const passEl = document.getElementById('overlay-pass');
     if (dx > 20) { likeEl.style.opacity = Math.min((dx - 20) / 60, 1); passEl.style.opacity = 0; }
@@ -1189,19 +880,13 @@ function setupSwipeTouch(card) {
     const dx = x - startX;
     if (dx > 50) swipeAction(true);
     else if (dx < -50) swipeAction(false);
-    else {
-      card.style.transform = '';
-      document.getElementById('overlay-like').style.opacity = 0;
-      document.getElementById('overlay-pass').style.opacity = 0;
-    }
+    else { card.style.transform = ''; document.getElementById('overlay-like').style.opacity = 0; document.getElementById('overlay-pass').style.opacity = 0; }
   }
 
-  // Touch events (iPhone / iPad)
   card.ontouchstart = e => onStart(e.touches[0].clientX, e.touches[0].clientY);
   card.ontouchmove  = e => onMove(e.touches[0].clientX, e.touches[0].clientY, e);
   card.ontouchend   = e => onEnd(e.changedTouches[0].clientX);
 
-  // Mouse events (desktop)
   let mouseDown = false;
   card.onmousedown = e => { mouseDown = true; onStart(e.clientX, e.clientY); e.preventDefault(); };
   document.onmousemove = e => { if (mouseDown) onMove(e.clientX, e.clientY, e); };
@@ -1209,36 +894,38 @@ function setupSwipeTouch(card) {
 }
 
 // ============================================================
-// STEP 4 — PROFILE
+// PROFILE
 // ============================================================
 function showProfile() {
-  const prenom = state.clientPrenom;
-  const nom    = state.clientNom;
-  document.getElementById('profile-name').textContent   = prenom + (nom ? ' ' + nom : '');
+  const prenom = state.clientPrenom, nom = state.clientNom;
+  document.getElementById('profile-name').textContent = prenom + (nom ? ' ' + nom : '');
   document.getElementById('profile-avatar').textContent = (prenom[0] || '?') + (nom ? nom[0] : '');
-  document.getElementById('profile-date').textContent   =
+  document.getElementById('profile-date').textContent =
     new Date().toLocaleDateString('fr-FR', { day:'numeric', month:'long', year:'numeric' });
 
-  // Top styles
-  const topStyles = Object.entries(state.styleCounts)
-    .filter(([,v]) => v > 0).sort((a,b) => b[1]-a[1]).slice(0, 5).map(([k]) => k);
-  document.getElementById('profile-style-tags').innerHTML =
-    topStyles.map(s => `<span class="profile-tag">${s}</span>`).join('');
+  const topStyles = Object.entries(state.styleCounts).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k])=>k);
+  document.getElementById('profile-style-tags').innerHTML = topStyles.map(s=>`<span class="profile-tag">${s}</span>`).join('');
 
-  // Top models
-  const topModels = Object.entries(state.modelCounts)
-    .filter(([,v]) => v > 0).sort((a,b) => b[1]-a[1]).slice(0, 5).map(([k]) => k);
-  document.getElementById('profile-model-tags').innerHTML =
-    topModels.map(m => `<span class="profile-tag">${m}</span>`).join('');
+  const topModels = Object.entries(state.modelCounts).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k])=>k);
+  document.getElementById('profile-model-tags').innerHTML = topModels.map(m=>`<span class="profile-tag">${m}</span>`).join('');
 
   // Radars
-  drawRadar('radar-style',  STYLES,                STYLES.map(s => state.styleCounts[s] || 0));
-  drawRadar('radar-models', MODELS.map(m => m.name), MODELS.map(m => state.modelCounts[m.name] || 0));
+  drawRadar('radar-style', STYLES, STYLES.map(s => state.styleCounts[s] || 0), 80, 72, 50);
 
-  // Moodboard
-  const mb   = document.getElementById('moodboard');
-  const shown = state.swipeLiked.length ? state.swipeLiked : state.swipeQueue.slice(0, 6);
-  mb.innerHTML = shown.slice(0, 9).map(img => `
+  // Top 10 models for radar to avoid label overlap
+  const modelEntries = MODELS.map(m => ({ name: m.name, score: state.modelCounts[m.name] || 0 }));
+  modelEntries.sort((a, b) => b.score - a.score);
+  const top10 = modelEntries.filter(m => m.score > 0).slice(0, 10);
+  if (top10.length < 3) {
+    // Show at least selected models
+    modelEntries.slice(0, 8).forEach(m => { if (!top10.find(t => t.name === m.name)) top10.push(m); });
+  }
+  drawRadar('radar-models', top10.map(m => m.name), top10.map(m => m.score), 100, 100, 70);
+
+  // Moodboard — show up to 20 liked images
+  const mb = document.getElementById('moodboard');
+  const shown = state.swipeLiked.length ? state.swipeLiked : state.swipeQueue.slice(0, 8);
+  mb.innerHTML = shown.slice(0, 20).map(img => `
     <div class="moodboard-item">
       ${img.img
         ? `<img src="${img.img}" alt="${img.id}" onerror="this.outerHTML='<div class=mb-id>${img.id}</div>'">`
@@ -1251,249 +938,173 @@ function showProfile() {
 // ============================================================
 // RADAR
 // ============================================================
-function drawRadar(canvasId, labels, values) {
+function drawRadar(canvasId, labels, values, cx, cy, r) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
-  const cx = 80, cy = 72, r = 50;
-  const n   = labels.length;
+  const n = labels.length;
+  if (n < 2) return;
   const max = Math.max(...values, 1);
+  const w = canvas.width, h = canvas.height;
+  ctx.clearRect(0, 0, w, h);
 
-  ctx.clearRect(0, 0, 160, 140);
-
-  // Grille
   for (let ring = 1; ring <= 3; ring++) {
     ctx.beginPath();
     for (let i = 0; i < n; i++) {
       const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
-      const rr    = r * (ring / 3);
-      i === 0
-        ? ctx.moveTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle))
-        : ctx.lineTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle));
+      const rr = r * (ring / 3);
+      i === 0 ? ctx.moveTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle))
+              : ctx.lineTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle));
     }
-    ctx.closePath();
-    ctx.strokeStyle = 'rgba(0,0,0,0.07)';
-    ctx.lineWidth   = 0.5;
-    ctx.stroke();
+    ctx.closePath(); ctx.strokeStyle = 'rgba(0,0,0,0.07)'; ctx.lineWidth = 0.5; ctx.stroke();
   }
 
-  // Axes + labels
   for (let i = 0; i < n; i++) {
     const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
-    ctx.beginPath();
-    ctx.moveTo(cx, cy);
+    ctx.beginPath(); ctx.moveTo(cx, cy);
     ctx.lineTo(cx + r * Math.cos(angle), cy + r * Math.sin(angle));
-    ctx.strokeStyle = 'rgba(0,0,0,0.07)';
-    ctx.lineWidth   = 0.5;
-    ctx.stroke();
-    ctx.font        = "7px 'Avenir Next', sans-serif";
-    ctx.fillStyle   = '#8A8580';
-    ctx.textAlign   = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(labels[i].substring(0, 9), cx + (r + 14) * Math.cos(angle), cy + (r + 14) * Math.sin(angle));
+    ctx.strokeStyle = 'rgba(0,0,0,0.07)'; ctx.lineWidth = 0.5; ctx.stroke();
+    ctx.font = "7px 'Avenir Next', sans-serif"; ctx.fillStyle = '#8A8580';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    const lr = r + 14;
+    ctx.fillText(labels[i].substring(0, 12), cx + lr * Math.cos(angle), cy + lr * Math.sin(angle));
   }
 
-  // Forme
   ctx.beginPath();
   values.forEach((v, i) => {
     const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
-    const rr    = r * (v / max);
-    i === 0
-      ? ctx.moveTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle))
-      : ctx.lineTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle));
+    const rr = r * (v / max);
+    i === 0 ? ctx.moveTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle))
+            : ctx.lineTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle));
   });
   ctx.closePath();
-  ctx.fillStyle   = 'rgba(196,162,101,0.15)';
-  ctx.fill();
-  ctx.strokeStyle = '#C4A265';
-  ctx.lineWidth   = 1.5;
-  ctx.stroke();
+  ctx.fillStyle = 'rgba(196,162,101,0.15)'; ctx.fill();
+  ctx.strokeStyle = '#C4A265'; ctx.lineWidth = 1.5; ctx.stroke();
 }
 
 // ============================================================
-// EXPORT — PDF visuel via html2canvas + jsPDF
+// EXPORT — PDF
 // ============================================================
 async function exportProfile() {
   const btn = document.querySelector('#screen-profile .btn-primary');
-  const origText = btn.textContent;
-  btn.textContent = 'Génération du PDF...';
-  btn.disabled = true;
+  btn.textContent = 'Génération du PDF...'; btn.disabled = true;
 
   try {
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF('p', 'mm', 'a4');
-    const pw = 210, ph = 297;
-    const mx = 20; // margin x
-    let y = 20;
+    const pw = 210, ph = 297, mx = 20;
+    let y = 0;
 
-    // --- Logo header (black bar) ---
-    pdf.setFillColor(26, 26, 26);
-    pdf.rect(0, 0, pw, 36, 'F');
+    // Header — beige bar with logo
+    pdf.setFillColor(236, 230, 223);
+    pdf.rect(0, 0, pw, 30, 'F');
     try {
       const logoImg = document.querySelector('.logo-block img');
-      if (logoImg) {
+      if (logoImg && logoImg.complete) {
         const c = document.createElement('canvas');
-        const ctx = c.getContext('2d');
         c.width = logoImg.naturalWidth; c.height = logoImg.naturalHeight;
-        // Draw white version: fill white, use logo as mask via globalCompositeOperation
-        ctx.fillStyle = '#FFFFFF';
-        ctx.fillRect(0, 0, c.width, c.height);
-        ctx.globalCompositeOperation = 'destination-in';
-        ctx.drawImage(logoImg, 0, 0);
-        const logoData = c.toDataURL('image/png');
-        pdf.addImage(logoData, 'PNG', pw/2 - 30, 6, 60, 20);
+        c.getContext('2d').drawImage(logoImg, 0, 0);
+        pdf.addImage(c.toDataURL('image/png'), 'PNG', pw/2 - 28, 5, 56, 18.7);
       }
     } catch(e) {
-      pdf.setTextColor(255, 255, 255);
-      pdf.setFontSize(16);
-      pdf.text('ORIGINE PARIS', pw/2, 20, { align: 'center' });
+      pdf.setTextColor(26, 26, 26); pdf.setFontSize(14);
+      pdf.text('ORIGINE PARIS', pw/2, 18, { align: 'center' });
     }
-    y = 44;
+    y = 32;
 
-    // --- Gold accent line ---
-    pdf.setDrawColor(196, 162, 101);
-    pdf.setLineWidth(0.5);
+    // Gold line
+    pdf.setDrawColor(196, 162, 101); pdf.setLineWidth(0.4);
     pdf.line(mx, y, pw - mx, y);
-    y += 8;
+    y += 5;
 
-    // --- Client name + date ---
+    // Client
     const name = state.clientPrenom + (state.clientNom ? ' ' + state.clientNom : '');
-    const date = new Date().toLocaleDateString('fr-FR', { day:'numeric', month:'long', year:'numeric' });
-    pdf.setTextColor(26, 26, 26);
-    pdf.setFontSize(22);
+    pdf.setTextColor(26, 26, 26); pdf.setFontSize(18);
     pdf.text(name, mx, y + 2);
-    pdf.setFontSize(9);
-    pdf.setTextColor(138, 133, 128);
-    pdf.text('Profil goût · ' + date, mx, y + 10);
-    y += 20;
+    pdf.setFontSize(8); pdf.setTextColor(138, 133, 128);
+    pdf.text('Profil goût · ' + new Date().toLocaleDateString('fr-FR', { day:'numeric', month:'long', year:'numeric' }), mx, y + 8);
+    y += 13;
 
-    // --- Style tags ---
-    pdf.setFontSize(8);
-    pdf.setTextColor(138, 133, 128);
-    pdf.text('PROFIL STYLE', mx, y);
-    y += 5;
-    const topStyles = Object.entries(state.styleCounts)
-      .filter(([,v]) => v > 0).sort((a,b) => b[1]-a[1]).slice(0, 5).map(([k]) => k);
-    pdf.setFontSize(10);
-    pdf.setTextColor(196, 162, 101);
-    pdf.text(topStyles.join('  ·  ') || '—', mx, y);
-    y += 10;
+    // Style tags
+    pdf.setFontSize(7); pdf.setTextColor(138, 133, 128);
+    pdf.text('PROFIL STYLE', mx, y); y += 4;
+    const topStyles = Object.entries(state.styleCounts).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k])=>k);
+    pdf.setFontSize(9); pdf.setTextColor(196, 162, 101);
+    pdf.text(topStyles.join('  ·  ') || '—', mx, y); y += 6;
 
-    // --- Model tags ---
-    pdf.setFontSize(8);
-    pdf.setTextColor(138, 133, 128);
-    pdf.text('MODÈLES PRÉFÉRÉS', mx, y);
-    y += 5;
-    const topModels = Object.entries(state.modelCounts)
-      .filter(([,v]) => v > 0).sort((a,b) => b[1]-a[1]).slice(0, 5).map(([k]) => k);
-    pdf.setFontSize(10);
-    pdf.setTextColor(196, 162, 101);
-    pdf.text(topModels.join('  ·  ') || '—', mx, y);
-    y += 12;
+    // Model tags
+    pdf.setFontSize(7); pdf.setTextColor(138, 133, 128);
+    pdf.text('MODÈLES PRÉFÉRÉS', mx, y); y += 4;
+    const topModels = Object.entries(state.modelCounts).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k])=>k);
+    pdf.setFontSize(9); pdf.setTextColor(196, 162, 101);
+    pdf.text(topModels.join('  ·  ') || '—', mx, y); y += 8;
 
-    // --- Radar charts ---
-    pdf.setFontSize(8);
-    pdf.setTextColor(138, 133, 128);
-    pdf.text('STYLE', mx, y);
-    pdf.text('MODÈLES', pw/2 + 5, y);
-    y += 3;
+    // Radars
+    pdf.setFontSize(7); pdf.setTextColor(138, 133, 128);
+    pdf.text('STYLE', mx, y); pdf.text('MODÈLES', pw/2 + 5, y); y += 2;
+    const rs = document.getElementById('radar-style');
+    const rm = document.getElementById('radar-models');
+    if (rs) pdf.addImage(rs.toDataURL('image/png'), 'PNG', mx - 2, y, 52, 46);
+    if (rm) pdf.addImage(rm.toDataURL('image/png'), 'PNG', pw/2 + 3, y, 65, 65);
+    y += 68;
 
-    const radarStyle  = document.getElementById('radar-style');
-    const radarModels = document.getElementById('radar-models');
-    if (radarStyle) {
-      pdf.addImage(radarStyle.toDataURL('image/png'), 'PNG', mx - 2, y, 52, 46);
-    }
-    if (radarModels) {
-      pdf.addImage(radarModels.toDataURL('image/png'), 'PNG', pw/2 + 3, y, 52, 46);
-    }
-    y += 52;
+    // Gold line
+    pdf.setDrawColor(196, 162, 101); pdf.setLineWidth(0.3);
+    pdf.line(mx, y, pw - mx, y); y += 5;
 
-    // --- Gold line ---
-    pdf.setDrawColor(196, 162, 101);
-    pdf.setLineWidth(0.3);
-    pdf.line(mx, y, pw - mx, y);
-    y += 8;
+    // Moodboard
+    pdf.setFontSize(7); pdf.setTextColor(138, 133, 128);
+    pdf.text('IMAGES LIKÉES (' + state.swipeLiked.length + ')', mx, y); y += 4;
 
-    // --- Moodboard ---
-    pdf.setFontSize(8);
-    pdf.setTextColor(138, 133, 128);
-    pdf.text('IMAGES LIKÉES (' + state.swipeLiked.length + ')', mx, y);
-    y += 5;
-
-    const liked = state.swipeLiked.slice(0, 9);
-    if (liked.length > 0) {
-      const thumbSize = 36;
-      const gap = 4;
-      const cols = 5;
-      let tx = mx, ty = y;
-
-      for (let i = 0; i < liked.length; i++) {
-        if (tx + thumbSize > pw - mx) {
-          tx = mx;
-          ty += thumbSize + gap;
+    const liked = state.swipeLiked.slice(0, 20);
+    const ts = 28, gap = 3, cols = 5;
+    let tx = mx, ty = y;
+    for (let i = 0; i < liked.length; i++) {
+      if (tx + ts > pw - mx) { tx = mx; ty += ts + gap; }
+      if (ty + ts > ph - 25) { pdf.addPage(); ty = 20; tx = mx; }
+      pdf.setFillColor(236, 230, 223);
+      pdf.roundedRect(tx, ty, ts, ts, 2, 2, 'F');
+      try {
+        const imgEl = document.querySelector(`.moodboard-item:nth-child(${i+1}) img`);
+        if (imgEl && imgEl.complete && imgEl.naturalWidth > 0) {
+          const c = document.createElement('canvas'); c.width = 200; c.height = 200;
+          const ctx = c.getContext('2d');
+          const s = Math.min(imgEl.naturalWidth, imgEl.naturalHeight);
+          ctx.drawImage(imgEl, (imgEl.naturalWidth-s)/2, (imgEl.naturalHeight-s)/2, s, s, 0, 0, 200, 200);
+          pdf.addImage(c.toDataURL('image/jpeg', 0.7), 'JPEG', tx, ty, ts, ts);
+        } else {
+          pdf.setFontSize(6); pdf.setTextColor(138,133,128);
+          pdf.text(liked[i].id, tx + ts/2, ty + ts/2, { align:'center' });
         }
-        // Draw beige placeholder
-        pdf.setFillColor(236, 230, 223);
-        pdf.roundedRect(tx, ty, thumbSize, thumbSize, 2, 2, 'F');
-
-        // Try to add actual image
-        try {
-          const imgEl = document.querySelector(`.moodboard-item:nth-child(${i+1}) img`);
-          if (imgEl && imgEl.complete && imgEl.naturalWidth > 0) {
-            const c = document.createElement('canvas');
-            c.width = 200; c.height = 200;
-            const ctx = c.getContext('2d');
-            // Cover crop
-            const s = Math.min(imgEl.naturalWidth, imgEl.naturalHeight);
-            const sx = (imgEl.naturalWidth - s) / 2;
-            const sy = (imgEl.naturalHeight - s) / 2;
-            ctx.drawImage(imgEl, sx, sy, s, s, 0, 0, 200, 200);
-            pdf.addImage(c.toDataURL('image/jpeg', 0.7), 'JPEG', tx, ty, thumbSize, thumbSize);
-          } else {
-            pdf.setFontSize(7);
-            pdf.setTextColor(138, 133, 128);
-            pdf.text(liked[i].id, tx + thumbSize/2, ty + thumbSize/2, { align: 'center' });
-          }
-        } catch(e) {
-          pdf.setFontSize(7);
-          pdf.setTextColor(138, 133, 128);
-          pdf.text(liked[i].id, tx + thumbSize/2, ty + thumbSize/2, { align: 'center' });
-        }
-        tx += thumbSize + gap;
+      } catch(e) {
+        pdf.setFontSize(6); pdf.setTextColor(138,133,128);
+        pdf.text(liked[i].id, tx + ts/2, ty + ts/2, { align:'center' });
       }
-      y = ty + thumbSize + 10;
+      tx += ts + gap;
     }
 
-    // --- Footer ---
-    pdf.setDrawColor(196, 162, 101);
-    pdf.setLineWidth(0.3);
-    pdf.line(mx, ph - 20, pw - mx, ph - 20);
-    pdf.setFontSize(8);
-    pdf.setTextColor(138, 133, 128);
-    pdf.text('Origine Paris · Bijoux sur-mesure · origineparis.com', pw/2, ph - 14, { align: 'center' });
-    pdf.setFontSize(7);
-    pdf.text('L\'essentiel. L\'origine. La création.', pw/2, ph - 9, { align: 'center' });
+    // Footer
+    const lastPage = pdf.getNumberOfPages();
+    pdf.setPage(lastPage);
+    pdf.setDrawColor(196, 162, 101); pdf.setLineWidth(0.3);
+    pdf.line(mx, ph - 18, pw - mx, ph - 18);
+    pdf.setFontSize(7); pdf.setTextColor(138, 133, 128);
+    pdf.text('Origine Paris · Bijoux sur-mesure · origineparis.com', pw/2, ph - 12, { align:'center' });
+    pdf.setFontSize(6);
+    pdf.text("L'essentiel. L'origine. La création.", pw/2, ph - 8, { align:'center' });
 
-    // Save
-    const filename = `profil-gout-${state.clientPrenom.toLowerCase()}-${new Date().toISOString().slice(0,10)}.pdf`;
-    pdf.save(filename);
+    pdf.save(`profil-gout-${state.clientPrenom.toLowerCase()}-${new Date().toISOString().slice(0,10)}.pdf`);
   } catch(err) {
-    console.error('PDF export error:', err);
-    alert('Erreur lors de la génération du PDF. Veuillez réessayer.');
+    console.error('PDF error:', err);
+    alert('Erreur PDF. Réessayez.');
   } finally {
-    btn.textContent = origText;
-    btn.disabled = false;
+    btn.textContent = 'Exporter la fiche cliente'; btn.disabled = false;
   }
 }
 
 function restart() {
-  state = {
-    clientPrenom:'', clientNom:'',
-    selectedStyles:[], selectedModels:[],
-    swipeQueue:[], swipeLiked:[], swipeCurrent:0,
-    styleCounts:{}, modelCounts:{}, tagScores:{},
-    touchStartX:0, touchStartY:0, isDragging:false, currentDragX:0
-  };
+  state = { clientPrenom:'', clientNom:'', selectedStyles:[], selectedModels:[],
+    swipeQueue:[], swipeLiked:[], swipeCurrent:0, styleCounts:{}, modelCounts:{}, tagScores:{}, seenIds: new Set() };
   show('screen-home');
 }
 </script>
