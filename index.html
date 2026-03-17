@@ -5,27 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Style Diagnostic — Origine Paris</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap');
 
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
   :root {
-    --gold: #B8976A;
-    --gold-light: #D4B896;
+    --gold: #C4A265;
+    --gold-light: #D4BA8A;
     --black: #1A1A1A;
-    --white: #FAFAF8;
-    --gray-light: #F2F0EC;
-    --gray-mid: #E0DDD8;
+    --white: #FFFFFF;
+    --beige: #ECE6DF;
+    --gray-light: #F5F2EE;
+    --gray-mid: #D8D2CB;
     --gray-text: #8A8580;
     --radius: 12px;
   }
 
   html, body {
     height: 100%;
-    background: var(--white);
+    background: var(--beige);
     color: var(--black);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-family: 'Avenir Next', 'Avenir', -apple-system, sans-serif;
+    font-weight: 400;
     overflow: hidden;
   }
 
@@ -42,22 +43,39 @@
   .screen { display: none; flex-direction: column; height: 100%; }
   .screen.active { display: flex; }
 
+  /* BACK BUTTON */
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    font-family: 'Avenir Next', 'Avenir', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gray-text);
+    cursor: pointer;
+    padding: 12px 24px 0;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+  .back-btn:active { opacity: 0.6; }
+
   /* HEADER */
   .header {
     padding: 20px 24px 0;
     flex-shrink: 0;
   }
   .logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 13px;
+    font-family: 'Avenir Next', 'Avenir', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
     letter-spacing: 0.2em;
     color: var(--gold);
     text-transform: uppercase;
   }
   .screen-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'QuinnDisplay', 'Cormorant Garamond', serif;
     font-weight: 300;
     font-size: 28px;
     line-height: 1.2;
@@ -84,7 +102,7 @@
   .footer {
     padding: 16px 24px 32px;
     flex-shrink: 0;
-    background: var(--white);
+    background: var(--beige);
   }
 
   /* BUTTONS */
@@ -95,7 +113,7 @@
     color: var(--white);
     border: none;
     border-radius: var(--radius);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Avenir Next', 'Avenir', sans-serif;
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.15em;
@@ -112,7 +130,7 @@
     color: var(--gray-text);
     border: 1px solid var(--gray-mid);
     border-radius: var(--radius);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Avenir Next', 'Avenir', sans-serif;
     font-size: 11px;
     font-weight: 400;
     letter-spacing: 0.1em;
@@ -120,6 +138,23 @@
     cursor: pointer;
     margin-top: 10px;
   }
+
+  .btn-gold {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: var(--radius);
+    font-family: 'Avenir Next', 'Avenir', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  .btn-gold:active { background: var(--gold); color: var(--white); }
 
   /* PROGRESS */
   .progress-wrap {
@@ -169,7 +204,7 @@
   }
   .home-emblem svg { width: 36px; height: 36px; }
   .home-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'QuinnDisplay', 'Cormorant Garamond', serif;
     font-size: 36px;
     font-weight: 300;
     line-height: 1.15;
@@ -204,7 +239,7 @@
   }
   .cat-card.featured {
     border-color: var(--gold);
-    background: linear-gradient(135deg, #FDFBF7 0%, #F8F4EE 100%);
+    background: var(--white);
   }
   .cat-card.featured::after {
     content: '';
@@ -223,7 +258,7 @@
     margin-bottom: 8px;
     display: block;
     color: var(--gold);
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'QuinnDisplay', 'Cormorant Garamond', serif;
     font-style: italic;
   }
   .cat-name {
@@ -259,9 +294,9 @@
     padding: 12px 14px;
     border: 1px solid var(--gray-mid);
     border-radius: 8px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Avenir Next', 'Avenir', sans-serif;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     background: var(--white);
     color: var(--black);
     outline: none;
@@ -285,7 +320,7 @@
     cursor: pointer;
     transition: all 0.15s;
     background: var(--white);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Avenir Next', 'Avenir', sans-serif;
   }
   .chip.selected {
     background: var(--black);
@@ -378,9 +413,9 @@
     position: relative;
   }
   .swipe-img-wrap img {
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .swipe-placeholder {
     display: flex;
@@ -408,14 +443,13 @@
     background: var(--gray-light);
     border-radius: 10px;
     padding: 3px 8px;
-    text-transform: uppercase;
   }
 
   /* LIKE / PASS OVERLAY */
   .vote-overlay {
     position: absolute;
     top: 20px;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'QuinnDisplay', 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 28px;
     font-weight: 300;
@@ -435,7 +469,7 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
-    padding: 16px 24px;
+    padding: 12px 24px;
     flex-shrink: 0;
   }
   .action-btn {
@@ -454,12 +488,16 @@
   .action-btn.pass-btn { border-color: #E8C5C2; color: #C0392B; }
   .action-btn.like-btn { border-color: #B8D4C4; color: #2D7A4F; }
   .action-btn:active { transform: scale(0.92); }
+  .swipe-footer {
+    padding: 0 24px 24px;
+    flex-shrink: 0;
+  }
   .swipe-hint {
     font-size: 10px;
     color: var(--gray-text);
     text-align: center;
     letter-spacing: 0.08em;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
     flex-shrink: 0;
   }
 
@@ -481,14 +519,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'QuinnDisplay', 'Cormorant Garamond', serif;
     font-size: 18px;
     font-style: italic;
     color: var(--gold);
     flex-shrink: 0;
   }
   .profile-name {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'QuinnDisplay', 'Cormorant Garamond', serif;
     font-size: 22px;
     font-weight: 300;
   }
@@ -506,7 +544,7 @@
     margin-bottom: 20px;
   }
   .radar-card {
-    background: var(--gray-light);
+    background: var(--white);
     border-radius: var(--radius);
     padding: 14px;
   }
@@ -535,7 +573,7 @@
   }
   .moodboard-item {
     aspect-ratio: 1;
-    background: var(--gray-light);
+    background: var(--white);
     border-radius: 8px;
     overflow: hidden;
     display: flex;
@@ -543,9 +581,9 @@
     justify-content: center;
   }
   .moodboard-item img {
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .moodboard-item .mb-id {
     font-size: 9px;
@@ -562,7 +600,7 @@
   .profile-tag {
     font-size: 10px;
     color: var(--gold);
-    background: #FDF8F2;
+    background: var(--white);
     border: 1px solid var(--gold-light);
     border-radius: 12px;
     padding: 4px 12px;
@@ -577,7 +615,7 @@
   <div id="screen-home" class="screen active">
     <div class="home-hero">
       <div class="home-emblem">
-        <svg viewBox="0 0 36 36" fill="none" stroke="#B8976A" stroke-width="0.8">
+        <svg viewBox="0 0 36 36" fill="none" stroke="#C4A265" stroke-width="0.8">
           <polygon points="18,4 32,28 4,28" fill="none"/>
           <circle cx="18" cy="16" r="5"/>
           <line x1="18" y1="4" x2="18" y2="11"/>
@@ -619,6 +657,7 @@
 
   <!-- CLIENT -->
   <div id="screen-client" class="screen">
+    <button class="back-btn" onclick="show('screen-home')">← Retour</button>
     <div class="header">
       <div class="logo">Origine Paris · Bagues de fiançailles</div>
       <h2 class="screen-title">La cliente</h2>
@@ -643,6 +682,7 @@
 
   <!-- STEP 1 — STYLE -->
   <div id="screen-step1" class="screen">
+    <button class="back-btn" onclick="show('screen-client')">← Retour</button>
     <div class="progress-wrap">
       <div class="progress-steps">
         <div class="step-dot active" id="dot1"></div>
@@ -667,6 +707,7 @@
 
   <!-- STEP 2 — MODÈLES -->
   <div id="screen-step2" class="screen">
+    <button class="back-btn" onclick="show('screen-step1')">← Retour</button>
     <div class="progress-wrap">
       <div class="progress-steps">
         <div class="step-dot done"></div>
@@ -692,6 +733,7 @@
 
   <!-- STEP 3 — SWIPE -->
   <div id="screen-swipe" class="screen">
+    <button class="back-btn" onclick="show('screen-step2')">← Retour</button>
     <div class="progress-wrap">
       <div class="progress-steps">
         <div class="step-dot done"></div>
@@ -723,6 +765,9 @@
       <button class="action-btn like-btn" onclick="swipeAction(true)">♥</button>
     </div>
     <div class="swipe-hint">Glissez ou utilisez les boutons</div>
+    <div class="swipe-footer">
+      <button class="btn-gold" onclick="skipToProfile()">Voir mon profil →</button>
+    </div>
   </div>
 
   <!-- STEP 4 — PROFILE -->
@@ -782,7 +827,6 @@ const STYLES = [
   'Symmetrical','Asymmetrical','Graphic','Organic','Rounded','Edgy'
 ];
 
-// MODÈLES BdF — mettre à jour les chemins img quand les fichiers sont en place
 const MODELS = [
   { id: 'FIA-LA-01', name: 'Solitaire classique',           img: 'images/line-art/Solitaire Classique.png' },
   { id: 'FIA-LA-02', name: 'Solitaire cathédrale',          img: 'images/line-art/Solitaire Cathédrale.png' },
@@ -803,25 +847,7 @@ const MODELS = [
   { id: 'FIA-LA-17', name: 'Nature / Floral',               img: 'images/line-art/Nature - Floral.jpeg' },
   { id: 'FIA-LA-18', name: 'Sculptural moderne',            img: 'images/line-art/Sculpturale moderne.jpeg' },
   { id: 'FIA-LA-19', name: 'Solitaire organique asymétrique', img: 'images/line-art/Solitaire assymetrique.jpeg' },
-  { id: 'FIA-LA-20', name: 'Organique fin structuré',       img: 'images/line-art/Diamants de chaque coté.jpeg' },
-];
-
-// Images FIA pour le swipe — sera remplacé par le JSON généré par exiftool
-// Format attendu du JSON : [{ id: "FIA-001", img: "images/fia/FIA-001.jpeg", tags: ["tag1","tag2",...] }, ...]
-// Données de démo en attendant le vrai JSON
-const DEMO_IMAGES = [
-  { id:'FIA-001', img:'', tags:['solitaire classique','or blanc','rond brillant','griffes 6','minimaliste','bridal'] },
-  { id:'FIA-002', img:'', tags:['halo','or jaune','ovale','pavé','romantique','bridal'] },
-  { id:'FIA-003', img:'', tags:['toi et moi','or rose','marquise','poire','asymétrique'] },
-  { id:'FIA-004', img:'', tags:['nature floral','or blanc','griffes florales','organique','bridal'] },
-  { id:'FIA-005', img:'', tags:['sculptural','or gris','tension','diamant','moderne'] },
-  { id:'FIA-006', img:'', tags:['vintage filigrane','or jaune','milgrain','coussin','romantique'] },
-  { id:'FIA-007', img:'', tags:['pavé band','or blanc','diamants','minimaliste','bridal'] },
-  { id:'FIA-008', img:'', tags:['bezel','or rose','serti clos','rond','épuré'] },
-  { id:'FIA-009', img:'', tags:['trois pierres','or blanc','émeraude','baguettes','classique'] },
-  { id:'FIA-010', img:'', tags:['split shank','or jaune','halo','ovale','statement'] },
-  { id:'FIA-011', img:'', tags:['cluster','or blanc','diamants','vintage','graphique'] },
-  { id:'FIA-012', img:'', tags:['east-west','or rose','marquise','horizontal','moderne'] },
+  { id: 'FIA-LA-20', name: 'Organique fin structuré',       img: 'images/line-art/Bohème.png' },
 ];
 
 // ============================================================
@@ -832,6 +858,7 @@ let state = {
   selectedStyles: [], selectedModels: [],
   swipeQueue: [], swipeLiked: [], swipeCurrent: 0,
   styleCounts: {}, modelCounts: {},
+  tagScores: {},
   touchStartX: 0, touchStartY: 0, isDragging: false, currentDragX: 0
 };
 
@@ -867,10 +894,12 @@ function goSwipe() {
   // Initialise les compteurs
   STYLES.forEach(s => state.styleCounts[s] = state.selectedStyles.includes(s) ? 2 : 0);
   MODELS.forEach(m => state.modelCounts[m.name] = state.selectedModels.includes(m.name) ? 2 : 0);
+  state.tagScores = {};
 
-  // Charge les images — tente de lire images.json, sinon démo
-  loadImages().then(imgs => {
-    state.swipeQueue = imgs;
+  // Charge les images — filtre selon les choix des étapes 1 et 2
+  loadImages().then(allImages => {
+    const filtered = filterImages(allImages);
+    state.swipeQueue = filtered;
     state.swipeLiked = [];
     state.swipeCurrent = 0;
     renderSwipeCard();
@@ -878,19 +907,108 @@ function goSwipe() {
   });
 }
 
+// ============================================================
+// IMAGE LOADING & FILTERING (points 4, 5, 7)
+// ============================================================
+function parseTagValue(tag) {
+  const idx = tag.indexOf(':');
+  return idx >= 0 ? tag.substring(idx + 1).trim().toLowerCase() : tag.toLowerCase();
+}
+
+function parseTagKey(tag) {
+  const idx = tag.indexOf(':');
+  return idx >= 0 ? tag.substring(0, idx).trim().toLowerCase() : '';
+}
+
 async function loadImages() {
   try {
     const resp = await fetch('data/images.json');
     if (!resp.ok) throw new Error();
     const raw = await resp.json();
-    // Normalise le format exiftool
     return raw.map(item => ({
-      id:   item.FileName || item.id || '?',
+      id:   item.id || item.FileName?.replace(/\.\w+$/, '') || '?',
       img:  'images/fia/' + (item.FileName || item.id),
       tags: [].concat(item.Keywords || item.Subject || item.tags || [])
     }));
   } catch {
-    return DEMO_IMAGES;
+    return [];
+  }
+}
+
+function filterImages(allImages) {
+  const selStyles = state.selectedStyles.map(s => s.toLowerCase());
+  const selModels = state.selectedModels.map(m => m.toLowerCase());
+
+  // Score each image by how well it matches selections
+  const scored = allImages.map(img => {
+    let score = 0;
+    const tagValues = img.tags.map(parseTagValue);
+    const tagKeys   = img.tags.map(parseTagKey);
+
+    // Match model families (via "famille:" tag)
+    img.tags.forEach((tag, i) => {
+      if (tagKeys[i] === 'famille') {
+        const val = tagValues[i];
+        selModels.forEach(m => {
+          // Fuzzy match: check if model name words appear in the tag value
+          const words = m.split(/[\s\/]+/);
+          if (words.some(w => w.length > 2 && val.includes(w))) score += 10;
+        });
+      }
+      // Match styles (via "style:" or "silhouette:" tags)
+      if (tagKeys[i] === 'style' || tagKeys[i] === 'silhouette') {
+        const val = tagValues[i];
+        selStyles.forEach(s => {
+          if (val.includes(s)) score += 10;
+        });
+      }
+      // General keyword matching
+      const val = tagValues[i];
+      selStyles.forEach(s => { if (val.includes(s)) score += 3; });
+      selModels.forEach(m => {
+        const words = m.split(/[\s\/]+/);
+        if (words.some(w => w.length > 2 && val.includes(w))) score += 3;
+      });
+    });
+
+    return { ...img, _score: score };
+  });
+
+  // If we have selections, put matching images first then the rest
+  if (selStyles.length > 0 || selModels.length > 0) {
+    const matching = scored.filter(img => img._score > 0);
+    const rest     = scored.filter(img => img._score === 0);
+    // Shuffle matching by score (higher first) with some randomness
+    matching.sort((a, b) => b._score - a._score + (Math.random() - 0.5) * 4);
+    // Shuffle the rest randomly
+    rest.sort(() => Math.random() - 0.5);
+    return [...matching, ...rest];
+  }
+
+  // No filters: random shuffle
+  return scored.sort(() => Math.random() - 0.5);
+}
+
+// Point 7 — Adaptive re-sorting: boost images similar to liked ones
+function adaptiveResort() {
+  const remaining = state.swipeQueue.slice(state.swipeCurrent);
+  if (remaining.length < 2) return;
+
+  remaining.forEach(img => {
+    let boost = 0;
+    img.tags.forEach(tag => {
+      const val = parseTagValue(tag);
+      boost += (state.tagScores[val] || 0);
+    });
+    img._boost = boost;
+  });
+
+  // Sort by boost with randomness to keep variety
+  remaining.sort((a, b) => (b._boost || 0) - (a._boost || 0) + (Math.random() - 0.5) * 3);
+
+  // Write back
+  for (let i = 0; i < remaining.length; i++) {
+    state.swipeQueue[state.swipeCurrent + i] = remaining[i];
   }
 }
 
@@ -950,14 +1068,13 @@ function renderSwipeCard() {
     `Étape 3 sur 4 — Swipe · ${current + 1} / ${total}`;
 
   const wrap = document.getElementById('swipe-img-wrap');
-  const idEl = document.getElementById('swipe-img-id');
-  idEl.textContent = img.id;
 
   // Image
   if (img.img) {
+    const safeId = (img.id || '').replace(/'/g, '');
     wrap.innerHTML = `
-      <img src="${img.img}" alt="${img.id}" style="width:80%;height:80%;object-fit:contain"
-           onerror="this.outerHTML='<div class=swipe-placeholder><div class=swipe-id>${img.id}</div></div>'"/>`;
+      <img src="${img.img}" alt="${img.id}" style="width:100%;height:100%;object-fit:cover"
+           onerror="this.outerHTML='<div class=swipe-placeholder><div class=swipe-id>${safeId}</div></div>'"/>`;
   } else {
     wrap.innerHTML = `<div class="swipe-placeholder">
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.8">
@@ -967,9 +1084,13 @@ function renderSwipeCard() {
       <div class="swipe-id">${img.id}</div></div>`;
   }
 
-  // Tags
+  // Tags — show cleaned values (strip key prefix)
   const tagsEl = document.getElementById('swipe-card-tags');
-  tagsEl.innerHTML = img.tags.slice(0, 6).map(t =>
+  const displayTags = img.tags
+    .filter(t => !t.startsWith('categorie:'))
+    .map(parseTagValue)
+    .slice(0, 6);
+  tagsEl.innerHTML = displayTags.map(t =>
     `<span class="swipe-tag">${t}</span>`).join('');
 
   // Reset overlays
@@ -990,14 +1111,20 @@ function swipeAction(liked) {
 
   if (liked) {
     state.swipeLiked.push(img);
+    // Update tag scores for adaptive algorithm
     img.tags.forEach(tag => {
+      const val = parseTagValue(tag);
+      state.tagScores[val] = (state.tagScores[val] || 0) + 1;
+
       const t = tag.toLowerCase();
       STYLES.forEach(s => {
         if (t.includes(s.toLowerCase())) state.styleCounts[s] = (state.styleCounts[s] || 0) + 3;
       });
       MODELS.forEach(m => {
-        const key = m.name.split(' ')[0].toLowerCase();
-        if (t.includes(key)) state.modelCounts[m.name] = (state.modelCounts[m.name] || 0) + 3;
+        const words = m.name.toLowerCase().split(/[\s\/]+/);
+        if (words.some(w => w.length > 2 && t.includes(w))) {
+          state.modelCounts[m.name] = (state.modelCounts[m.name] || 0) + 3;
+        }
       });
     });
   }
@@ -1011,8 +1138,16 @@ function swipeAction(liked) {
 
   setTimeout(() => {
     state.swipeCurrent++;
+    // Point 7 — Adaptive: re-sort remaining queue after each swipe
+    if (liked && Object.keys(state.tagScores).length > 0) {
+      adaptiveResort();
+    }
     renderSwipeCard();
   }, 320);
+}
+
+function skipToProfile() {
+  showProfile();
 }
 
 function setupSwipeTouch(card) {
@@ -1128,7 +1263,7 @@ function drawRadar(canvasId, labels, values) {
     ctx.strokeStyle = 'rgba(0,0,0,0.07)';
     ctx.lineWidth   = 0.5;
     ctx.stroke();
-    ctx.font        = '7px Montserrat, sans-serif';
+    ctx.font        = "7px 'Avenir Next', sans-serif";
     ctx.fillStyle   = '#8A8580';
     ctx.textAlign   = 'center';
     ctx.textBaseline = 'middle';
@@ -1145,9 +1280,9 @@ function drawRadar(canvasId, labels, values) {
       : ctx.lineTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle));
   });
   ctx.closePath();
-  ctx.fillStyle   = 'rgba(184,151,106,0.15)';
+  ctx.fillStyle   = 'rgba(196,162,101,0.15)';
   ctx.fill();
-  ctx.strokeStyle = '#B8976A';
+  ctx.strokeStyle = '#C4A265';
   ctx.lineWidth   = 1.5;
   ctx.stroke();
 }
@@ -1176,7 +1311,7 @@ function restart() {
     clientPrenom:'', clientNom:'',
     selectedStyles:[], selectedModels:[],
     swipeQueue:[], swipeLiked:[], swipeCurrent:0,
-    styleCounts:{}, modelCounts:{},
+    styleCounts:{}, modelCounts:{}, tagScores:{},
     touchStartX:0, touchStartY:0, isDragging:false, currentDragX:0
   };
   show('screen-home');
