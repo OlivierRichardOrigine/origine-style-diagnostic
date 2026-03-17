@@ -291,6 +291,8 @@
   .action-btn.fav-btn  { border-color: var(--gold-light); color: var(--gold); width: 56px; height: 56px; font-size: 20px; }
   .action-btn.like-btn { border-color: #B8D4C4; color: #2D7A4F; }
   .action-btn:active { transform: scale(0.88); }
+  .action-btn.undo-btn { width: 44px; height: 44px; font-size: 18px; color: var(--gray-text); border-color: var(--gray-mid); position: absolute; left: 24px; }
+  .swipe-actions { position: relative; }
   .swipe-footer { padding: 0 24px 24px; flex-shrink: 0; }
   .swipe-hint { font-size: 10px; color: var(--gray-text); text-align: center; letter-spacing: 0.08em; padding-bottom: 4px; flex-shrink: 0; }
 
@@ -441,6 +443,7 @@
       </div>
     </div>
     <div class="swipe-actions">
+      <button class="action-btn undo-btn" id="undo-btn" onclick="undoSwipe()" style="visibility:hidden">↩</button>
       <button class="action-btn pass-btn" onclick="swipeAction('pass')">✕</button>
       <button class="action-btn fav-btn" onclick="swipeAction('fav')">★</button>
       <button class="action-btn like-btn" onclick="swipeAction('like')">♥</button>
@@ -491,56 +494,56 @@
 // DATA
 // ============================================================
 const STYLES = [
-  'Intricate','Minimalistic','Delicate','Volumous',
-  'Symmetrical','Asymmetrical','Graphic','Organic','Rounded','Edgy'
+  'Sophistiqué','Minimaliste','Délicat','Volumineux',
+  'Symétrique','Asymétrique','Graphique','Organique','Arrondi','Audacieux'
 ];
 
 const STYLE_TAG_MAPPING = {
-  'Minimalistic': [
+  'Minimaliste': [
     'thin band','plain band','plain round band','solitaire',
     'moderne épuré','minimaliste','épuré','bezel','serti clos',
     'tension','east-west','simple'
   ],
-  'Intricate': [
+  'Sophistiqué': [
     'pavé','pavé griffes','micro-pavé','filigrane','milgrain',
     'vintage','retro','cluster','grappe','nature floral',
     'floral prongs','leaf','feuilles','art déco','ornate'
   ],
-  'Delicate': [
+  'Délicat': [
     'thin band','fine','délicate','griffes 4','griffes 6',
     'solitaire classique','cathédrale','romantique','feminine'
   ],
-  'Volumous': [
+  'Volumineux': [
     'double halo','halo','statement','cluster','grappe',
     'coussin','cushion','bold','volumineuse','bombée',
     'cinq pierres','trois pierres'
   ],
-  'Symmetrical': [
+  'Symétrique': [
     'solitaire classique','halo','trois pierres','cinq pierres',
     'double halo','classique intemporel','classique','symétrique'
   ],
-  'Asymmetrical': [
+  'Asymétrique': [
     'toi et moi','bypass','by pass','asymétrique',
     'solitaire asymétrique','organique asymétrique',
     'east-west','wrap'
   ],
-  'Graphic': [
+  'Graphique': [
     'east-west','tension','serti tension','géométrique',
     'bezel','serti clos','moderne','avant-garde',
     'architectural','graphique'
   ],
-  'Organic': [
+  'Organique': [
     'nature floral','nature - floral','floral prongs',
     'leaf','feuilles','organique','botanique',
     'nature organique','nature inspired','sculptural',
     'bypass','asymétrique'
   ],
-  'Rounded': [
+  'Arrondi': [
     'halo','coussin','cushion','rond brillant','ovale',
     'double halo','hidden halo','halo caché','romantique',
     'bombée','pavé band'
   ],
-  'Edgy': [
+  'Audacieux': [
     'tension','serti tension','avant-garde','sculptural moderne',
     'brutaliste','géométrique','east-west','bypass',
     'architectural','moderne épuré'
@@ -548,16 +551,16 @@ const STYLE_TAG_MAPPING = {
 };
 
 const STYLE_OPPOSITES = {
-  'Minimalistic': ['intricate','cluster','pavé intégral','statement','double halo','volumineuse','grappe','chandelier','bold'],
-  'Intricate':    ['plain band','thin band','épuré','minimaliste','bezel','tension'],
-  'Delicate':     ['statement','bold','volumineuse','cluster','grappe','double halo'],
-  'Volumous':     ['thin band','fine','minimaliste','épuré'],
-  'Organic':      ['géométrique','architectural','east-west'],
-  'Graphic':      ['nature floral','organique','romantique'],
-  'Rounded':      ['east-west','marquise','géométrique'],
-  'Edgy':         ['romantique','classique','nature floral'],
-  'Symmetrical':  ['asymétrique','toi et moi','bypass'],
-  'Asymmetrical': ['solitaire classique','symétrique','classique']
+  'Minimaliste':  ['intricate','cluster','pavé intégral','statement','double halo','volumineuse','grappe','chandelier','bold'],
+  'Sophistiqué':  ['plain band','thin band','épuré','minimaliste','bezel','tension'],
+  'Délicat':      ['statement','bold','volumineuse','cluster','grappe','double halo'],
+  'Volumineux':   ['thin band','fine','minimaliste','épuré'],
+  'Organique':    ['géométrique','architectural','east-west'],
+  'Graphique':    ['nature floral','organique','romantique'],
+  'Arrondi':      ['east-west','marquise','géométrique'],
+  'Audacieux':    ['romantique','classique','nature floral'],
+  'Symétrique':   ['asymétrique','toi et moi','bypass'],
+  'Asymétrique':  ['solitaire classique','symétrique','classique']
 };
 
 const MODELS = [
@@ -591,7 +594,7 @@ let state = {
   selectedStyles:[], selectedModels:[],
   swipeQueue:[], swipeLiked:[], coupsDeCœur:[], swipeCurrent:0,
   styleCounts:{}, modelCounts:{}, tagScores:{},
-  seenIds: new Set()
+  seenIds: new Set(), undoStack:[]
 };
 
 // ============================================================
@@ -690,6 +693,7 @@ function goSwipe() {
     state.swipeQueue = filterAndSort(unique);
     state.swipeLiked = [];
     state.coupsDeCœur = [];
+    state.undoStack = [];
     state.swipeCurrent = 0;
     renderSwipeCard();
     show('screen-swipe');
@@ -713,54 +717,60 @@ async function loadImages() {
 }
 
 function filterAndSort(allImages) {
-  const selStyles = state.selectedStyles; // keep original case
+  const selStyles = state.selectedStyles;
   const selModels = state.selectedModels.map(m => m.toLowerCase());
-  const hasFilters = selStyles.length > 0 || selModels.length > 0;
+  const hasModels = selModels.length > 0;
+  const hasStyles = selStyles.length > 0;
 
-  const scored = allImages.map(img => {
+  // STEP 1 — Hard filter by model family if any selected
+  let pool = allImages;
+  if (hasModels) {
+    const modelFiltered = allImages.filter(img => {
+      return img.tags.some(tag => {
+        if (parseTagKey(tag) !== 'famille') return false;
+        const val = parseTagValue(tag);
+        return selModels.some(m => {
+          const words = m.split(/[\s\/]+/);
+          return words.some(w => w.length > 2 && val.includes(w)) || val.includes(m);
+        });
+      });
+    });
+    // Only use filtered if we got results
+    if (modelFiltered.length > 0) pool = modelFiltered;
+  }
+
+  // STEP 2 — Score by style match + penalize opposites
+  const scored = pool.map(img => {
     let score = 0;
     let penalty = 0;
     const tagValues = img.tags.map(parseTagValue);
 
-    // Match via STYLE_TAG_MAPPING (positive)
     selStyles.forEach(style => {
       const keywords = STYLE_TAG_MAPPING[style] || [];
       tagValues.forEach(val => {
         keywords.forEach(kw => { if (val.includes(kw) || kw.includes(val)) score += 5; });
       });
-      // Penalty for opposite tags
       const opposites = STYLE_OPPOSITES[style] || [];
       tagValues.forEach(val => {
         opposites.forEach(opp => { if (val.includes(opp) || opp.includes(val)) penalty += 8; });
       });
     });
 
-    // Match model families
-    img.tags.forEach(tag => {
-      if (parseTagKey(tag) === 'famille') {
-        const val = parseTagValue(tag);
-        selModels.forEach(m => {
-          const words = m.split(/[\s\/]+/);
-          if (words.some(w => w.length > 2 && val.includes(w))) score += 10;
-        });
-      }
-    });
-
-    // Adaptive boost from previous likes
+    // Adaptive boost
     tagValues.forEach(val => { score += (state.tagScores[val] || 0) * 2; });
 
-    const netScore = score - penalty;
-    return { ...img, _score: netScore };
+    return { ...img, _score: score - penalty };
   });
 
-  if (hasFilters) {
-    // Min 2 points to be presented when filters are active
-    const matching = scored.filter(i => i._score >= 2);
-    const rest     = scored.filter(i => i._score < 2 && i._score > -5);
-    matching.sort((a, b) => b._score - a._score + (Math.random() - 0.5) * 4);
-    rest.sort(() => Math.random() - 0.5);
-    return [...matching, ...rest];
+  if (hasStyles) {
+    // Exclude penalized images, sort by score
+    const good = scored.filter(i => i._score > 0);
+    const neutral = scored.filter(i => i._score === 0);
+    good.sort((a, b) => b._score - a._score + (Math.random() - 0.5) * 4);
+    neutral.sort(() => Math.random() - 0.5);
+    return [...good, ...neutral];
   }
+
   return scored.sort(() => Math.random() - 0.5);
 }
 
@@ -867,8 +877,20 @@ function swipeAction(action) {
   const img = state.swipeQueue[state.swipeCurrent];
   if (!img) return;
 
+  // Save undo snapshot
+  state.undoStack.push({
+    index: state.swipeCurrent,
+    action: action,
+    styleCountsSnap: { ...state.styleCounts },
+    modelCountsSnap: { ...state.modelCounts },
+    tagScoresSnap: { ...state.tagScores },
+    likedLen: state.swipeLiked.length,
+    favLen: state.coupsDeCœur.length
+  });
+  document.getElementById('undo-btn').style.visibility = 'visible';
+
   const isLike = action === 'like' || action === 'fav';
-  const multiplier = action === 'fav' ? 3 : 1; // coup de coeur = 3x weight
+  const multiplier = action === 'fav' ? 3 : 1;
 
   if (isLike) {
     img._fav = action === 'fav';
@@ -907,6 +929,23 @@ function swipeAction(action) {
 }
 
 function skipToProfile() { showProfile(); }
+
+function undoSwipe() {
+  if (state.undoStack.length === 0) return;
+  const snap = state.undoStack.pop();
+  // Restore scores
+  state.styleCounts = snap.styleCountsSnap;
+  state.modelCounts = snap.modelCountsSnap;
+  state.tagScores = snap.tagScoresSnap;
+  // Remove any added liked/fav entries
+  state.swipeLiked.length = snap.likedLen;
+  state.coupsDeCœur.length = snap.favLen;
+  // Go back to previous card
+  state.seenIds.delete(state.swipeQueue[snap.index]?.id);
+  state.swipeCurrent = snap.index;
+  renderSwipeCard();
+  if (state.undoStack.length === 0) document.getElementById('undo-btn').style.visibility = 'hidden';
+}
 
 function setupSwipeTouch(card) {
   let startX = 0, startY = 0, isDragging = false, locked = false;
@@ -1087,21 +1126,11 @@ async function exportProfile() {
     const pw = 210, ph = 297, mx = 20;
     let y = 0;
 
-    // Preload sigle image
-    let sigleData = null;
-    try {
-      const sigleImg = new Image();
-      sigleImg.crossOrigin = 'anonymous';
-      sigleImg.src = 'sigle_noir_sur_fond_transparent.png';
-      await new Promise((res, rej) => { sigleImg.onload = res; sigleImg.onerror = rej; });
-      const sc = document.createElement('canvas'); sc.width = sigleImg.naturalWidth; sc.height = sigleImg.naturalHeight;
-      sc.getContext('2d').drawImage(sigleImg, 0, 0);
-      sigleData = sc.toDataURL('image/png');
-    } catch(e) {}
-
-    function addSigle(pdf, y) {
-      if (sigleData) { pdf.addImage(sigleData, 'PNG', pw/2 - 3, y, 6, 6); return y + 9; }
-      return y + 4;
+    function addSeparator(pdf, y) {
+      pdf.setDrawColor(196, 162, 101);
+      pdf.setLineWidth(0.3);
+      pdf.line(pw/2 - 20, y + 2, pw/2 + 20, y + 2);
+      return y + 6;
     }
 
     function addBeigeBg(pdf) {
@@ -1159,7 +1188,7 @@ async function exportProfile() {
     pdf.text('Profil goût · ' + new Date().toLocaleDateString('fr-FR', { day:'numeric', month:'long', year:'numeric' }), mx, y + 6);
     y += 12;
 
-    y = addSigle(pdf, y);
+    y = addSeparator(pdf, y);
 
     // Style tags
     pdf.setFontSize(7); pdf.setTextColor(138, 133, 128);
@@ -1168,7 +1197,7 @@ async function exportProfile() {
     pdf.setFontSize(9); pdf.setTextColor(196, 162, 101);
     pdf.text(topStyles.join('  ·  ') || '—', mx, y); y += 5;
 
-    y = addSigle(pdf, y);
+    y = addSeparator(pdf, y);
 
     // Model tags
     pdf.setFontSize(7); pdf.setTextColor(138, 133, 128);
@@ -1177,7 +1206,7 @@ async function exportProfile() {
     pdf.setFontSize(9); pdf.setTextColor(196, 162, 101);
     pdf.text(topModels.join('  ·  ') || '—', mx, y); y += 5;
 
-    y = addSigle(pdf, y);
+    y = addSeparator(pdf, y);
 
     // Radars — same size for both
     const radarSize = 60;
@@ -1189,7 +1218,7 @@ async function exportProfile() {
     if (rm) pdf.addImage(rm.toDataURL('image/png'), 'PNG', pw/2, y, radarSize, radarSize);
     y += radarSize + 4;
 
-    y = addSigle(pdf, y);
+    y = addSeparator(pdf, y);
 
     // Moodboard
     pdf.setFontSize(7); pdf.setTextColor(138, 133, 128);
@@ -1227,7 +1256,7 @@ async function exportProfile() {
       pdf.setTextColor(196, 162, 101); pdf.setFontSize(16);
       pdf.text('Ses coups de cœur', pw/2, y, { align: 'center' });
       y += 4;
-      y = addSigle(pdf, y);
+      y = addSeparator(pdf, y);
 
       // Large format, 2 columns
       const favSize = 75, favGap = 10;
@@ -1287,7 +1316,7 @@ async function exportProfile() {
 
 function restart() {
   state = { clientPrenom:'', clientNom:'', selectedStyles:[], selectedModels:[],
-    swipeQueue:[], swipeLiked:[], coupsDeCœur:[], swipeCurrent:0, styleCounts:{}, modelCounts:{}, tagScores:{}, seenIds: new Set() };
+    swipeQueue:[], swipeLiked:[], coupsDeCœur:[], swipeCurrent:0, styleCounts:{}, modelCounts:{}, tagScores:{}, seenIds: new Set(), undoStack:[] };
   show('screen-home');
 }
 </script>
