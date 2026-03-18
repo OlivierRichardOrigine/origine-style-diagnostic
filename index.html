@@ -613,13 +613,14 @@
     </div>
   </div>
 
-  <!-- STEP 4 — PROFILE -->
+  <!-- PROFIL -->
   <div id="screen-profile" class="screen">
-    <div class="progress-wrap">
-      <div class="progress-steps"><div class="step-dot done"></div><div class="step-dot done"></div><div class="step-dot done"></div><div class="step-dot active"></div></div>
-      <div class="step-label">Étape 5 sur 5 — Profil goût</div>
-    </div>
-    <div class="scroll-content">
+    <div class="scroll-content" style="padding: 24px 28px;">
+      <!-- Logo Style.ID centré -->
+      <div style="text-align:center;padding:20px 0 16px;">
+        <img src="styleid_logo.png" alt="Style.ID" style="height:40px;opacity:0.8;">
+      </div>
+
       <div class="profile-header">
         <div class="profile-avatar" id="profile-avatar">?</div>
         <div>
@@ -627,23 +628,28 @@
           <div class="profile-date" id="profile-date">—</div>
         </div>
       </div>
-      <span class="section-label">Profil style</span>
+
+      <span class="section-label" style="margin-top:8px;">Profil style</span>
       <div class="profile-tags" id="profile-style-tags"></div>
+
       <span class="section-label">Modèles préférés</span>
       <div class="profile-tags" id="profile-model-tags"></div>
-      <div class="radar-grid">
+
+      <div class="radar-grid" style="margin-top:8px;">
         <div class="radar-card"><span class="radar-label">Style</span><canvas id="radar-style" width="260" height="260"></canvas></div>
         <div class="radar-card"><span class="radar-label">Modèles</span><canvas id="radar-models" width="260" height="260"></canvas></div>
       </div>
+
       <span class="section-label">Images likées</span>
       <div class="moodboard" id="moodboard"></div>
+
       <div id="favs-section" style="display:none">
         <span class="section-label">Coups de cœur ★</span>
         <div class="moodboard" id="favs-grid" style="grid-template-columns: repeat(3, 1fr); gap: 8px;"></div>
       </div>
     </div>
     <div class="footer">
-      <button class="btn-primary" onclick="exportProfile()">Exporter la fiche cliente</button>
+      <button class="btn-primary" onclick="exportProfile()">Exporter la fiche</button>
       <div class="email-row">
         <input class="email-input" id="send-email" placeholder="Email" type="email"/>
         <button class="btn-send" onclick="sendByEmail()">Envoyer</button>
@@ -721,26 +727,26 @@ const STYLE_OPPOSITES = {
 
 // Model search terms — searched across ALL tag values
 const MODEL_SEARCH = {
-  'Solitaire classique':             ['solitaire classique','solitaire','classic solitaire','4 prong','6 prong'],
+  'Solitaire classique':             ['solitaire classique','solitaire','classic solitaire'],
   'Solitaire cathédrale':            ['solitaire cathédrale','cathedral'],
   'Halo':                            ['halo'],
   'Double halo':                     ['double halo'],
-  'Trois pierres':                   ['trois pierres','three stone','3 stone','trilogy'],
-  'Cinq pierres':                    ['cinq pierres','five stone','multi-pierres','graduated'],
-  'Toi et Moi':                      ['toi et moi','toi & moi','two stone'],
-  'Pavé band':                       ['pavé band','pave band','diamond pave','pavé','full pave'],
+  'Trois pierres':                   ['trois pierres','three stone','3-stone','3 stone'],
+  'Cinq pierres':                    ['cinq pierres','five stone','5 stone','multi-pierres'],
+  'Toi et Moi':                      ['toi et moi','two stone'],
+  'Pavé band':                       ['pavé band','pave band','full pave'],
   'Hidden halo':                     ['hidden halo','halo caché'],
   'Split shank':                     ['split shank','split band','double band'],
-  'Bypass':                          ['bypass','by pass','wrap'],
+  'Bypass':                          ['bypass','by pass','bypass shank'],
   'Tension':                         ['tension','serti tension','tension set'],
-  'Bezel / Clos':                    ['bezel','serti clos','bezel set'],
+  'Bezel / Clos':                    ['bezel','serti clos','bezel set','half bezel'],
   'East-West':                       ['east-west','east west','horizontal set'],
-  'Cluster':                         ['cluster','grappe','multi stone'],
-  'Vintage filigrane':               ['vintage','filigrane','filigree','milgrain','retro','art deco','antique'],
-  'Nature / Floral':                 ['nature','floral','leaf','flower','feuille','vine','botanical','nature-inspired'],
-  'Sculptural moderne':              ['sculptural','statement','cocktail','architectural','modern art'],
+  'Cluster':                         ['cluster','grappe','cluster shoulders'],
+  'Vintage filigrane':               ['vintage','filigrane','filigree','milgrain','art deco','antique'],
+  'Nature / Floral':                 ['floral','leaf','flower','feuille','vine','botanical','nature-inspired','nature inspired'],
+  'Sculptural moderne':              ['sculptural','cocktail','architectural'],
   'Solitaire organique asymétrique': ['organique asymétrique','asymmetric','organic','twisted'],
-  'Organique fin structuré':         ['organique fin','bohème','bohemian','textured band','hammered']
+  'Organique fin structuré':         ['organique fin','bohème','bohemian','hammered']
 };
 
 // Colored stone keywords for filter
