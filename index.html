@@ -365,6 +365,17 @@
   .cat-card-lg .cat-unavail { width: 20px; height: 20px; object-fit: contain; margin-top: 6px; opacity: 0.5; }
   .cat-card-lg.full { grid-column: span 2; }
 
+  /* PATH CHOICE */
+  .path-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 0 24px; }
+  .path-card {
+    border: 1.5px solid var(--gray-mid); border-radius: 16px; padding: 36px 20px;
+    text-align: center; cursor: pointer; transition: all 0.2s; background: var(--white);
+  }
+  .path-card:active { transform: scale(0.97); }
+  .path-card .path-icon { font-size: 36px; margin-bottom: 16px; display: block; color: var(--gold); }
+  .path-card .path-title { font-family: 'QuinnDisplay','Cormorant Garamond',serif; font-size: 20px; font-weight: 300; display: block; margin-bottom: 8px; color: var(--black); }
+  .path-card .path-sub { font-size: 11px; color: var(--gray-text); line-height: 1.5; display: block; }
+
   /* ADMIN */
   .lock-btn { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 16px; cursor: pointer; opacity: 0.3; z-index: 10; }
   .lock-btn:hover { opacity: 0.6; }
@@ -435,9 +446,34 @@
     </div>
   </div>
 
+  <!-- CHOIX DU PARCOURS -->
+  <div id="screen-path" class="screen">
+    <button class="back-btn" onclick="show('screen-identity')">← Retour</button>
+    <div class="header" style="padding-bottom:12px;">
+      <div class="logo">Origine Paris</div>
+      <h2 class="screen-title">Comment souhaitez-vous explorer ?</h2>
+    </div>
+    <div style="flex:1;display:flex;align-items:center;">
+      <div class="path-grid">
+        <!-- PARCOURS 1 — Filtré : couleur d'or → style → modèles → swipe filtré -->
+        <div class="path-card" onclick="choosePath('guided')">
+          <span class="path-icon">◇</span>
+          <span class="path-title">J'ai une idée</span>
+          <span class="path-sub">Vous avez déjà une direction en tête</span>
+        </div>
+        <!-- PARCOURS 2 — Découverte : swipe toutes images, algo adaptatif pur -->
+        <div class="path-card" onclick="choosePath('discover')">
+          <span class="path-icon">◈</span>
+          <span class="path-title">Je veux découvrir</span>
+          <span class="path-sub">Laissez vos instincts vous guider</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ÉTAPE 0b — CATÉGORIE -->
   <div id="screen-categories" class="screen">
-    <button class="back-btn" onclick="show('screen-identity')">← Retour</button>
+    <button class="back-btn" onclick="show('screen-path')">← Retour</button>
     <div class="header">
       <div class="logo">Origine Paris</div>
       <h2 class="screen-title">Qu'est-ce qui vous intéresse ?</h2>
@@ -542,7 +578,7 @@
 
   <!-- ÉTAPE 3 — SWIPE -->
   <div id="screen-swipe" class="screen">
-    <button class="back-btn" onclick="show('screen-step2')">← Retour</button>
+    <button class="back-btn" onclick="show(state.path==='discover'?'screen-path':'screen-step2')">← Retour</button>
     <div class="progress-wrap">
       <div class="progress-steps"><div class="step-dot done"></div><div class="step-dot done"></div><div class="step-dot done"></div><div class="step-dot active"></div><div class="step-dot"></div></div>
       <div class="step-label" id="swipe-step-label">Étape 4 sur 5 — Swipe · 0 / 0</div>
@@ -801,12 +837,59 @@ function goCategories() {
   state.clientPrenom = document.getElementById('client-prenom').value.trim() || 'Cliente';
   state.clientNom    = document.getElementById('client-nom').value.trim();
   state.clientEmail  = document.getElementById('client-email').value.trim();
-  show('screen-categories');
+  show('screen-path');
 }
 
 function toggleCat(el) { el.classList.toggle('selected'); }
 
 function startCategory(cat) { if (cat === 'bdf') show('screen-identity'); }
+
+// ============================================================
+// PATH CHOICE — guided vs discover
+// ============================================================
+function choosePath(path) {
+  state.path = path;
+  if (path === 'guided') {
+    // Parcours 1: catégorie → style → couleur d'or → modèles → swipe filtré
+    show('screen-categories');
+  } else {
+    // Parcours 2: skip straight to swipe with ALL images, pure adaptive
+    goSwipeDiscover();
+  }
+}
+
+async function goSwipeDiscover() {
+  // Init counters at 0
+  STYLES.forEach(s => state.styleCounts[s] = 0);
+  MODELS.forEach(m => state.modelCounts[m.name] = 0);
+  state.tagScores = {};
+  state.selectedStyles = [];
+  state.selectedModels = [];
+  state.selectedGold = [];
+  state.seenIds = new Set();
+  state.undoStack = [];
+
+  const allImages = await loadImages();
+
+  // Deduplicate
+  const unique = [];
+  const seenIds = new Set(), seenPaths = new Set();
+  allImages.forEach(img => {
+    if (!seenIds.has(img.id) && !seenPaths.has(img.img)) {
+      seenIds.add(img.id); seenPaths.add(img.img); unique.push(img);
+    }
+  });
+
+  // Fisher-Yates shuffle — all images, no filter
+  shuffle(unique);
+
+  state.swipeQueue = unique;
+  state.swipeLiked = [];
+  state.coupsDeCœur = [];
+  state.swipeCurrent = 0;
+  renderSwipeCard();
+  show('screen-swipe');
+}
 
 function showToast() {
   const t = document.getElementById('export-toast');
@@ -982,7 +1065,11 @@ function adaptiveResort() {
     let boost = 0;
     const text = imageText(img);
     Object.entries(state.tagScores).forEach(([val, sc]) => {
-      if (text.includes(val)) boost += sc;
+      if (text.includes(val)) {
+        // Bonus multipliers for discover mode: x2 if liked 3+, x3 if liked 6+
+        const mult = sc >= 6 ? 3 : sc >= 3 ? 2 : 1;
+        boost += sc * mult;
+      }
     });
     STYLES.forEach(style => {
       if ((state.styleCounts[style] || 0) > 0) {
@@ -1565,7 +1652,7 @@ async function exportProfile() {
 }
 
 function restart() {
-  state = { clientPrenom:'', clientNom:'', clientEmail:'', selectedStyles:[], selectedModels:[],
+  state = { clientPrenom:'', clientNom:'', clientEmail:'', path:'', selectedStyles:[], selectedModels:[],
     swipeQueue:[], swipeLiked:[], coupsDeCœur:[], swipeCurrent:0, styleCounts:{}, modelCounts:{}, tagScores:{}, seenIds: new Set(), undoStack:[], selectedGold:[] };
   show('screen-home');
 }
