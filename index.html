@@ -6,6 +6,7 @@
 <title>Style.ID by Origine Paris</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap');
 
@@ -366,6 +367,27 @@
   .cat-card-lg .cat-unavail { width: 20px; height: 20px; object-fit: contain; margin-top: 6px; opacity: 0.5; }
   .cat-card-lg.full { grid-column: span 2; }
 
+  /* ADMIN */
+  .lock-btn { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 16px; cursor: pointer; opacity: 0.3; z-index: 10; }
+  .lock-btn:hover { opacity: 0.6; }
+  .admin-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 200; display: none; align-items: center; justify-content: center; }
+  .admin-overlay.show { display: flex; }
+  .admin-modal { background: var(--white); border-radius: 16px; padding: 32px; max-width: 400px; width: 90%; max-height: 85vh; overflow-y: auto; }
+  .admin-modal h3 { font-family: 'QuinnDisplay','Cormorant Garamond',serif; font-size: 20px; font-weight: 300; margin-bottom: 16px; }
+  .admin-modal input { width: 100%; padding: 12px; border: 1px solid var(--gray-mid); border-radius: 8px; font-family: 'Avenir Next',sans-serif; font-size: 14px; margin-bottom: 12px; outline: none; }
+  .admin-modal input:focus { border-color: var(--gold); }
+  .admin-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+  .admin-table th { text-align: left; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-text); padding: 8px 6px; border-bottom: 1px solid var(--gray-mid); }
+  .admin-table td { padding: 8px 6px; border-bottom: 1px solid var(--gray-light); vertical-align: top; }
+  .admin-table .admin-actions { display: flex; gap: 6px; }
+  .admin-table .admin-actions button { font-size: 9px; padding: 4px 8px; border: 1px solid var(--gray-mid); border-radius: 6px; background: var(--white); cursor: pointer; font-family: 'Avenir Next',sans-serif; }
+
+  /* EMAIL */
+  .email-row { display: flex; gap: 8px; margin-top: 10px; }
+  .email-input { flex: 1; padding: 12px; border: 1px solid var(--gray-mid); border-radius: 8px; font-family: 'Avenir Next',sans-serif; font-size: 12px; outline: none; }
+  .email-input:focus { border-color: var(--gold); }
+  .btn-send { padding: 12px 20px; background: var(--gold); color: var(--white); border: none; border-radius: 8px; font-family: 'Avenir Next',sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; white-space: nowrap; }
+
   /* TOAST */
   .toast { position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%) scale(0.8); background: var(--white); border: 1px solid var(--gold); border-radius: 16px; padding: 28px 36px; text-align: center; z-index: 100; opacity: 0; transition: all 0.3s; pointer-events: none; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
   .toast.show { opacity: 1; transform: translate(-50%,-50%) scale(1); }
@@ -376,8 +398,16 @@
 <body>
 <div id="app">
 
+  <!-- ADMIN OVERLAY -->
+  <div class="admin-overlay" id="admin-overlay">
+    <div class="admin-modal" id="admin-modal">
+      <!-- filled by JS -->
+    </div>
+  </div>
+
   <!-- ONBOARDING -->
   <div id="screen-home" class="screen active onboarding">
+    <button class="lock-btn" onclick="showAdmin()">🔒</button>
     <div class="logo-block"><img src="logo_origine_paris.png" alt="Origine Paris"></div>
     <img src="sigle_noir_sur_fond_transparent.png" class="sigle" alt="">
     <p class="home-desc">Votre goût est unique.<br>Prenez un instant pour le découvrir<br>et le garder en mémoire.</p>
@@ -401,6 +431,7 @@
       <h2 class="identity-title">Comment vous<br>appelez-vous ?</h2>
       <input class="identity-field" id="client-prenom" placeholder="Prénom" autocomplete="off"/>
       <input class="identity-field" id="client-nom" placeholder="Nom" autocomplete="off"/>
+      <input class="identity-field" id="client-email" placeholder="Email" type="email" autocomplete="off"/>
     </div>
     <div class="footer">
       <button class="btn-primary" onclick="goCategories()">Continuer →</button>
@@ -569,7 +600,7 @@
       <div class="profile-tags" id="profile-model-tags"></div>
       <div class="radar-grid">
         <div class="radar-card"><span class="radar-label">Style</span><canvas id="radar-style" width="300" height="300"></canvas></div>
-        <div class="radar-card"><span class="radar-label">Modèles</span><canvas id="radar-models" width="400" height="400"></canvas></div>
+        <div class="radar-card"><span class="radar-label">Modèles</span><canvas id="radar-models" width="340" height="340"></canvas></div>
       </div>
       <span class="section-label">Images likées</span>
       <div class="moodboard" id="moodboard"></div>
@@ -580,6 +611,10 @@
     </div>
     <div class="footer">
       <button class="btn-primary" onclick="exportProfile()">Exporter la fiche cliente</button>
+      <div class="email-row">
+        <input class="email-input" id="send-email" placeholder="Email" type="email"/>
+        <button class="btn-send" onclick="sendByEmail()">Envoyer</button>
+      </div>
       <button class="btn-secondary" onclick="restart()">Nouveau diagnostic</button>
     </div>
   </div>
@@ -707,7 +742,7 @@ const MODELS = [
 // STATE
 // ============================================================
 let state = {
-  clientPrenom:'', clientNom:'',
+  clientPrenom:'', clientNom:'', clientEmail:'',
   selectedStyles:[], selectedModels:[], selectedGold:[],
   swipeQueue:[], swipeLiked:[], coupsDeCœur:[], swipeCurrent:0,
   styleCounts:{}, modelCounts:{}, tagScores:{},
@@ -768,6 +803,7 @@ function show(id) {
 function goCategories() {
   state.clientPrenom = document.getElementById('client-prenom').value.trim() || 'Cliente';
   state.clientNom    = document.getElementById('client-nom').value.trim();
+  state.clientEmail  = document.getElementById('client-email').value.trim();
   show('screen-categories');
 }
 
@@ -1235,7 +1271,7 @@ function showProfile() {
   // Radar models — ALL 20 axes, always displayed
   const allModelLabels = MODELS.map(m => m.name);
   const allModelValues = MODELS.map(m => state.modelCounts[m.name] || 0);
-  drawRadar('radar-models', allModelLabels, allModelValues, 200, 200, 130);
+  drawRadar('radar-models', allModelLabels, allModelValues, 170, 170, 110);
 
   // Moodboard — show up to 20 liked images
   const mb = document.getElementById('moodboard');
@@ -1261,6 +1297,13 @@ function showProfile() {
   } else {
     favsSection.style.display = 'none';
   }
+
+  // Pre-fill email field
+  const emailField = document.getElementById('send-email');
+  if (emailField && state.clientEmail) emailField.value = state.clientEmail;
+
+  // Save to localStorage
+  saveProfileToStorage();
 
   show('screen-profile');
 }
@@ -1375,8 +1418,11 @@ async function exportProfile() {
       }
     } catch(e) {
       pdf.setTextColor(26, 26, 26); pdf.setFontSize(14);
-      pdf.text('Style.ID by Origine Paris', pw/2, 18, { align: 'center' });
+      pdf.text('ORIGINE PARIS', pw/2, 16, { align: 'center' });
     }
+    // Style.ID subtitle
+    pdf.setFontSize(8); pdf.setTextColor(196, 162, 101);
+    pdf.text('S T Y L E . I D   b y   O r i g i n e   P a r i s', pw/2, 28, { align: 'center' });
     y = 34;
 
     // Client
@@ -1416,8 +1462,12 @@ async function exportProfile() {
     pdf.setFontSize(7); pdf.setTextColor(138, 133, 128);
     pdf.text('MODÈLES', mx, y); y += 2;
     const rm = document.getElementById('radar-models');
-    if (rm) { pdf.addImage(rm.toDataURL('image/png'), 'PNG', mx - 5, y, 180, 180); y += 182; }
-    else { y += 4; }
+    if (rm) {
+      // Check remaining space on page
+      const rmSize = Math.min(130, ph - y - 30);
+      pdf.addImage(rm.toDataURL('image/png'), 'PNG', pw/2 - rmSize/2, y, rmSize, rmSize);
+      y += rmSize + 4;
+    }
 
     y = addSeparator(pdf, y);
 
@@ -1512,9 +1562,120 @@ async function exportProfile() {
 }
 
 function restart() {
-  state = { clientPrenom:'', clientNom:'', selectedStyles:[], selectedModels:[],
+  state = { clientPrenom:'', clientNom:'', clientEmail:'', selectedStyles:[], selectedModels:[],
     swipeQueue:[], swipeLiked:[], coupsDeCœur:[], swipeCurrent:0, styleCounts:{}, modelCounts:{}, tagScores:{}, seenIds: new Set(), undoStack:[], selectedGold:[] };
   show('screen-home');
+}
+
+// ============================================================
+// SAVE PROFILE TO LOCALSTORAGE
+// ============================================================
+function saveProfileToStorage() {
+  const profiles = JSON.parse(localStorage.getItem('origine_profiles') || '[]');
+  const topStyles = Object.entries(state.styleCounts).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k])=>k);
+  const topModels = Object.entries(state.modelCounts).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k])=>k);
+  profiles.push({
+    prenom: state.clientPrenom,
+    nom: state.clientNom,
+    email: state.clientEmail,
+    date: new Date().toISOString(),
+    styles: topStyles,
+    models: topModels,
+    likedIds: state.swipeLiked.map(i => i.id),
+    favIds: state.coupsDeCœur.map(i => i.id)
+  });
+  localStorage.setItem('origine_profiles', JSON.stringify(profiles));
+}
+
+// ============================================================
+// ADMIN
+// ============================================================
+function showAdmin() {
+  const modal = document.getElementById('admin-modal');
+  const overlay = document.getElementById('admin-overlay');
+  if (!localStorage.getItem('origine_admin')) {
+    modal.innerHTML = `
+      <h3>Accès administrateur</h3>
+      <input type="password" id="admin-pwd" placeholder="Mot de passe" onkeydown="if(event.key==='Enter')checkAdmin()"/>
+      <button class="btn-primary" onclick="checkAdmin()">Connexion</button>
+      <button class="btn-secondary" onclick="document.getElementById('admin-overlay').classList.remove('show')">Annuler</button>`;
+  } else {
+    renderAdminList();
+  }
+  overlay.classList.add('show');
+}
+
+function checkAdmin() {
+  if (document.getElementById('admin-pwd').value === 'origine2026') {
+    localStorage.setItem('origine_admin', '1');
+    renderAdminList();
+  } else {
+    alert('Mot de passe incorrect');
+  }
+}
+
+function renderAdminList() {
+  const profiles = JSON.parse(localStorage.getItem('origine_profiles') || '[]');
+  const modal = document.getElementById('admin-modal');
+  modal.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+      <h3 style="margin:0">Profils clients</h3>
+      <button class="btn-secondary" style="width:auto;margin:0;padding:8px 16px;font-size:9px" onclick="adminLogout()">Déconnexion</button>
+    </div>
+    ${profiles.length === 0 ? '<p style="color:var(--gray-text);font-size:12px;">Aucun profil enregistré.</p>' : `
+    <table class="admin-table">
+      <thead><tr><th>Nom</th><th>Email</th><th>Date</th><th>Styles</th><th></th></tr></thead>
+      <tbody>
+        ${profiles.map((p, i) => `<tr>
+          <td>${p.prenom} ${p.nom || ''}</td>
+          <td>${p.email || '—'}</td>
+          <td>${new Date(p.date).toLocaleDateString('fr-FR')}</td>
+          <td>${(p.styles || []).slice(0,3).join(', ')}</td>
+          <td class="admin-actions"><button onclick="adminDeleteProfile(${i})">Supprimer</button></td>
+        </tr>`).join('')}
+      </tbody>
+    </table>`}
+    <button class="btn-secondary" onclick="document.getElementById('admin-overlay').classList.remove('show')">Fermer</button>`;
+}
+
+function adminLogout() {
+  localStorage.removeItem('origine_admin');
+  document.getElementById('admin-overlay').classList.remove('show');
+}
+
+function adminDeleteProfile(idx) {
+  const profiles = JSON.parse(localStorage.getItem('origine_profiles') || '[]');
+  profiles.splice(idx, 1);
+  localStorage.setItem('origine_profiles', JSON.stringify(profiles));
+  renderAdminList();
+}
+
+// ============================================================
+// EMAIL SEND (EmailJS placeholder — needs config)
+// ============================================================
+async function sendByEmail() {
+  const emailField = document.getElementById('send-email');
+  const email = emailField.value.trim() || state.clientEmail;
+  if (!email || !email.includes('@')) { alert('Veuillez saisir un email valide.'); return; }
+
+  const btn = document.querySelector('.btn-send');
+  btn.textContent = 'Envoi...'; btn.disabled = true;
+
+  try {
+    // NOTE: EmailJS requires configuration:
+    // 1. Create account at emailjs.com
+    // 2. Create email service + template
+    // 3. Replace these IDs:
+    // emailjs.init('YOUR_PUBLIC_KEY');
+    // await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', { ... });
+
+    // For now, show a message that config is needed
+    alert('Pour activer l\'envoi par email, configurez EmailJS avec votre clé API dans le code (voir commentaires dans sendByEmail).');
+  } catch(err) {
+    alert('Erreur lors de l\'envoi. Réessayez.');
+  } finally {
+    btn.textContent = 'Envoyer'; btn.disabled = false;
+  }
 }
 </script>
 </body>
