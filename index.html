@@ -542,39 +542,63 @@ const STYLE_DEFS = {
   'Classique':    'Intemporel, solitaire, cathédrale, élégance pure'
 };
 
-// Direct style keywords — searched in all tag values
+// Map UI style names → actual IPTC style: and silhouette: tag values
 const STYLE_KEYWORDS = {
-  'Minimaliste':  ['minimaliste','épuré','moderne épuré','simple','thin band','plain band','bezel','serti clos','tension'],
-  'Sophistiqué':  ['sophistiqué','glamour','opulent','pavé','filigrane','milgrain','cluster','grappe','ornate','royale'],
-  'Délicat':      ['délicat','délicate','romantique délicat','fin','fine','griffes 4','griffes 6','feminine'],
-  'Volumineux':   ['volumineux','volumineuse','statement','bold','bombée','double halo','cluster','grappe'],
-  'Symétrique':   ['symétrique','classique intemporel','classique','solitaire classique','halo','trois pierres'],
-  'Asymétrique':  ['asymétrique','toi et moi','bypass','by pass','east-west','wrap','organique asymétrique'],
-  'Graphique':    ['graphique','géométrique','architectural','east-west','tension','serti tension','avant-garde','moderne'],
-  'Organique':    ['organique','nature organique','nature floral','floral','feuilles','leaf','botanique','sculptural'],
-  'Arrondi':      ['arrondi','rond','ovale','coussin','cushion','halo','romantique','bombée'],
-  'Audacieux':    ['audacieux','avant-garde','sculptural moderne','brutaliste','edgy','architectural'],
-  'Contemporain': ['contemporain','moderne','moderne épuré','actuel'],
-  'Romantique':   ['romantique','romantique délicat','féminin','doux','halo','délicat'],
-  'Vintage':      ['vintage','retro','milgrain','filigrane','art déco','antique'],
-  'Classique':    ['classique','classique intemporel','intemporel','cathédrale','solitaire classique','traditionnel']
+  'Minimaliste':  ['moderne épuré','minimal','épuré','fine','classique'],
+  'Sophistiqué':  ['glamour opulent','royale luxueux','riche'],
+  'Délicat':      ['romantique délicat','romantique','fine','délicate'],
+  'Volumineux':   ['glamour opulent','royale luxueux','riche','statement','double halo','cluster'],
+  'Symétrique':   ['classique intemporel','classique','solitaire classique','halo','trois pierres'],
+  'Asymétrique':  ['bypass','organique','torsadé','asymétrique','east-west'],
+  'Graphique':    ['moderne épuré','géométrique','sculptural moderne','east-west','bezel'],
+  'Organique':    ['nature organique','organique','floral','torsadé','sculptural'],
+  'Arrondi':      ['romantique','romantique délicat','halo','classique','ovale','coussin'],
+  'Audacieux':    ['sculptural moderne','glamour opulent','géométrique','statement'],
+  'Contemporain': ['moderne épuré','sculptural moderne','géométrique'],
+  'Romantique':   ['romantique','romantique délicat','nature organique','floral'],
+  'Vintage':      ['vintage','filigrane','milgrain','retro'],
+  'Classique':    ['classique intemporel','classique','solitaire classique','cathédrale']
 };
 
 const STYLE_OPPOSITES = {
-  'Minimaliste':  ['cluster','pavé intégral','statement','double halo','volumineuse','grappe','bold','glamour','opulent'],
-  'Sophistiqué':  ['plain band','thin band','épuré','minimaliste','bezel','tension','simple'],
-  'Délicat':      ['statement','bold','volumineuse','cluster','grappe','double halo','brutaliste'],
-  'Volumineux':   ['thin band','fine','minimaliste','épuré','simple'],
-  'Organique':    ['géométrique','architectural','east-west'],
-  'Graphique':    ['nature floral','organique','romantique'],
-  'Arrondi':      ['east-west','marquise','géométrique','angular'],
-  'Audacieux':    ['romantique','classique','nature floral','délicat'],
-  'Symétrique':   ['asymétrique','toi et moi','bypass'],
-  'Asymétrique':  ['solitaire classique','symétrique','classique'],
-  'Contemporain': ['vintage','retro','antique','art déco'],
-  'Romantique':   ['brutaliste','edgy','géométrique','architectural'],
-  'Vintage':      ['moderne','contemporain','minimaliste'],
-  'Classique':    ['avant-garde','brutaliste','edgy','asymétrique']
+  'Minimaliste':  ['glamour opulent','royale luxueux','riche','cluster','statement'],
+  'Sophistiqué':  ['minimal','épuré','moderne épuré','fine'],
+  'Délicat':      ['statement','glamour opulent','cluster','sculptural moderne'],
+  'Volumineux':   ['minimal','fine','épuré','moderne épuré'],
+  'Organique':    ['géométrique','bezel géométrique'],
+  'Graphique':    ['nature organique','floral','romantique'],
+  'Arrondi':      ['géométrique','east-west','bezel géométrique'],
+  'Audacieux':    ['romantique','classique intemporel','romantique délicat'],
+  'Symétrique':   ['bypass','asymétrique','torsadé'],
+  'Asymétrique':  ['classique','symétrique','solitaire classique'],
+  'Contemporain': ['vintage','retro','filigrane'],
+  'Romantique':   ['sculptural moderne','géométrique','brutaliste'],
+  'Vintage':      ['moderne épuré','sculptural moderne'],
+  'Classique':    ['sculptural moderne','bypass','asymétrique']
+};
+
+// Map UI model names → IPTC famille: tag values to match
+const MODEL_TAGS = {
+  'Solitaire classique':             ['solitaire classique'],
+  'Solitaire cathédrale':            ['solitaire cathédrale'],
+  'Halo':                            ['halo','halo pavé band','halo split shank','halo vintage','halo vintage filigrane'],
+  'Double halo':                     ['double halo','double halo pavé band','double halo split shank'],
+  'Trois pierres':                   ['trois pierres'],
+  'Cinq pierres':                    ['cinq pierres','multi-pierres graduées'],
+  'Toi et Moi':                      ['toi et moi'],
+  'Pavé band':                       ['pavé band','pavé band east-west','halo pavé band','double halo pavé band'],
+  'Hidden halo':                     ['halo caché','hidden halo'],
+  'Split shank':                     ['split shank','split shank pavé','halo split shank','double halo split shank'],
+  'Bypass':                          ['bypass'],
+  'Tension':                         ['tension','serti tension'],
+  'Bezel / Clos':                    ['bezel','bezel géométrique','serti clos'],
+  'East-West':                       ['east-west','pavé band east-west'],
+  'Cluster':                         ['cluster','cluster étoilé'],
+  'Vintage filigrane':               ['vintage filigrane','halo vintage filigrane','halo vintage','vintage'],
+  'Nature / Floral':                 ['nature / floral','nature floral','floral'],
+  'Sculptural moderne':              ['sculptural moderne','cocktail statement'],
+  'Solitaire organique asymétrique': ['solitaire organique asymétrique','solitaire asymétrique'],
+  'Organique fin structuré':         ['organique fin structuré','bohème']
 };
 
 const MODELS = [
@@ -735,23 +759,20 @@ async function loadImages() {
 
 function filterAndSort(allImages) {
   const selStyles = state.selectedStyles;
-  const selModels = state.selectedModels.map(m => m.toLowerCase());
+  const selModels = state.selectedModels;
   const hasModels = selModels.length > 0;
   const hasStyles = selStyles.length > 0;
 
-  // Helper: does image match at least one selected model?
+  // Does image match at least one selected model via MODEL_TAGS?
   function matchesModel(img) {
-    return img.tags.some(tag => {
-      if (parseTagKey(tag) !== 'famille') return false;
-      const val = parseTagValue(tag);
-      return selModels.some(m => {
-        const words = m.split(/[\s\/]+/);
-        return words.some(w => w.length > 2 && val.includes(w)) || val.includes(m);
-      });
+    const familleTags = img.tags.filter(t => parseTagKey(t) === 'famille').map(parseTagValue);
+    return selModels.some(model => {
+      const targets = MODEL_TAGS[model] || [model.toLowerCase()];
+      return familleTags.some(fam => targets.some(t => fam.includes(t) || t.includes(fam)));
     });
   }
 
-  // Helper: style score for an image
+  // Style score: search STYLE_KEYWORDS in ALL tag values (style:, silhouette:, ornement:, etc.)
   function styleScore(img) {
     let score = 0, penalty = 0;
     const tagValues = img.tags.map(parseTagValue);
@@ -759,14 +780,13 @@ function filterAndSort(allImages) {
       const kws = STYLE_KEYWORDS[style] || [];
       tagValues.forEach(val => { kws.forEach(kw => { if (val.includes(kw) || kw.includes(val)) score += 5; }); });
       const opps = STYLE_OPPOSITES[style] || [];
-      tagValues.forEach(val => { opps.forEach(opp => { if (val.includes(opp) || opp.includes(val)) penalty += 8; }); });
+      tagValues.forEach(val => { opps.forEach(opp => { if (val.includes(opp)) penalty += 8; }); });
     });
-    // Adaptive boost
     tagValues.forEach(val => { score += (state.tagScores[val] || 0) * 2; });
     return score - penalty;
   }
 
-  // AND logic: model AND style must both match (if both selected)
+  // AND logic
   let pool;
   if (hasModels && hasStyles) {
     pool = allImages.filter(img => matchesModel(img) && styleScore(img) > 0);
@@ -778,11 +798,10 @@ function filterAndSort(allImages) {
     pool = [...allImages];
   }
 
-  // Score and sort
   const scored = pool.map(img => ({ ...img, _score: styleScore(img) }));
   scored.sort((a, b) => b._score - a._score + (Math.random() - 0.5) * 3);
 
-  // Minimum 30: if too few, add best-scored from remaining
+  // Minimum 30
   if (scored.length < 30 && (hasModels || hasStyles)) {
     const poolIds = new Set(scored.map(i => i.id));
     const rest = allImages.filter(i => !poolIds.has(i.id))
@@ -1320,7 +1339,8 @@ async function exportProfile() {
       let col = 0;
       let fy = y;
 
-      // Preload fav images from the DOM moodboard or create temp images
+      // Get fav images from the DOM favs-grid
+      const favImgEls = document.querySelectorAll('#favs-grid .moodboard-item img');
       for (let i = 0; i < state.coupsDeCœur.length; i++) {
         const fx = col === 0 ? col1x : col2x;
         if (fy + favSize > ph - 25) {
@@ -1329,15 +1349,9 @@ async function exportProfile() {
         pdf.setFillColor(255, 255, 255);
         pdf.roundedRect(fx, fy, favSize, favSize, 3, 3, 'F');
 
-        // Try to load the image
         try {
-          const tempImg = new Image();
-          tempImg.crossOrigin = 'anonymous';
-          tempImg.src = state.coupsDeCœur[i].img;
-          // Check if already cached
-          if (tempImg.complete && tempImg.naturalWidth > 0) {
-            drawThumb(pdf, tempImg, fx, fy, favSize);
-          } else {
+          const imgEl = favImgEls[i];
+          if (!drawThumb(pdf, imgEl, fx, fy, favSize)) {
             pdf.setFontSize(8); pdf.setTextColor(138,133,128);
             pdf.text(state.coupsDeCœur[i].id, fx + favSize/2, fy + favSize/2, { align:'center' });
           }
