@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>Style.ID — Origine Paris</title>
+<title>Style.ID by Origine Paris</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <style>
@@ -231,10 +231,10 @@
   }
   .input-field:focus { border-color: var(--gold); }
 
-  .chip-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
   .chip {
-    padding: 9px 16px; border: 1px solid var(--gray-mid); border-radius: 20px; font-size: 11px;
-    letter-spacing: 0.05em; color: var(--gray-text); cursor: pointer; transition: all 0.15s;
+    padding: 12px 20px; border: 1px solid var(--gray-mid); border-radius: 24px; font-size: 13px;
+    letter-spacing: 0.04em; color: var(--gray-text); cursor: pointer; transition: all 0.15s;
     background: var(--white); font-family: 'Avenir Next', 'Avenir', sans-serif;
   }
   .chip.selected { background: var(--black); color: var(--white); border-color: var(--black); }
@@ -306,7 +306,7 @@
   .profile-name { font-family: 'QuinnDisplay', 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; }
   .profile-date { font-size: 10px; color: var(--gray-text); letter-spacing: 0.08em; margin-top: 2px; }
 
-  .radar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .radar-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 20px; }
   .radar-card { background: transparent; border-radius: var(--radius); padding: 4px; }
   .radar-card canvas { width: 100%; height: auto; }
   .radar-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-text); margin-bottom: 10px; display: block; }
@@ -351,9 +351,9 @@
   /* IDENTITY SCREEN */
   .identity-hero { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 40px 32px; }
   .identity-title { font-family: 'QuinnDisplay','Cormorant Garamond',serif; font-size: 32px; font-weight: 300; line-height: 1.2; margin-bottom: 32px; color: var(--black); }
-  .identity-field { width: 100%; padding: 14px 0; border: none; border-bottom: 1px solid var(--gray-mid); font-family: 'Avenir Next','Avenir',sans-serif; font-size: 18px; font-weight: 300; background: transparent; color: var(--black); outline: none; margin-bottom: 20px; }
+  .identity-field { width: 100%; padding: 14px 0; border: none; border-bottom: 1.5px solid var(--black); font-family: 'Avenir Next','Avenir',sans-serif; font-size: 18px; font-weight: 300; background: transparent; color: var(--black); outline: none; margin-bottom: 20px; }
   .identity-field:focus { border-bottom-color: var(--gold); }
-  .identity-field::placeholder { color: var(--gray-mid); }
+  .identity-field::placeholder { color: #8A8580; }
 
   /* CATEGORY CARDS LARGE */
   .cat-grid-large { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -361,8 +361,9 @@
   .cat-card-lg.selected { border-color: var(--gold); border-width: 2px; }
   .cat-card-lg.unavailable { opacity: 0.3; pointer-events: none; }
   .cat-card-lg:active { transform: scale(0.97); }
-  .cat-card-lg .cat-icon { font-size: 28px; margin-bottom: 10px; display: block; }
+  .cat-card-lg .cat-icon { width: 48px; height: 48px; object-fit: contain; margin: 0 auto 10px; display: block; border-radius: 8px; }
   .cat-card-lg .cat-name { font-size: 12px; font-weight: 500; }
+  .cat-card-lg .cat-unavail { width: 20px; height: 20px; object-fit: contain; margin-top: 6px; opacity: 0.5; }
   .cat-card-lg.full { grid-column: span 2; }
 
   /* TOAST */
@@ -417,13 +418,29 @@
     <div class="scroll-content">
       <div class="cat-grid-large">
         <div class="cat-card-lg full" id="cat-bdf" onclick="toggleCat(this)">
-          <span class="cat-icon">◇</span>
+          <img class="cat-icon" src="images/Icons_categoy/Bagues de fiancailles.png" alt="">
           <span class="cat-name">Bagues de fiançailles</span>
         </div>
-        <div class="cat-card-lg unavailable"><span class="cat-icon">◇</span><span class="cat-name">Bagues</span></div>
-        <div class="cat-card-lg unavailable"><span class="cat-icon">◈</span><span class="cat-name">Boucles d'oreilles</span></div>
-        <div class="cat-card-lg unavailable"><span class="cat-icon">○</span><span class="cat-name">Colliers</span></div>
-        <div class="cat-card-lg unavailable"><span class="cat-icon">⌀</span><span class="cat-name">Bracelets</span></div>
+        <div class="cat-card-lg unavailable">
+          <img class="cat-icon" src="images/Icons_categoy/Bagues.jpeg" alt="">
+          <span class="cat-name">Bagues</span>
+          <img class="cat-unavail" src="images/Icons_categoy/Sablier.jpeg" alt="">
+        </div>
+        <div class="cat-card-lg unavailable">
+          <img class="cat-icon" src="images/Icons_categoy/Boucles d'oreilles.jpeg" alt="">
+          <span class="cat-name">Boucles d'oreilles</span>
+          <img class="cat-unavail" src="images/Icons_categoy/Sablier.jpeg" alt="">
+        </div>
+        <div class="cat-card-lg unavailable">
+          <img class="cat-icon" src="images/Icons_categoy/Colliers et pendentifs.jpeg" alt="">
+          <span class="cat-name">Colliers</span>
+          <img class="cat-unavail" src="images/Icons_categoy/Sablier.jpeg" alt="">
+        </div>
+        <div class="cat-card-lg unavailable">
+          <img class="cat-icon" src="images/Icons_categoy/Bracelets.jpeg" alt="">
+          <span class="cat-name">Bracelets</span>
+          <img class="cat-unavail" src="images/Icons_categoy/Sablier.jpeg" alt="">
+        </div>
       </div>
     </div>
     <div class="footer"><button class="btn-primary" onclick="goStep1()">Continuer →</button></div>
@@ -551,8 +568,8 @@
       <span class="section-label">Modèles préférés</span>
       <div class="profile-tags" id="profile-model-tags"></div>
       <div class="radar-grid">
-        <div class="radar-card"><span class="radar-label">Style</span><canvas id="radar-style" width="200" height="200"></canvas></div>
-        <div class="radar-card"><span class="radar-label">Modèles</span><canvas id="radar-models" width="200" height="200"></canvas></div>
+        <div class="radar-card"><span class="radar-label">Style</span><canvas id="radar-style" width="300" height="300"></canvas></div>
+        <div class="radar-card"><span class="radar-label">Modèles</span><canvas id="radar-models" width="400" height="400"></canvas></div>
       </div>
       <span class="section-label">Images likées</span>
       <div class="moodboard" id="moodboard"></div>
@@ -1212,18 +1229,13 @@ function showProfile() {
   const topModels = Object.entries(state.modelCounts).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k])=>k);
   document.getElementById('profile-model-tags').innerHTML = topModels.map(m=>`<span class="profile-tag">${m}</span>`).join('');
 
-  // Radars — same size for both
-  const rCx = 100, rCy = 100, rR = 65;
-  drawRadar('radar-style', STYLES, STYLES.map(s => state.styleCounts[s] || 0), rCx, rCy, rR);
+  // Radar style
+  drawRadar('radar-style', STYLES, STYLES.map(s => state.styleCounts[s] || 0), 150, 150, 100);
 
-  // Top 10 models for radar to avoid label overlap
-  const modelEntries = MODELS.map(m => ({ name: m.name, score: state.modelCounts[m.name] || 0 }));
-  modelEntries.sort((a, b) => b.score - a.score);
-  const top10 = modelEntries.filter(m => m.score > 0).slice(0, 10);
-  if (top10.length < 3) {
-    modelEntries.slice(0, 8).forEach(m => { if (!top10.find(t => t.name === m.name)) top10.push(m); });
-  }
-  drawRadar('radar-models', top10.map(m => m.name), top10.map(m => m.score), rCx, rCy, rR);
+  // Radar models — ALL 20 axes, always displayed
+  const allModelLabels = MODELS.map(m => m.name);
+  const allModelValues = MODELS.map(m => state.modelCounts[m.name] || 0);
+  drawRadar('radar-models', allModelLabels, allModelValues, 200, 200, 130);
 
   // Moodboard — show up to 20 liked images
   const mb = document.getElementById('moodboard');
@@ -1282,10 +1294,10 @@ function drawRadar(canvasId, labels, values, cx, cy, r) {
     ctx.beginPath(); ctx.moveTo(cx, cy);
     ctx.lineTo(cx + r * Math.cos(angle), cy + r * Math.sin(angle));
     ctx.strokeStyle = 'rgba(0,0,0,0.07)'; ctx.lineWidth = 0.5; ctx.stroke();
-    ctx.font = "7px 'Avenir Next', sans-serif"; ctx.fillStyle = '#8A8580';
+    ctx.font = "9px 'Avenir Next', sans-serif"; ctx.fillStyle = '#8A8580';
     ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    const lr = r + 14;
-    ctx.fillText(labels[i].substring(0, 12), cx + lr * Math.cos(angle), cy + lr * Math.sin(angle));
+    const lr = r + 18;
+    ctx.fillText(labels[i].substring(0, 16), cx + lr * Math.cos(angle), cy + lr * Math.sin(angle));
   }
 
   ctx.beginPath();
@@ -1396,14 +1408,16 @@ async function exportProfile() {
     y = addSeparator(pdf, y);
 
     // Radars — same size for both
-    const radarSize = 60;
     pdf.setFontSize(7); pdf.setTextColor(138, 133, 128);
-    pdf.text('STYLE', mx, y); pdf.text('MODÈLES', pw/2 + 5, y); y += 2;
+    pdf.text('STYLE', mx, y); y += 2;
     const rs = document.getElementById('radar-style');
+    if (rs) pdf.addImage(rs.toDataURL('image/png'), 'PNG', mx, y, 80, 80);
+    y += 82;
+    pdf.setFontSize(7); pdf.setTextColor(138, 133, 128);
+    pdf.text('MODÈLES', mx, y); y += 2;
     const rm = document.getElementById('radar-models');
-    if (rs) pdf.addImage(rs.toDataURL('image/png'), 'PNG', mx - 4, y, radarSize, radarSize);
-    if (rm) pdf.addImage(rm.toDataURL('image/png'), 'PNG', pw/2, y, radarSize, radarSize);
-    y += radarSize + 4;
+    if (rm) { pdf.addImage(rm.toDataURL('image/png'), 'PNG', mx - 5, y, 180, 180); y += 182; }
+    else { y += 4; }
 
     y = addSeparator(pdf, y);
 
