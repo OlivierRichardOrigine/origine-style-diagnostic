@@ -319,48 +319,73 @@
 
   .profile-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
   .profile-tag { font-size: 10px; color: var(--gold); background: var(--white); border: 1px solid var(--gold-light); border-radius: 12px; padding: 4px 12px; letter-spacing: 0.05em; }
+
+  /* ONBOARDING */
+  .onboarding { background: var(--black); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .onboarding .logo-block { background: transparent; margin-bottom: 16px; }
+  .onboarding .logo-block img { filter: brightness(0) invert(1); width: 200px; }
+  .onboarding .sigle { width: 40px; margin-bottom: 24px; filter: brightness(0) invert(1); }
+  .onboarding .home-desc { color: #8A8580; margin-bottom: 40px; }
+  .onboarding-btns { width: 100%; padding: 0 32px; }
+  .btn-white { width: 100%; padding: 16px; background: var(--white); color: var(--black); border: none; border-radius: var(--radius); font-family: 'Avenir Next','Avenir',sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; margin-bottom: 10px; }
+  .btn-outline-white { width: 100%; padding: 14px; background: transparent; color: #8A8580; border: 1px solid #444; border-radius: var(--radius); font-family: 'Avenir Next','Avenir',sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; }
+
+  /* CHIP INFO */
+  .chip-wrap { display: flex; align-items: center; gap: 4px; }
+  .chip-info { width: 18px; height: 18px; border-radius: 50%; border: 1px solid var(--gray-mid); background: var(--white); color: var(--gray-text); font-size: 10px; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; position: relative; }
+  .chip-tooltip { display: none; position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--black); color: var(--white); font-size: 10px; padding: 8px 12px; border-radius: 8px; width: 200px; text-align: left; line-height: 1.4; z-index: 10; pointer-events: none; }
+  .chip-info.active .chip-tooltip { display: block; }
+
+  /* TOAST */
+  .toast { position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%) scale(0.8); background: var(--white); border: 1px solid var(--gold); border-radius: 16px; padding: 28px 36px; text-align: center; z-index: 100; opacity: 0; transition: all 0.3s; pointer-events: none; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+  .toast.show { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+  .toast-check { font-size: 32px; color: #2D7A4F; margin-bottom: 8px; }
+  .toast-text { font-size: 12px; color: var(--black); letter-spacing: 0.05em; }
 </style>
 </head>
 <body>
 <div id="app">
 
-  <!-- HOME -->
-  <div id="screen-home" class="screen active">
-    <div class="home-hero">
-      <div class="logo-block">
-        <img src="logo_origine_paris.png" alt="Origine Paris">
-      </div>
-      <h2 class="home-subtitle">Style Diagnostic</h2>
-      <p class="home-desc">Votre goût est unique. Prenez un instant pour le découvrir et le garder en mémoire.</p>
+  <!-- ONBOARDING -->
+  <div id="screen-home" class="screen active onboarding">
+    <div class="logo-block"><img src="logo_origine_paris.png" alt="Origine Paris"></div>
+    <img src="sigle_noir_sur_fond_transparent.png" class="sigle" alt="">
+    <p class="home-desc">Votre goût est unique.<br>Prenez un instant pour le découvrir<br>et le garder en mémoire.</p>
+    <div class="onboarding-btns">
+      <button class="btn-white" onclick="show('screen-categories')">Commencer</button>
+      <button class="btn-outline-white">Connexion</button>
     </div>
-    <div style="padding: 0 24px 32px;">
+  </div>
+
+  <!-- CATEGORIES -->
+  <div id="screen-categories" class="screen">
+    <button class="back-btn" onclick="show('screen-home')">← Retour</button>
+    <div class="header">
+      <div class="logo-block" style="background:transparent;padding:16px 0;margin-bottom:0;justify-content:flex-start;"><img src="logo_origine_paris.png" alt="" style="width:120px"></div>
+      <h2 class="screen-title">Choisissez une catégorie</h2>
+    </div>
+    <div class="scroll-content">
       <div class="cat-grid">
         <div class="cat-card featured" onclick="startCategory('bdf')" style="grid-column: span 2;">
           <span class="cat-name">Bagues de fiançailles</span>
         </div>
-        <div class="cat-card disabled">
-          <span class="cat-name">Bagues</span>
-          <span class="cat-soon">bientôt</span>
-        </div>
-        <div class="cat-card disabled">
-          <span class="cat-name">Boucles d'oreilles</span>
-          <span class="cat-soon">bientôt</span>
-        </div>
-        <div class="cat-card disabled">
-          <span class="cat-name">Colliers</span>
-          <span class="cat-soon">bientôt</span>
-        </div>
-        <div class="cat-card disabled">
-          <span class="cat-name">Bracelets</span>
-          <span class="cat-soon">bientôt</span>
-        </div>
+        <div class="cat-card disabled"><span class="cat-name">Bagues</span><span class="cat-soon">bientôt</span></div>
+        <div class="cat-card disabled"><span class="cat-name">Boucles d'oreilles</span><span class="cat-soon">bientôt</span></div>
+        <div class="cat-card disabled"><span class="cat-name">Colliers</span><span class="cat-soon">bientôt</span></div>
+        <div class="cat-card disabled"><span class="cat-name">Bracelets</span><span class="cat-soon">bientôt</span></div>
       </div>
     </div>
   </div>
 
+  <!-- TOAST -->
+  <div class="toast" id="export-toast">
+    <div class="toast-check">✓</div>
+    <div class="toast-text">Fiche exportée avec succès</div>
+  </div>
+
   <!-- CLIENT -->
   <div id="screen-client" class="screen">
-    <button class="back-btn" onclick="show('screen-home')">← Retour</button>
+    <button class="back-btn" onclick="show('screen-categories')">← Retour</button>
     <div class="header">
       <div class="logo">Origine Paris · Bagues de fiançailles</div>
       <h2 class="screen-title">La cliente</h2>
@@ -495,72 +520,60 @@
 // ============================================================
 const STYLES = [
   'Sophistiqué','Minimaliste','Délicat','Volumineux',
-  'Symétrique','Asymétrique','Graphique','Organique','Arrondi','Audacieux'
+  'Symétrique','Asymétrique','Graphique','Organique','Arrondi','Audacieux',
+  'Contemporain','Romantique','Vintage','Classique'
 ];
 
-const STYLE_TAG_MAPPING = {
-  'Minimaliste': [
-    'thin band','plain band','plain round band','solitaire',
-    'moderne épuré','minimaliste','épuré','bezel','serti clos',
-    'tension','east-west','simple'
-  ],
-  'Sophistiqué': [
-    'pavé','pavé griffes','micro-pavé','filigrane','milgrain',
-    'vintage','retro','cluster','grappe','nature floral',
-    'floral prongs','leaf','feuilles','art déco','ornate'
-  ],
-  'Délicat': [
-    'thin band','fine','délicate','griffes 4','griffes 6',
-    'solitaire classique','cathédrale','romantique','feminine'
-  ],
-  'Volumineux': [
-    'double halo','halo','statement','cluster','grappe',
-    'coussin','cushion','bold','volumineuse','bombée',
-    'cinq pierres','trois pierres'
-  ],
-  'Symétrique': [
-    'solitaire classique','halo','trois pierres','cinq pierres',
-    'double halo','classique intemporel','classique','symétrique'
-  ],
-  'Asymétrique': [
-    'toi et moi','bypass','by pass','asymétrique',
-    'solitaire asymétrique','organique asymétrique',
-    'east-west','wrap'
-  ],
-  'Graphique': [
-    'east-west','tension','serti tension','géométrique',
-    'bezel','serti clos','moderne','avant-garde',
-    'architectural','graphique'
-  ],
-  'Organique': [
-    'nature floral','nature - floral','floral prongs',
-    'leaf','feuilles','organique','botanique',
-    'nature organique','nature inspired','sculptural',
-    'bypass','asymétrique'
-  ],
-  'Arrondi': [
-    'halo','coussin','cushion','rond brillant','ovale',
-    'double halo','hidden halo','halo caché','romantique',
-    'bombée','pavé band'
-  ],
-  'Audacieux': [
-    'tension','serti tension','avant-garde','sculptural moderne',
-    'brutaliste','géométrique','east-west','bypass',
-    'architectural','moderne épuré'
-  ]
+const STYLE_DEFS = {
+  'Sophistiqué':  'Détails travaillés, pavé, filigrane, motifs floraux',
+  'Minimaliste':  'Lignes épurées, bande fine, sans ornement superflu',
+  'Délicat':      'Fin, féminin, griffes discrètes, romantique',
+  'Volumineux':   'Présence affirmée, halo, cluster, pierres multiples',
+  'Symétrique':   'Équilibre parfait, solitaire centré, classique',
+  'Asymétrique':  'Toi et moi, bypass, décentré, original',
+  'Graphique':    'Géométrique, tension, east-west, architectural',
+  'Organique':    'Inspiré de la nature, feuilles, floral, sculptural',
+  'Arrondi':      'Formes courbes, coussin, ovale, halo doux',
+  'Audacieux':    'Avant-garde, sculptural, brutaliste, statement',
+  'Contemporain': 'Design actuel, moderne épuré, lignes nettes',
+  'Romantique':   'Doux, féminin, halo délicat, pierres rondes',
+  'Vintage':      'Rétro, milgrain, filigrane, art déco',
+  'Classique':    'Intemporel, solitaire, cathédrale, élégance pure'
+};
+
+// Direct style keywords — searched in all tag values
+const STYLE_KEYWORDS = {
+  'Minimaliste':  ['minimaliste','épuré','moderne épuré','simple','thin band','plain band','bezel','serti clos','tension'],
+  'Sophistiqué':  ['sophistiqué','glamour','opulent','pavé','filigrane','milgrain','cluster','grappe','ornate','royale'],
+  'Délicat':      ['délicat','délicate','romantique délicat','fin','fine','griffes 4','griffes 6','feminine'],
+  'Volumineux':   ['volumineux','volumineuse','statement','bold','bombée','double halo','cluster','grappe'],
+  'Symétrique':   ['symétrique','classique intemporel','classique','solitaire classique','halo','trois pierres'],
+  'Asymétrique':  ['asymétrique','toi et moi','bypass','by pass','east-west','wrap','organique asymétrique'],
+  'Graphique':    ['graphique','géométrique','architectural','east-west','tension','serti tension','avant-garde','moderne'],
+  'Organique':    ['organique','nature organique','nature floral','floral','feuilles','leaf','botanique','sculptural'],
+  'Arrondi':      ['arrondi','rond','ovale','coussin','cushion','halo','romantique','bombée'],
+  'Audacieux':    ['audacieux','avant-garde','sculptural moderne','brutaliste','edgy','architectural'],
+  'Contemporain': ['contemporain','moderne','moderne épuré','actuel'],
+  'Romantique':   ['romantique','romantique délicat','féminin','doux','halo','délicat'],
+  'Vintage':      ['vintage','retro','milgrain','filigrane','art déco','antique'],
+  'Classique':    ['classique','classique intemporel','intemporel','cathédrale','solitaire classique','traditionnel']
 };
 
 const STYLE_OPPOSITES = {
-  'Minimaliste':  ['intricate','cluster','pavé intégral','statement','double halo','volumineuse','grappe','chandelier','bold'],
-  'Sophistiqué':  ['plain band','thin band','épuré','minimaliste','bezel','tension'],
-  'Délicat':      ['statement','bold','volumineuse','cluster','grappe','double halo'],
-  'Volumineux':   ['thin band','fine','minimaliste','épuré'],
+  'Minimaliste':  ['cluster','pavé intégral','statement','double halo','volumineuse','grappe','bold','glamour','opulent'],
+  'Sophistiqué':  ['plain band','thin band','épuré','minimaliste','bezel','tension','simple'],
+  'Délicat':      ['statement','bold','volumineuse','cluster','grappe','double halo','brutaliste'],
+  'Volumineux':   ['thin band','fine','minimaliste','épuré','simple'],
   'Organique':    ['géométrique','architectural','east-west'],
   'Graphique':    ['nature floral','organique','romantique'],
-  'Arrondi':      ['east-west','marquise','géométrique'],
-  'Audacieux':    ['romantique','classique','nature floral'],
+  'Arrondi':      ['east-west','marquise','géométrique','angular'],
+  'Audacieux':    ['romantique','classique','nature floral','délicat'],
   'Symétrique':   ['asymétrique','toi et moi','bypass'],
-  'Asymétrique':  ['solitaire classique','symétrique','classique']
+  'Asymétrique':  ['solitaire classique','symétrique','classique'],
+  'Contemporain': ['vintage','retro','antique','art déco'],
+  'Romantique':   ['brutaliste','edgy','géométrique','architectural'],
+  'Vintage':      ['moderne','contemporain','minimaliste'],
+  'Classique':    ['avant-garde','brutaliste','edgy','asymétrique']
 };
 
 const MODELS = [
@@ -610,17 +623,14 @@ function parseTagKey(tag) {
   return idx >= 0 ? tag.substring(0, idx).trim().toLowerCase() : '';
 }
 
-// Compute style scores for an image based on STYLE_TAG_MAPPING
 function computeStyleScores(img) {
   const scores = {};
   const tagValues = img.tags.map(parseTagValue);
   STYLES.forEach(style => {
-    const keywords = STYLE_TAG_MAPPING[style] || [];
+    const keywords = STYLE_KEYWORDS[style] || [];
     let score = 0;
     tagValues.forEach(val => {
-      keywords.forEach(kw => {
-        if (val.includes(kw) || kw.includes(val)) score++;
-      });
+      keywords.forEach(kw => { if (val.includes(kw) || kw.includes(val)) score++; });
     });
     if (score > 0) scores[style] = score;
   });
@@ -654,6 +664,12 @@ function show(id) {
 }
 
 function startCategory(cat) { if (cat === 'bdf') show('screen-client'); }
+
+function showToast() {
+  const t = document.getElementById('export-toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
 
 function goStep1() {
   state.clientPrenom = document.getElementById('client-prenom').value.trim() || 'Cliente';
@@ -722,56 +738,59 @@ function filterAndSort(allImages) {
   const hasModels = selModels.length > 0;
   const hasStyles = selStyles.length > 0;
 
-  // STEP 1 — Hard filter by model family if any selected
-  let pool = allImages;
-  if (hasModels) {
-    const modelFiltered = allImages.filter(img => {
-      return img.tags.some(tag => {
-        if (parseTagKey(tag) !== 'famille') return false;
-        const val = parseTagValue(tag);
-        return selModels.some(m => {
-          const words = m.split(/[\s\/]+/);
-          return words.some(w => w.length > 2 && val.includes(w)) || val.includes(m);
-        });
+  // Helper: does image match at least one selected model?
+  function matchesModel(img) {
+    return img.tags.some(tag => {
+      if (parseTagKey(tag) !== 'famille') return false;
+      const val = parseTagValue(tag);
+      return selModels.some(m => {
+        const words = m.split(/[\s\/]+/);
+        return words.some(w => w.length > 2 && val.includes(w)) || val.includes(m);
       });
     });
-    // Only use filtered if we got results
-    if (modelFiltered.length > 0) pool = modelFiltered;
   }
 
-  // STEP 2 — Score by style match + penalize opposites
-  const scored = pool.map(img => {
-    let score = 0;
-    let penalty = 0;
+  // Helper: style score for an image
+  function styleScore(img) {
+    let score = 0, penalty = 0;
     const tagValues = img.tags.map(parseTagValue);
-
     selStyles.forEach(style => {
-      const keywords = STYLE_TAG_MAPPING[style] || [];
-      tagValues.forEach(val => {
-        keywords.forEach(kw => { if (val.includes(kw) || kw.includes(val)) score += 5; });
-      });
-      const opposites = STYLE_OPPOSITES[style] || [];
-      tagValues.forEach(val => {
-        opposites.forEach(opp => { if (val.includes(opp) || opp.includes(val)) penalty += 8; });
-      });
+      const kws = STYLE_KEYWORDS[style] || [];
+      tagValues.forEach(val => { kws.forEach(kw => { if (val.includes(kw) || kw.includes(val)) score += 5; }); });
+      const opps = STYLE_OPPOSITES[style] || [];
+      tagValues.forEach(val => { opps.forEach(opp => { if (val.includes(opp) || opp.includes(val)) penalty += 8; }); });
     });
-
     // Adaptive boost
     tagValues.forEach(val => { score += (state.tagScores[val] || 0) * 2; });
-
-    return { ...img, _score: score - penalty };
-  });
-
-  if (hasStyles) {
-    // Exclude penalized images, sort by score
-    const good = scored.filter(i => i._score > 0);
-    const neutral = scored.filter(i => i._score === 0);
-    good.sort((a, b) => b._score - a._score + (Math.random() - 0.5) * 4);
-    neutral.sort(() => Math.random() - 0.5);
-    return [...good, ...neutral];
+    return score - penalty;
   }
 
-  return scored.sort(() => Math.random() - 0.5);
+  // AND logic: model AND style must both match (if both selected)
+  let pool;
+  if (hasModels && hasStyles) {
+    pool = allImages.filter(img => matchesModel(img) && styleScore(img) > 0);
+  } else if (hasModels) {
+    pool = allImages.filter(matchesModel);
+  } else if (hasStyles) {
+    pool = allImages.filter(img => styleScore(img) > 0);
+  } else {
+    pool = [...allImages];
+  }
+
+  // Score and sort
+  const scored = pool.map(img => ({ ...img, _score: styleScore(img) }));
+  scored.sort((a, b) => b._score - a._score + (Math.random() - 0.5) * 3);
+
+  // Minimum 30: if too few, add best-scored from remaining
+  if (scored.length < 30 && (hasModels || hasStyles)) {
+    const poolIds = new Set(scored.map(i => i.id));
+    const rest = allImages.filter(i => !poolIds.has(i.id))
+      .map(img => ({ ...img, _score: styleScore(img) }))
+      .sort((a, b) => b._score - a._score);
+    scored.push(...rest.slice(0, 30 - scored.length));
+  }
+
+  return scored;
 }
 
 // Point 9 — Adaptive re-sort after each like
@@ -781,10 +800,9 @@ function adaptiveResort() {
   remaining.forEach(img => {
     let boost = 0;
     img.tags.forEach(tag => { boost += (state.tagScores[parseTagValue(tag)] || 0); });
-    // Also boost by style mapping match
     STYLES.forEach(style => {
       if ((state.styleCounts[style] || 0) > 0) {
-        const kws = STYLE_TAG_MAPPING[style] || [];
+        const kws = STYLE_KEYWORDS[style] || [];
         img.tags.forEach(tag => {
           const val = parseTagValue(tag);
           kws.forEach(kw => { if (val.includes(kw)) boost += state.styleCounts[style]; });
@@ -805,10 +823,20 @@ function adaptiveResort() {
 function buildStyleChips() {
   const c = document.getElementById('style-chips'); c.innerHTML = '';
   STYLES.forEach(s => {
-    const el = document.createElement('div');
-    el.className = 'chip'; el.textContent = s;
-    el.onclick = () => el.classList.toggle('selected');
-    c.appendChild(el);
+    const wrap = document.createElement('div');
+    wrap.className = 'chip-wrap';
+    const chip = document.createElement('div');
+    chip.className = 'chip'; chip.textContent = s;
+    chip.onclick = () => chip.classList.toggle('selected');
+    wrap.appendChild(chip);
+    if (STYLE_DEFS[s]) {
+      const info = document.createElement('div');
+      info.className = 'chip-info';
+      info.innerHTML = `ⓘ<div class="chip-tooltip">${STYLE_DEFS[s]}</div>`;
+      info.onclick = (e) => { e.stopPropagation(); info.classList.toggle('active'); };
+      wrap.appendChild(info);
+    }
+    c.appendChild(wrap);
   });
 }
 
@@ -1306,6 +1334,7 @@ async function exportProfile() {
     }
 
     pdf.save(`profil-gout-${state.clientPrenom.toLowerCase()}-${new Date().toISOString().slice(0,10)}.pdf`);
+    showToast();
   } catch(err) {
     console.error('PDF error:', err);
     alert('Erreur PDF. Réessayez.');
@@ -1317,7 +1346,7 @@ async function exportProfile() {
 function restart() {
   state = { clientPrenom:'', clientNom:'', selectedStyles:[], selectedModels:[],
     swipeQueue:[], swipeLiked:[], coupsDeCœur:[], swipeCurrent:0, styleCounts:{}, modelCounts:{}, tagScores:{}, seenIds: new Set(), undoStack:[] };
-  show('screen-home');
+  show('screen-categories');
 }
 </script>
 </body>

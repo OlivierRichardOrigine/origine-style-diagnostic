@@ -1,7 +1,7 @@
 [
   {
     "id": "FIA-001",
-    "FileName": "FIA-001.jpeg",
+    "FileName": "FIA-001.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:nature / floral",
@@ -15,12 +15,11 @@
       "ornement:riche",
       "finition:poli, ajouré, motifs feuilles pavé",
       "matiere:or + diamants"
-    ],
-    "Caption": "nature / floral | diamant poire | serti griffes | or blanc | nature organique | poli, ajouré, motifs feuilles pavé"
+    ]
   },
   {
     "id": "FIA-002",
-    "FileName": "FIA-002.jpeg",
+    "FileName": "FIA-002.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:solitaire cathédrale",
@@ -34,12 +33,11 @@
       "ornement:minimal",
       "finition:poli miroir, corps lisse épuré",
       "matiere:or + diamants"
-    ],
-    "Caption": "solitaire cathédrale | diamant coussin | serti griffes | or blanc | classique intemporel | poli miroir, corps lisse épuré"
+    ]
   },
   {
     "id": "FIA-003",
-    "FileName": "FIA-003.jpeg",
+    "FileName": "FIA-003.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:solitaire cathédrale",
@@ -53,12 +51,11 @@
       "ornement:minimal",
       "finition:poli miroir, corps split épuré",
       "matiere:or + diamants"
-    ],
-    "Caption": "solitaire cathédrale | diamant taille émeraude | serti griffes | or blanc | classique intemporel | poli miroir, corps split épuré"
+    ]
   },
   {
     "id": "FIA-004",
-    "FileName": "FIA-004.jpeg",
+    "FileName": "FIA-004.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:solitaire classique",
@@ -72,12 +69,11 @@
       "ornement:minimal",
       "finition:poli miroir, corps lisse",
       "matiere:or + diamants"
-    ],
-    "Caption": "solitaire classique | diamant princesse | serti griffes | or blanc | classique intemporel | poli miroir, corps lisse"
+    ]
   },
   {
     "id": "FIA-005",
-    "FileName": "FIA-005.jpeg",
+    "FileName": "FIA-005.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:solitaire organique asymétrique",
@@ -91,50 +87,29 @@
       "ornement:minimal",
       "finition:poli miroir, corps torsadé entrelacé",
       "matiere:or + diamants"
-    ],
-    "Caption": "solitaire organique asymétrique | diamant princesse | serti griffes | or rose | nature organique | poli miroir, corps torsadé entrelacé"
-  },
-  {
-    "id": "FIA-006",
-    "FileName": "FIA-006.jpeg",
-    "Keywords": [
-      "categorie:bague de fiançailles",
-      "famille:solitaire organique asymétrique",
-      "pierre_centre:diamant princesse",
-      "pierre_laterale:aucune",
-      "sertissage:serti griffes",
-      "sertissage_detail:griffes 4 sur corps torsadé",
-      "metal:or rose",
-      "style:nature organique",
-      "silhouette:organique torsadé",
-      "ornement:minimal",
-      "finition:poli miroir, corps torsadé entrelacé",
-      "matiere:or + diamants"
-    ],
-    "Caption": "solitaire organique asymétrique | diamant princesse | serti griffes | or rose | nature organique | poli miroir, corps torsadé entrelacé"
+    ]
   },
   {
     "id": "FIA-007",
-    "FileName": "FIA-007.jpeg",
+    "FileName": "FIA-007.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:split shank",
       "pierre_centre:diamant taille rose",
       "pierre_laterale:aucune",
       "sertissage:serti clos",
-      "sertissage_detail:semi-bezel ouvert, pierre enchâssée dans split",
+      "sertissage_detail:semi-bezel ouvert, pierre enchâssée dans spl",
       "metal:or jaune",
       "style:moderne épuré",
       "silhouette:split shank",
       "ornement:minimal",
       "finition:poli miroir, corps lisse split ouvert",
       "matiere:or + diamants"
-    ],
-    "Caption": "split shank | diamant taille rose | serti clos | or jaune | moderne épuré | poli miroir, corps lisse split ouvert"
+    ]
   },
   {
     "id": "FIA-008",
-    "FileName": "FIA-008.jpeg",
+    "FileName": "FIA-008.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:bypass",
@@ -148,31 +123,29 @@
       "ornement:minimal",
       "finition:poli satiné, corps fluide asymétrique",
       "matiere:or + diamants"
-    ],
-    "Caption": "bypass | diamant taille rose | serti clos | or jaune | moderne épuré | poli satiné, corps fluide asymétrique"
+    ]
   },
   {
     "id": "FIA-009",
-    "FileName": "FIA-009.jpeg",
+    "FileName": "FIA-009.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:split shank pavé",
       "pierre_centre:diamant taille rose",
       "pierre_laterale:diamants pavé sur split",
       "sertissage:serti clos + serti grain",
-      "sertissage_detail:semi-bezel centre, micro-pavé grain sur les br",
+      "sertissage_detail:semi-bezel centre, micro-pavé grain sur les b",
       "metal:or jaune",
       "style:romantique",
       "silhouette:split shank",
       "ornement:modéré",
       "finition:poli miroir, branches pavé",
       "matiere:or + diamants"
-    ],
-    "Caption": "split shank pavé | diamant taille rose | serti clos + serti grain | or jaune | romantique | poli miroir, branches pavé"
+    ]
   },
   {
     "id": "FIA-010",
-    "FileName": "FIA-010.jpeg",
+    "FileName": "FIA-010.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:cluster",
@@ -186,31 +159,29 @@
       "ornement:riche",
       "finition:poli miroir, ajouré entre les pierres",
       "matiere:pierres couleur + diamants"
-    ],
-    "Caption": "cluster | émeraude coussin | serti griffes | or rose | romantique | poli miroir, ajouré entre les pierres"
+    ]
   },
   {
     "id": "FIA-011",
-    "FileName": "FIA-011.jpeg",
+    "FileName": "FIA-011.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:nature / floral",
       "pierre_centre:saphir rose Asscher",
       "pierre_laterale:diamants pavé sur feuilles",
       "sertissage:serti griffes + serti grain",
-      "sertissage_detail:griffes centre, serti grain pavé sur motifs fe",
+      "sertissage_detail:griffes centre, serti grain pavé sur motifs f",
       "metal:or jaune",
       "style:nature organique",
       "silhouette:floral",
       "ornement:riche",
       "finition:poli, orné, motifs feuilles ajourées pavé",
       "matiere:pierres couleur + diamants"
-    ],
-    "Caption": "nature / floral | saphir rose Asscher | serti griffes + serti grain | or jaune | nature organique | poli, orné, motifs feuilles ajourées pavé"
+    ]
   },
   {
     "id": "FIA-012",
-    "FileName": "FIA-012.jpeg",
+    "FileName": "FIA-012.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:solitaire organique asymétrique",
@@ -224,12 +195,11 @@
       "ornement:minimal",
       "finition:poli miroir, corps ondulé sculptural",
       "matiere:or + diamants"
-    ],
-    "Caption": "solitaire organique asymétrique | diamant coussin | serti griffes | or rose | sculptural moderne | poli miroir, corps ondulé sculptural"
+    ]
   },
   {
     "id": "FIA-013",
-    "FileName": "FIA-013.jpeg",
+    "FileName": "FIA-013.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:east-west",
@@ -243,12 +213,11 @@
       "ornement:minimal",
       "finition:poli miroir, corps lisse",
       "matiere:or + diamants"
-    ],
-    "Caption": "east-west | diamant Asscher | serti griffes | or rose | classique intemporel | poli miroir, corps lisse"
+    ]
   },
   {
     "id": "FIA-014",
-    "FileName": "FIA-014.jpeg",
+    "FileName": "FIA-014.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:cinq pierres",
@@ -262,12 +231,11 @@
       "ornement:modéré",
       "finition:poli miroir, corps massif sculptural",
       "matiere:or + diamants"
-    ],
-    "Caption": "cinq pierres | diamant rond brillant | serti griffes | or rose | sculptural moderne | poli miroir, corps massif sculptural"
+    ]
   },
   {
     "id": "FIA-015",
-    "FileName": "FIA-015.jpeg",
+    "FileName": "FIA-015.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:cinq pierres",
@@ -281,31 +249,29 @@
       "ornement:modéré",
       "finition:poli miroir, corps large lisse",
       "matiere:or + diamants"
-    ],
-    "Caption": "cinq pierres | diamant rond brillant | serti griffes | or rose | classique intemporel | poli miroir, corps large lisse"
+    ]
   },
   {
     "id": "FIA-016",
-    "FileName": "FIA-016.jpeg",
+    "FileName": "FIA-016.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:multi-pierres graduées",
       "pierre_centre:diamant rond brillant",
       "pierre_laterale:diamants ronds graduées pavé band",
       "sertissage:serti griffes",
-      "sertissage_detail:griffes partagées, pierres graduées continues",
+      "sertissage_detail:griffes partagées, pierres graduées continue",
       "metal:or rose",
       "style:romantique",
       "silhouette:classique",
       "ornement:riche",
       "finition:poli miroir, corps entièrement serti",
       "matiere:or + diamants"
-    ],
-    "Caption": "multi-pierres graduées | diamant rond brillant | serti griffes | or rose | romantique | poli miroir, corps entièrement serti"
+    ]
   },
   {
     "id": "FIA-017",
-    "FileName": "FIA-017.jpeg",
+    "FileName": "FIA-017.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:solitaire cathédrale",
@@ -319,12 +285,11 @@
       "ornement:minimal",
       "finition:poli miroir, corps split lisse",
       "matiere:or + diamants"
-    ],
-    "Caption": "solitaire cathédrale | diamant taille émeraude | serti griffes | or blanc | classique intemporel | poli miroir, corps split lisse"
+    ]
   },
   {
     "id": "FIA-018",
-    "FileName": "FIA-018.jpeg",
+    "FileName": "FIA-018.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:solitaire cathédrale",
@@ -338,12 +303,11 @@
       "ornement:minimal",
       "finition:poli miroir, corps split lisse",
       "matiere:or + diamants"
-    ],
-    "Caption": "solitaire cathédrale | diamant rond taille rose | serti griffes | or jaune | classique intemporel | poli miroir, corps split lisse"
+    ]
   },
   {
     "id": "FIA-019",
-    "FileName": "FIA-019.jpeg",
+    "FileName": "FIA-019.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:organique fin structuré",
@@ -357,183 +321,155 @@
       "ornement:modéré",
       "finition:poli miroir, corps fin délicat",
       "matiere:or + diamants"
-    ],
-    "Caption": "organique fin structuré | diamant rond brillant | serti griffes | or rose | romantique délicat | poli miroir, corps fin délicat"
-  },
-  {
-    "id": "FIA-020",
-    "FileName": "FIA-020.jpeg",
-    "Keywords": [
-      "categorie:bague de fiançailles",
-      "famille:halo pavé band",
-      "pierre_centre:saphir rose rond",
-      "pierre_laterale:diamants halo + pavé band",
-      "sertissage:serti griffes + serti grain",
-      "sertissage_detail:griffes 4 centre, micro-pavé halo et band",
-      "metal:or rose",
-      "style:romantique",
-      "silhouette:classique",
-      "ornement:riche",
-      "finition:poli miroir, entièrement serti",
-      "matiere:pierres couleur + diamants"
-    ],
-    "Caption": "halo pavé band | saphir rose rond | serti griffes + serti grain | or rose | romantique | poli miroir, entièrement serti"
+    ]
   },
   {
     "id": "FIA-021",
-    "FileName": "FIA-021.jpeg",
+    "FileName": "FIA-021.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:cocktail statement",
       "pierre_centre:saphir rose taille émeraude",
       "pierre_laterale:diamants pavé intégral",
       "sertissage:serti clos",
-      "sertissage_detail:bezel architectural à pans coupés, pavé sur co",
+      "sertissage_detail:bezel architectural à pans coupés, pavé sur",
       "metal:or rose",
       "style:glamour opulent",
       "silhouette:volumineuse",
       "ornement:riche",
       "finition:poli miroir, corps bombé entièrement pavé",
       "matiere:pierres couleur + diamants"
-    ],
-    "Caption": "cocktail statement | saphir rose taille émeraude | serti clos | or rose | glamour opulent | poli miroir, corps bombé entièrement pavé"
+    ]
   },
   {
     "id": "FIA-022",
-    "FileName": "FIA-022.jpeg",
+    "FileName": "FIA-022.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:halo split shank",
       "pierre_centre:saphir rose ovale",
       "pierre_laterale:diamants halo + pavé split",
       "sertissage:serti griffes + serti grain",
-      "sertissage_detail:griffes 4 centre, halo pavé, split shank pavé",
+      "sertissage_detail:griffes 4 centre, halo pavé, split shank pav",
       "metal:or rose",
       "style:romantique",
       "silhouette:split shank",
       "ornement:riche",
       "finition:poli miroir, split pavé intégral",
       "matiere:pierres couleur + diamants"
-    ],
-    "Caption": "halo split shank | saphir rose ovale | serti griffes + serti grain | or rose | romantique | poli miroir, split pavé intégral"
+    ]
   },
   {
     "id": "FIA-023",
-    "FileName": "FIA-023.jpeg",
+    "FileName": "FIA-023.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:solitaire organique asymétrique",
       "pierre_centre:saphir rose poire",
       "pierre_laterale:diamants pavé sur maillons",
       "sertissage:serti griffes",
-      "sertissage_detail:griffes sur pierre, pavé sur corps ajouré géom",
+      "sertissage_detail:griffes sur pierre, pavé sur corps ajouré g",
       "metal:or rose",
       "style:moderne épuré",
       "silhouette:géométrique ajouré",
       "ornement:modéré",
       "finition:poli miroir, ajouré, maillons géométriques pavé",
       "matiere:pierres couleur + diamants"
-    ],
-    "Caption": "solitaire organique asymétrique | saphir rose poire | serti griffes | or rose | moderne épuré | poli miroir, ajouré, maillons géométriques pavé"
+    ]
   },
   {
     "id": "FIA-024",
-    "FileName": "FIA-024.jpeg",
+    "FileName": "FIA-024.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:halo split shank",
       "pierre_centre:diamant princesse",
       "pierre_laterale:diamants halo + pavé split",
       "sertissage:serti griffes + serti grain",
-      "sertissage_detail:griffes centre, halo carré pavé, split shank p",
+      "sertissage_detail:griffes centre, halo carré pavé, split shank",
       "metal:or blanc",
       "style:classique intemporel",
       "silhouette:split shank",
       "ornement:riche",
       "finition:poli miroir, split pavé",
       "matiere:or + diamants"
-    ],
-    "Caption": "halo split shank | diamant princesse | serti griffes + serti grain | or blanc | classique intemporel | poli miroir, split pavé"
+    ]
   },
   {
     "id": "FIA-025",
-    "FileName": "FIA-025.jpeg",
+    "FileName": "FIA-025.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:halo",
       "pierre_centre:diamant princesse",
       "pierre_laterale:diamants halo",
       "sertissage:serti griffes + serti grain",
-      "sertissage_detail:griffes 4 centre, halo carré pavé, corps lisse",
+      "sertissage_detail:griffes 4 centre, halo carré pavé, corps lis",
       "metal:or blanc",
       "style:classique intemporel",
       "silhouette:classique",
       "ornement:modéré",
       "finition:poli miroir, corps lisse",
       "matiere:or + diamants"
-    ],
-    "Caption": "halo | diamant princesse | serti griffes + serti grain | or blanc | classique intemporel | poli miroir, corps lisse"
+    ]
   },
   {
     "id": "FIA-026",
-    "FileName": "FIA-026.jpeg",
+    "FileName": "FIA-026.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:halo",
       "pierre_centre:diamant princesse",
       "pierre_laterale:diamants halo",
       "sertissage:serti griffes + serti grain",
-      "sertissage_detail:griffes 4 centre, halo coussin pavé, corps spl",
+      "sertissage_detail:griffes 4 centre, halo coussin pavé, corps sp",
       "metal:or blanc",
       "style:classique intemporel",
       "silhouette:classique split",
       "ornement:modéré",
       "finition:poli miroir, corps split lisse",
       "matiere:or + diamants"
-    ],
-    "Caption": "halo | diamant princesse | serti griffes + serti grain | or blanc | classique intemporel | poli miroir, corps split lisse"
+    ]
   },
   {
     "id": "FIA-027",
-    "FileName": "FIA-027.jpeg",
+    "FileName": "FIA-027.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:halo vintage",
       "pierre_centre:diamant princesse",
       "pierre_laterale:diamants halo + pavé band + filigrane",
       "sertissage:serti griffes + serti grain",
-      "sertissage_detail:griffes centre, halo octogonal, pavé band, mot",
+      "sertissage_detail:griffes centre, halo octogonal, pavé band, mo",
       "metal:or blanc",
       "style:vintage",
       "silhouette:classique",
       "ornement:riche",
       "finition:poli, ajouré, motifs géométriques filigrane",
       "matiere:or + diamants"
-    ],
-    "Caption": "halo vintage | diamant princesse | serti griffes + serti grain | or blanc | vintage | poli, ajouré, motifs géométriques filigrane"
+    ]
   },
   {
     "id": "FIA-028",
-    "FileName": "FIA-028.jpeg",
+    "FileName": "FIA-028.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:halo vintage filigrane",
       "pierre_centre:diamant princesse",
       "pierre_laterale:diamants halo + pavé band + milgrain",
       "sertissage:serti griffes + serti grain",
-      "sertissage_detail:griffes centre, double rang halo, split pavé m",
+      "sertissage_detail:griffes centre, double rang halo, split pavé ",
       "metal:or blanc",
       "style:vintage",
       "silhouette:split shank",
       "ornement:riche",
       "finition:poli, milgrain, filigrane, split pavé",
       "matiere:or + diamants"
-    ],
-    "Caption": "halo vintage filigrane | diamant princesse | serti griffes + serti grain | or blanc | vintage | poli, milgrain, filigrane, split pavé"
+    ]
   },
   {
     "id": "FIA-029",
-    "FileName": "FIA-029.jpeg",
+    "FileName": "FIA-029.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:halo pavé band",
@@ -547,50 +483,47 @@
       "ornement:riche",
       "finition:poli miroir, entièrement serti",
       "matiere:pierres couleur + diamants"
-    ],
-    "Caption": "halo pavé band | émeraude ronde | serti griffes + serti grain | or jaune | classique intemporel | poli miroir, entièrement serti"
+    ]
   },
   {
     "id": "FIA-030",
-    "FileName": "FIA-030.jpeg",
+    "FileName": "FIA-030.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:halo pavé band",
       "pierre_centre:émeraude taille émeraude",
       "pierre_laterale:diamants halo rectangulaire + pavé band",
       "sertissage:serti griffes + serti grain",
-      "sertissage_detail:griffes 4 centre, halo rectangulaire pavé, ban",
+      "sertissage_detail:griffes 4 centre, halo rectangulaire pavé, ba",
       "metal:or jaune",
       "style:classique intemporel",
       "silhouette:classique",
       "ornement:riche",
       "finition:poli miroir, entièrement serti",
       "matiere:pierres couleur + diamants"
-    ],
-    "Caption": "halo pavé band | émeraude taille émeraude | serti griffes + serti grain | or jaune | classique intemporel | poli miroir, entièrement serti"
+    ]
   },
   {
     "id": "FIA-031",
-    "FileName": "FIA-031.jpeg",
+    "FileName": "FIA-031.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:halo pavé band",
       "pierre_centre:émeraude coussin",
       "pierre_laterale:diamants halo + pavé band",
       "sertissage:serti griffes + serti grain",
-      "sertissage_detail:griffes 4 centre, halo coussin pavé, band pavé",
+      "sertissage_detail:griffes 4 centre, halo coussin pavé, band pav",
       "metal:or jaune",
       "style:classique intemporel",
       "silhouette:classique",
       "ornement:riche",
       "finition:poli miroir, entièrement serti",
       "matiere:pierres couleur + diamants"
-    ],
-    "Caption": "halo pavé band | émeraude coussin | serti griffes + serti grain | or jaune | classique intemporel | poli miroir, entièrement serti"
+    ]
   },
   {
     "id": "FIA-032",
-    "FileName": "FIA-032.jpeg",
+    "FileName": "FIA-032.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:double halo split shank",
@@ -604,31 +537,29 @@
       "ornement:riche",
       "finition:poli miroir, triple split pavé intégral",
       "matiere:pierres couleur + diamants"
-    ],
-    "Caption": "double halo split shank | émeraude ronde | serti griffes + serti grain | or jaune | royale luxueux | poli miroir, triple split pavé intégral"
+    ]
   },
   {
     "id": "FIA-033",
-    "FileName": "FIA-033.jpeg",
+    "FileName": "FIA-033.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:double halo",
       "pierre_centre:émeraude ovale",
       "pierre_laterale:diamants double halo + pavé band",
       "sertissage:serti griffes + serti grain",
-      "sertissage_detail:griffes 4 centre, double halo ovale, pavé band",
+      "sertissage_detail:griffes 4 centre, double halo ovale, pavé ban",
       "metal:or jaune",
       "style:classique intemporel",
       "silhouette:classique",
       "ornement:riche",
       "finition:poli miroir, double halo pavé",
       "matiere:pierres couleur + diamants"
-    ],
-    "Caption": "double halo | émeraude ovale | serti griffes + serti grain | or jaune | classique intemporel | poli miroir, double halo pavé"
+    ]
   },
   {
     "id": "FIA-034",
-    "FileName": "FIA-034.jpeg",
+    "FileName": "FIA-034.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:trois pierres",
@@ -642,12 +573,11 @@
       "ornement:minimal",
       "finition:poli miroir, corps lisse",
       "matiere:or + diamants"
-    ],
-    "Caption": "trois pierres | diamant taille émeraude | serti griffes | or rose | classique intemporel | poli miroir, corps lisse"
+    ]
   },
   {
     "id": "FIA-035",
-    "FileName": "FIA-035.jpeg",
+    "FileName": "FIA-035.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:trois pierres",
@@ -661,50 +591,47 @@
       "ornement:minimal",
       "finition:poli miroir, corps lisse",
       "matiere:or + diamants"
-    ],
-    "Caption": "trois pierres | diamant taille émeraude | serti griffes | or rose | romantique | poli miroir, corps lisse"
+    ]
   },
   {
     "id": "FIA-036",
-    "FileName": "FIA-036.jpeg",
+    "FileName": "FIA-036.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:double halo pavé band",
       "pierre_centre:diamant ovale",
       "pierre_laterale:diamants double halo + pavé band",
       "sertissage:serti griffes + serti grain",
-      "sertissage_detail:griffes centre, double halo ovale pavé, band p",
+      "sertissage_detail:griffes centre, double halo ovale pavé, band ",
       "metal:or rose",
       "style:romantique",
       "silhouette:classique",
       "ornement:riche",
       "finition:poli miroir, entièrement serti",
       "matiere:or + diamants"
-    ],
-    "Caption": "double halo pavé band | diamant ovale | serti griffes + serti grain | or rose | romantique | poli miroir, entièrement serti"
+    ]
   },
   {
     "id": "FIA-037",
-    "FileName": "FIA-037.jpeg",
+    "FileName": "FIA-037.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:double halo",
       "pierre_centre:diamant ovale",
       "pierre_laterale:diamants double halo",
       "sertissage:serti griffes + serti grain",
-      "sertissage_detail:griffes centre, double halo ovale pavé, corps ",
+      "sertissage_detail:griffes centre, double halo ovale pavé, corps",
       "metal:or rose",
       "style:classique intemporel",
       "silhouette:classique",
       "ornement:modéré",
       "finition:poli miroir, corps lisse",
       "matiere:or + diamants"
-    ],
-    "Caption": "double halo | diamant ovale | serti griffes + serti grain | or rose | classique intemporel | poli miroir, corps lisse"
+    ]
   },
   {
     "id": "FIA-038",
-    "FileName": "FIA-038.jpeg",
+    "FileName": "FIA-038.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:organique fin structuré",
@@ -718,12 +645,11 @@
       "ornement:modéré",
       "finition:poli miroir, corps fin lisse",
       "matiere:or + diamants"
-    ],
-    "Caption": "organique fin structuré | diamant coussin | serti griffes | or blanc | romantique délicat | poli miroir, corps fin lisse"
+    ]
   },
   {
     "id": "FIA-039",
-    "FileName": "FIA-039.jpeg",
+    "FileName": "FIA-039.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:cluster",
@@ -737,31 +663,29 @@
       "ornement:riche",
       "finition:poli miroir, corps lisse",
       "matiere:or + diamants"
-    ],
-    "Caption": "cluster | diamant coussin | serti griffes | or blanc | classique intemporel | poli miroir, corps lisse"
+    ]
   },
   {
     "id": "FIA-040",
-    "FileName": "FIA-040.jpeg",
+    "FileName": "FIA-040.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:cluster étoilé",
       "pierre_centre:diamant coussin",
       "pierre_laterale:diamants ronds et poire en couronne étoilée",
       "sertissage:serti griffes",
-      "sertissage_detail:griffes centre, griffes individuelles halo éto",
+      "sertissage_detail:griffes centre, griffes individuelles halo ét",
       "metal:or blanc",
       "style:royale luxueux",
       "silhouette:cluster étoilé",
       "ornement:riche",
       "finition:poli miroir, corps lisse",
       "matiere:or + diamants"
-    ],
-    "Caption": "cluster étoilé | diamant coussin | serti griffes | or blanc | royale luxueux | poli miroir, corps lisse"
+    ]
   },
   {
     "id": "FIA-041",
-    "FileName": "FIA-041.jpeg",
+    "FileName": "FIA-041.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:bezel géométrique",
@@ -775,12 +699,11 @@
       "ornement:modéré",
       "finition:poli miroir, motifs géométriques losange",
       "matiere:pierres couleur + diamants"
-    ],
-    "Caption": "bezel géométrique | saphir rose ovale | serti clos | or jaune | moderne épuré | poli miroir, motifs géométriques losange"
+    ]
   },
   {
     "id": "FIA-042",
-    "FileName": "FIA-042.jpeg",
+    "FileName": "FIA-042.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:halo split shank",
@@ -794,12 +717,11 @@
       "ornement:modéré",
       "finition:poli miroir, corps split lisse",
       "matiere:pierres couleur + diamants"
-    ],
-    "Caption": "halo split shank | saphir rose ovale | serti clos + serti grain | or jaune | classique intemporel | poli miroir, corps split lisse"
+    ]
   },
   {
     "id": "FIA-043",
-    "FileName": "FIA-043.jpeg",
+    "FileName": "FIA-043.jpg",
     "Keywords": [
       "categorie:bague de fiançailles",
       "famille:pavé band east-west",
@@ -813,6046 +735,2388 @@
       "ornement:modéré",
       "finition:poli miroir, corps fin pavé",
       "matiere:pierres couleur + diamants"
-    ],
-    "Caption": "pavé band east-west | saphir rose taille émeraude | serti griffes + serti grain | or rose | romantique délicat | poli miroir, corps fin pavé"
+    ]
   },
   {
     "id": "FIA-044",
-    "FileName": "FIA-044.jpeg",
+    "FileName": "FIA-044.jpg",
     "Keywords": [
       "ring, rose gold, pink sapphire, oval, bezel setting, diamond pav"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-045",
-    "FileName": "FIA-045.jpeg",
+    "FileName": "FIA-045.jpg",
     "Keywords": [
       "ring, rose gold, pink sapphire, emerald cut, double band, split "
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-046",
-    "FileName": "FIA-046.jpeg",
+    "FileName": "FIA-046.jpg",
     "Keywords": [
       "ring, rose gold, pink sapphire, emerald cut, horizontal set, sid"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-047",
-    "FileName": "FIA-047.jpeg",
+    "FileName": "FIA-047.jpg",
     "Keywords": [
       "ring, white gold, ruby, oval, floral prongs, leaf shank, pave, n"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-048",
-    "FileName": "FIA-048.jpeg",
+    "FileName": "FIA-048.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, cushion cut, 4 prong, plain band, so"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-049",
-    "FileName": "FIA-049.jpeg",
+    "FileName": "FIA-049.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, cushion cut, double prong, plain ban"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-050",
-    "FileName": "FIA-050.jpeg",
+    "FileName": "FIA-050.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, cushion cut, 4 prong, thin band, sol"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-051",
-    "FileName": "FIA-051.jpeg",
+    "FileName": "FIA-051.jpg",
     "Keywords": [
       "ring, white gold, pink sapphire, emerald cut, horizontal set, ge"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-052",
-    "FileName": "FIA-052.png",
-    "Keywords": [],
-    "Caption": ""
+    "FileName": "FIA-052.jpg",
+    "Keywords": []
   },
   {
     "id": "FIA-053",
-    "FileName": "FIA-053.jpeg",
+    "FileName": "FIA-053.jpg",
     "Keywords": [
       "ring, rose gold, diamond, radiant cut, 5 stone, shared prong, th"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-054",
-    "FileName": "FIA-054.jpeg",
+    "FileName": "FIA-054.jpg",
     "Keywords": [
       "ring, rose gold, diamond, radiant cut, baguette shoulders, wide "
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-055",
-    "FileName": "FIA-055.jpeg",
+    "FileName": "FIA-055.jpg",
     "Keywords": [
       "ring, rose gold, diamond, oval cut, bypass setting, wave shank, "
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-056",
-    "FileName": "FIA-056.jpeg",
+    "FileName": "FIA-056.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, radiant cut, rectangular halo, pave,"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-057",
-    "FileName": "FIA-057.jpeg",
+    "FileName": "FIA-057.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, oval cut, round halo, pave band, rom"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-058",
-    "FileName": "FIA-058.png",
-    "Keywords": [],
-    "Caption": ""
+    "FileName": "FIA-058.jpg",
+    "Keywords": []
   },
   {
     "id": "FIA-059",
-    "FileName": "FIA-059.jpeg",
+    "FileName": "FIA-059.jpg",
     "Keywords": [
       "ring, rose gold, diamond, cushion cut, bezel setting, plain band"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-060",
-    "FileName": "FIA-060.jpeg",
+    "FileName": "FIA-060.jpg",
     "Keywords": [
       "ring, rose gold, ruby, oval, 3 stone, round side diamonds, wide "
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-061",
-    "FileName": "FIA-061.jpeg",
+    "FileName": "FIA-061.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, rose cut, round, 8 prong, double cla"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-062",
-    "FileName": "FIA-062.jpeg",
+    "FileName": "FIA-062.jpg",
     "Keywords": [
       "ring, rose gold, diamond, round brilliant, 6 prong, thin band, s"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-063",
-    "FileName": "FIA-063.jpeg",
+    "FileName": "FIA-063.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, cushion cut, square halo, pave halo,"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-064",
-    "FileName": "FIA-064.jpeg",
+    "FileName": "FIA-064.jpg",
     "Keywords": [
       "ring, yellow gold, pink sapphire, oval, starburst halo, marquise"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-065",
-    "FileName": "FIA-065.jpeg",
+    "FileName": "FIA-065.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, cushion cut, leaf vine shank, sculpt"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-066",
-    "FileName": "FIA-066.jpeg",
+    "FileName": "FIA-066.jpg",
     "Keywords": [
       "ring, white gold, diamond, asscher cut, bezel setting, split sha"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-067",
-    "FileName": "FIA-067.jpeg",
+    "FileName": "FIA-067.jpg",
     "Keywords": [
       "ring, rose gold, diamond, pear cut, double halo, leaf vine shank"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-068",
-    "FileName": "FIA-068.jpeg",
+    "FileName": "FIA-068.jpg",
     "Keywords": [
       "ring, rose gold, diamond, princess cut, art deco halo, baguette,"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-069",
-    "FileName": "FIA-069.jpeg",
+    "FileName": "FIA-069.jpg",
     "Keywords": [
       "ring, rose gold, diamond, princess cut, geometric halo, baguette"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-070",
-    "FileName": "FIA-070.jpeg",
+    "FileName": "FIA-070.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, marquise cut, bezel setting, leaf vi"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-071",
-    "FileName": "FIA-071.jpeg",
+    "FileName": "FIA-071.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, oval cut, bezel setting, engraved sh"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-072",
-    "FileName": "FIA-072.jpeg",
+    "FileName": "FIA-072.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, oval cut, bezel setting, hidden pave"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-073",
-    "FileName": "FIA-073.jpeg",
+    "FileName": "FIA-073.jpg",
     "Keywords": [
       "ring, rose gold, blue sapphire, oval, halo, crossover shank, pav"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-074",
-    "FileName": "FIA-074.jpeg",
+    "FileName": "FIA-074.jpg",
     "Keywords": [
       "ring, rose gold, blue sapphire, round, bypass shank, wave, side "
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-075",
-    "FileName": "FIA-075.jpeg",
+    "FileName": "FIA-075.jpg",
     "Keywords": [
       "ring, rose gold, diamond, pear cut, bypass, semi bezel, satin ba"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-076",
-    "FileName": "FIA-076.jpeg",
+    "FileName": "FIA-076.jpg",
     "Keywords": [
       "ring, rose gold, diamond, pear cut, bypass, split shank, sculptu"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-077",
-    "FileName": "FIA-077.jpeg",
+    "FileName": "FIA-077.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, pear cut, partial bezel, lower pave,"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-078",
-    "FileName": "FIA-078.jpeg",
+    "FileName": "FIA-078.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, pear cut, semi bezel, hidden pave, t"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-079",
-    "FileName": "FIA-079.jpeg",
+    "FileName": "FIA-079.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, marquise cut, semi bezel, hidden pav"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-080",
-    "FileName": "FIA-080.jpeg",
+    "FileName": "FIA-080.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, princess cut, filigree shank, openwo"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-081",
-    "FileName": "FIA-081.jpeg",
+    "FileName": "FIA-081.jpg",
     "Keywords": [
       "ring, yellow gold, diamond, cushion cut, bypass wave, semi bezel"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-082",
-    "FileName": "FIA-082.jpeg",
+    "FileName": "FIA-082.jpg",
     "Keywords": [
       "ring, rose gold, diamond, cushion cut, leaf vine shank, pave, na"
-    ],
-    "Caption": ""
+    ]
   },
   {
     "id": "FIA-083",
-    "FileName": "FIA-083.png",
-    "Keywords": [],
-    "Caption": ""
+    "FileName": "FIA-083.jpg",
+    "Keywords": []
   },
   {
     "id": "FIA-084",
-    "FileName": "FIA-084.jpeg",
+    "FileName": "FIA-084.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "cushion cut",
-      "4-prong",
-      "twisted pave band",
-      "diamond pave",
-      "nature-inspired",
-      "romantic",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, cushion cut, 4-prong, twisted pave ban"
+    ]
   },
   {
     "id": "FIA-085",
-    "FileName": "FIA-085.jpeg",
+    "FileName": "FIA-085.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "platinum",
-      "diamond",
-      "pear cut",
-      "3-stone",
-      "pear side stones",
-      "plain band",
-      "classic",
-      "elegant",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, platinum, diamond, pear cut, 3-stone, pear sid"
+    ]
   },
   {
     "id": "FIA-086",
-    "FileName": "FIA-086.jpeg",
+    "FileName": "FIA-086.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval cut",
-      "round halo",
-      "pave halo",
-      "pave band",
-      "4-prong",
-      "classic",
-      "halo",
-      "romantic",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, oval cut, round halo, pave halo, pave"
+    ]
   },
   {
     "id": "FIA-087",
-    "FileName": "FIA-087.jpeg",
+    "FileName": "FIA-087.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval cut",
-      "round halo",
-      "pave halo",
-      "plain band",
-      "4-prong",
-      "classic",
-      "halo",
-      "minimalist",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, oval cut, round halo, pave halo, plai"
+    ]
   },
   {
     "id": "FIA-088",
-    "FileName": "FIA-088.jpeg",
+    "FileName": "FIA-088.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "asscher cut",
-      "leaf shank",
-      "floral shank",
-      "diamond pave",
-      "nature-inspired",
-      "organic",
-      "botanical",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, asscher cut, leaf shank, floral shank"
+    ]
   },
   {
     "id": "FIA-089",
-    "FileName": "FIA-089.jpeg",
+    "FileName": "FIA-089.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "asscher cut",
-      "bezel setting",
-      "large halo",
-      "round halo",
-      "plain band",
-      "art deco",
-      "vintage",
-      "statement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, asscher cut, bezel setting, large ha"
+    ]
   },
   {
     "id": "FIA-090",
-    "FileName": "FIA-090.jpeg",
+    "FileName": "FIA-090.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "radiant cut",
-      "bezel setting",
-      "plain band",
-      "polished",
-      "minimalist",
-      "contemporary",
-      "solitaire",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, radiant cut, bezel setting, plain ba"
+    ]
   },
   {
     "id": "FIA-091",
-    "FileName": "FIA-091.jpeg",
+    "FileName": "FIA-091.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "bezel setting",
-      "wide band",
-      "filigree",
-      "openwork",
-      "milgrain",
-      "ornate",
-      "vintage",
-      "statement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, bezel setting, wide ban"
+    ]
   },
   {
     "id": "FIA-092",
-    "FileName": "FIA-092.jpeg",
+    "FileName": "FIA-092.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "pink sapphire",
-      "cushion cut",
-      "square halo",
-      "pave halo",
-      "pave band",
-      "4-prong",
-      "romantic",
-      "halo",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, white gold, pink sapphire, cushion cut, square halo, pave "
+    ]
   },
   {
     "id": "FIA-093",
-    "FileName": "FIA-093.jpeg",
+    "FileName": "FIA-093.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "pink sapphire",
-      "cushion cut",
-      "square halo",
-      "pave halo",
-      "plain band",
-      "4-prong",
-      "statement",
-      "elegant",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, white gold, pink sapphire, cushion cut, square halo, pave "
+    ]
   },
   {
     "id": "FIA-094",
-    "FileName": "FIA-094.jpeg",
+    "FileName": "FIA-094.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "pink sapphire",
-      "cushion cut",
-      "square halo",
-      "pave halo",
-      "pave band",
-      "4-prong",
-      "romantic",
-      "classic",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, white gold, pink sapphire, cushion cut, square halo, pave "
+    ]
   },
   {
     "id": "FIA-095",
-    "FileName": "FIA-095.jpeg",
+    "FileName": "FIA-095.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "cushion cut",
-      "square halo",
-      "pave halo",
-      "twisted leaf shank",
-      "diamond pave",
-      "nature-inspired",
-      "romantic",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, cushion cut, square halo, pave halo, t"
+    ]
   },
   {
     "id": "FIA-096",
-    "FileName": "FIA-096.jpeg",
+    "FileName": "FIA-096.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "ruby",
-      "oval cut",
-      "tension setting",
-      "wide band",
-      "brushed",
-      "side diamonds",
-      "contemporary",
-      "statement",
-      "sculptural",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, yellow gold, ruby, oval cut, tension setting, wide band, b"
+    ]
   },
   {
     "id": "FIA-097",
-    "FileName": "FIA-097.jpeg",
+    "FileName": "FIA-097.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "pink sapphire",
-      "oval cut",
-      "round halo",
-      "pave halo",
-      "split pave band",
-      "4-prong",
-      "romantic",
-      "elegant",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, yellow gold, pink sapphire, oval cut, round halo, pave hal"
+    ]
   },
   {
     "id": "FIA-098",
-    "FileName": "FIA-098.jpeg",
+    "FileName": "FIA-098.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "pink sapphire",
-      "emerald cut",
-      "split band",
-      "double band",
-      "diamond pave",
-      "4-prong",
-      "contemporary",
-      "elegant",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, yellow gold, pink sapphire, emerald cut, split band, doubl"
+    ]
   },
   {
     "id": "FIA-099",
-    "FileName": "FIA-099.jpeg",
+    "FileName": "FIA-099.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "emerald",
-      "emerald cut",
-      "horizontal set",
-      "leaf mounting",
-      "marquise side diamonds",
-      "sculptural",
-      "nature-inspired",
-      "high jewelry",
-      "statement",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, rose gold, emerald, emerald cut, horizontal set, leaf moun"
+    ]
   },
   {
     "id": "FIA-100",
-    "FileName": "FIA-100.jpeg",
+    "FileName": "FIA-100.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "emerald",
-      "oval cut",
-      "floral halo",
-      "pave halo",
-      "twisted leaf shank",
-      "diamond pave",
-      "nature-inspired",
-      "high jewelry",
-      "statement",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, rose gold, emerald, oval cut, floral halo, pave halo, twis"
+    ]
   },
   {
     "id": "FIA-101",
-    "FileName": "FIA-101.jpeg",
+    "FileName": "FIA-101.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "rose cut",
-      "round",
-      "round halo",
-      "milgrain",
-      "split band",
-      "brushed",
-      "vintage",
-      "bohemian",
-      "romantic",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, rose cut, round, round halo, milgrai"
+    ]
   },
   {
     "id": "FIA-102",
-    "FileName": "FIA-102.jpeg",
+    "FileName": "FIA-102.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval cut",
-      "6-prong",
-      "plain band",
-      "polished",
-      "minimalist",
-      "classic",
-      "solitaire",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval cut, 6-prong, plain band, polis"
+    ]
   },
   {
     "id": "FIA-103",
-    "FileName": "FIA-103.jpeg",
+    "FileName": "FIA-103.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "cushion cut",
-      "4-prong",
-      "pave band",
-      "milgrain",
-      "polished",
-      "classic",
-      "romantic",
-      "solitaire",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, cushion cut, 4-prong, pave band, milgr"
+    ]
   },
   {
     "id": "FIA-104",
-    "FileName": "FIA-104.jpeg",
+    "FileName": "FIA-104.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval cut",
-      "8-prong",
-      "plain band",
-      "polished",
-      "minimalist",
-      "classic",
-      "solitaire",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval cut, 8-prong, plain band, polis"
+    ]
   },
   {
     "id": "FIA-105",
-    "FileName": "FIA-105.jpeg",
+    "FileName": "FIA-105.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald",
-      "marquise cut",
-      "pear cut",
-      "toi et moi",
-      "two stone",
-      "pave band",
-      "contemporary",
-      "statement",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald, marquise cut, pear cut, toi"
+    ]
   },
   {
     "id": "FIA-106",
-    "FileName": "FIA-106.jpeg",
+    "FileName": "FIA-106.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear cut",
-      "marquise cut",
-      "toi et moi",
-      "two stone",
-      "plain band",
-      "brushed",
-      "contemporary",
-      "minimalist",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear cut, marquise cut, toi et moi, "
+    ]
   },
   {
     "id": "FIA-107",
-    "FileName": "FIA-107.jpeg",
+    "FileName": "FIA-107.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round brilliant",
-      "starburst halo",
-      "cluster halo",
-      "plain band",
-      "4-prong",
-      "vintage",
-      "glamour",
-      "statement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round brilliant, starburst halo, clus"
+    ]
   },
   {
     "id": "FIA-108",
-    "FileName": "FIA-108.jpeg",
+    "FileName": "FIA-108.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round brilliant",
-      "mixed halo",
-      "pear halo",
-      "cluster shoulders",
-      "plain band",
-      "4-prong",
-      "elegant",
-      "floral",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round brilliant, mixed halo, pear hal"
+    ]
   },
   {
     "id": "FIA-109",
-    "FileName": "FIA-109.jpeg",
+    "FileName": "FIA-109.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "rose gold",
-      "diamond",
-      "round brilliant",
-      "marquise shoulders",
-      "plain band",
-      "4-prong",
-      "nature-inspired",
-      "elegant",
-      "floral",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, rose gold, diamond, round brilliant, marquise "
+    ]
   },
   {
     "id": "FIA-110",
-    "FileName": "FIA-110.jpeg",
+    "FileName": "FIA-110.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round brilliant",
-      "sunburst halo",
-      "marquise halo",
-      "plain band",
-      "4-prong",
-      "statement",
-      "floral",
-      "vintage",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round brilliant, sunburst halo, marqu"
+    ]
   },
   {
     "id": "FIA-111",
-    "FileName": "FIA-111.jpeg",
+    "FileName": "FIA-111.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "asscher cut",
-      "3-stone",
-      "baguette side stones",
-      "engraved band",
-      "milgrain",
-      "ornate",
-      "art deco",
-      "vintage",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, asscher cut, 3-stone, baguette side "
+    ]
   },
   {
     "id": "FIA-112",
-    "FileName": "FIA-112.jpeg",
+    "FileName": "FIA-112.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "asscher cut",
-      "4-prong",
-      "plain band",
-      "polished",
-      "minimalist",
-      "contemporary",
-      "solitaire",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, asscher cut, 4-prong, plain band, poli"
+    ]
   },
   {
     "id": "FIA-113",
-    "FileName": "FIA-113.jpeg",
+    "FileName": "FIA-113.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "radiant cut",
-      "bypass setting",
-      "double band",
-      "wave shank",
-      "polished",
-      "sculptural",
-      "contemporary",
-      "solitaire",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, radiant cut, bypass setting, double ba"
+    ]
   },
   {
     "id": "FIA-114",
-    "FileName": "FIA-114.jpeg",
+    "FileName": "FIA-114.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "pink sapphire",
-      "oval cut",
-      "horizontal set",
-      "4-prong",
-      "pave band",
-      "minimalist",
-      "romantic",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, yellow gold, pink sapphire, oval cut, horizontal set, 4-pr"
+    ]
   },
   {
     "id": "FIA-115",
-    "FileName": "FIA-115.jpeg",
+    "FileName": "FIA-115.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "asscher cut",
-      "square halo",
-      "pave halo",
-      "leaf shank",
-      "twisted shank",
-      "nature-inspired",
-      "romantic",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, asscher cut, square halo, pave halo,"
+    ]
   },
   {
     "id": "FIA-116",
-    "FileName": "FIA-116.jpeg",
+    "FileName": "FIA-116.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "rose cut",
-      "round",
-      "bezel setting",
-      "eye shape",
-      "bypass shank",
-      "crossover band",
-      "polished",
-      "sculptural",
-      "contemporary",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, rose cut, round, bezel setting, eye "
+    ]
   },
   {
     "id": "FIA-117",
-    "FileName": "FIA-117.jpeg",
+    "FileName": "FIA-117.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "blue sapphire",
-      "oval cut",
-      "geometric halo",
-      "baguette halo",
-      "pave halo",
-      "plain band",
-      "art deco",
-      "vintage",
-      "statement",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, rose gold, blue sapphire, oval cut, geometric halo, baguet"
+    ]
   },
   {
     "id": "FIA-118",
-    "FileName": "FIA-118.jpeg",
+    "FileName": "FIA-118.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "blue sapphire",
-      "oval cut",
-      "floral halo",
-      "openwork halo",
-      "baguette diamonds",
-      "round diamonds",
-      "plain band",
-      "vintage",
-      "floral",
-      "statement",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, rose gold, blue sapphire, oval cut, floral halo, openwork "
+    ]
   },
   {
     "id": "FIA-119",
-    "FileName": "FIA-119.jpeg",
+    "FileName": "FIA-119.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "radiant cut",
-      "marquise shoulders",
-      "round side diamonds",
-      "plain band",
-      "4-prong",
-      "elegant",
-      "nature-inspired",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, radiant cut, marquise shoulders, roun"
+    ]
   },
   {
     "id": "FIA-120",
-    "FileName": "FIA-120.jpeg",
+    "FileName": "FIA-120.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "radiant cut",
-      "marquise shoulders",
-      "round side diamonds",
-      "plain band",
-      "4-prong",
-      "elegant",
-      "nature-inspired",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, radiant cut, marquise shoulders, roun"
+    ]
   },
   {
     "id": "FIA-121",
-    "FileName": "FIA-121.jpeg",
+    "FileName": "FIA-121.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "radiant cut",
-      "marquise shoulders",
-      "round side diamonds",
-      "plain band",
-      "4-prong",
-      "elegant",
-      "nature-inspired",
-      "romantic",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, radiant cut, marquise shoulders, roun"
+    ]
   },
   {
     "id": "FIA-122",
-    "FileName": "FIA-122.jpeg",
+    "FileName": "FIA-122.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "princess cut",
-      "3-stone",
-      "princess side stones",
-      "plain band",
-      "polished",
-      "classic",
-      "geometric",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, princess cut, 3-stone, princess side"
+    ]
   },
   {
     "id": "FIA-123",
-    "FileName": "FIA-123.jpeg",
+    "FileName": "FIA-123.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "platinum",
-      "diamond",
-      "round brilliant",
-      "round halo",
-      "floral halo",
-      "plain band",
-      "4-prong",
-      "romantic",
-      "delicate",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, platinum, diamond, round brilliant, round halo"
+    ]
   },
   {
     "id": "FIA-124",
-    "FileName": "FIA-124.jpeg",
+    "FileName": "FIA-124.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "princess cut",
-      "3-stone",
-      "princess side stones",
-      "plain band",
-      "polished",
-      "classic",
-      "geometric",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, princess cut, 3-stone, princess side"
+    ]
   },
   {
     "id": "FIA-125",
-    "FileName": "FIA-125.jpeg",
+    "FileName": "FIA-125.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear cut",
-      "split shank",
-      "sculptural shank",
-      "claw prong",
-      "polished",
-      "sculptural",
-      "contemporary",
-      "solitaire",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear cut, split shank, sculptural sh"
+    ]
   },
   {
     "id": "FIA-126",
-    "FileName": "FIA-126.jpeg",
+    "FileName": "FIA-126.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "radiant cut",
-      "double halo",
-      "pave halo",
-      "pave band",
-      "4-prong",
-      "glamour",
-      "statement",
-      "classic",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, radiant cut, double halo, pave halo,"
+    ]
   },
   {
     "id": "FIA-127",
-    "FileName": "FIA-127.jpeg",
+    "FileName": "FIA-127.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "radiant cut",
-      "leaf shank",
-      "openwork",
-      "botanical",
-      "4-prong",
-      "nature-inspired",
-      "bohemian",
-      "organic",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, radiant cut, leaf shank, openwork, bo"
+    ]
   },
   {
     "id": "FIA-128",
-    "FileName": "FIA-128.jpeg",
+    "FileName": "FIA-128.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "emerald",
-      "oval cut",
-      "4-prong",
-      "pave band",
-      "minimalist",
-      "romantic",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, yellow gold, emerald, oval cut, 4-prong, pave band, minima"
+    ]
   },
   {
     "id": "FIA-129",
-    "FileName": "FIA-129.jpeg",
+    "FileName": "FIA-129.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "emerald",
-      "oval cut",
-      "4-prong",
-      "plain thin band",
-      "under-halo diamonds",
-      "minimalist",
-      "elegant",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, yellow gold, emerald, oval cut, 4-prong, plain thin band, "
+    ]
   },
   {
     "id": "FIA-130",
-    "FileName": "FIA-130.jpeg",
+    "FileName": "FIA-130.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "emerald",
-      "oval cut",
-      "bypass halo",
-      "pave halo",
-      "twisted pave band",
-      "4-prong",
-      "romantic",
-      "sculptural",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, rose gold, emerald, oval cut, bypass halo, pave halo, twis"
+    ]
   },
   {
     "id": "FIA-131",
-    "FileName": "FIA-131.jpeg",
+    "FileName": "FIA-131.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "emerald",
-      "oval cut",
-      "crossover halo",
-      "pave halo",
-      "crossover band",
-      "pave band",
-      "4-prong",
-      "statement",
-      "contemporary",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, rose gold, emerald, oval cut, crossover halo, pave halo, c"
+    ]
   },
   {
     "id": "FIA-132",
-    "FileName": "FIA-132.jpeg",
+    "FileName": "FIA-132.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "marquise cut",
-      "marquise cluster shoulders",
-      "round side diamonds",
-      "asymmetric",
-      "plain thin band",
-      "nature-inspired",
-      "romantic",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, marquise cut, marquise cluster shoul"
+    ]
   },
   {
     "id": "FIA-133",
-    "FileName": "FIA-133.jpeg",
+    "FileName": "FIA-133.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "marquise cut",
-      "marquise crown",
-      "round side diamonds",
-      "textured band",
-      "floral",
-      "nature-inspired",
-      "romantic",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, marquise cut, marquise crown, round "
+    ]
   },
   {
     "id": "FIA-134",
-    "FileName": "FIA-134.jpeg",
+    "FileName": "FIA-134.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "marquise cut",
-      "marquise shoulders",
-      "round side diamonds",
-      "plain band",
-      "nature-inspired",
-      "elegant",
-      "romantic",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, marquise cut, marquise shoulders, ro"
+    ]
   },
   {
     "id": "FIA-135",
-    "FileName": "FIA-135.jpeg",
+    "FileName": "FIA-135.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "round brilliant",
-      "6-prong",
-      "wide band",
-      "engraved",
-      "leaf motif",
-      "openwork",
-      "milgrain",
-      "vintage",
-      "nature-inspired",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, round brilliant, 6-prong, wide band, e"
+    ]
   },
   {
     "id": "FIA-136",
-    "FileName": "FIA-136.jpeg",
+    "FileName": "FIA-136.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "asscher cut",
-      "hidden halo",
-      "plain band",
-      "split shank",
-      "floral prongs",
-      "minimalist",
-      "contemporary",
-      "solitaire",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, asscher cut, hidden halo, plain band, "
+    ]
   },
   {
     "id": "FIA-137",
-    "FileName": "FIA-137.jpeg",
+    "FileName": "FIA-137.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "princess cut",
-      "bezel setting",
-      "wide band",
-      "brushed",
-      "matte",
-      "minimalist",
-      "contemporary",
-      "solitaire",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, princess cut, bezel setting, wide ba"
+    ]
   },
   {
     "id": "FIA-138",
-    "FileName": "FIA-138.jpeg",
+    "FileName": "FIA-138.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "cushion cut",
-      "square bezel",
-      "bezel setting",
-      "plain band",
-      "polished",
-      "minimalist",
-      "statement",
-      "solitaire",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, cushion cut, square bezel, bezel set"
+    ]
   },
   {
     "id": "FIA-139",
-    "FileName": "FIA-139.jpeg",
+    "FileName": "FIA-139.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "cushion cut",
-      "floral mounting",
-      "petal motif",
-      "openwork",
-      "diamond pave",
-      "plain band",
-      "nature-inspired",
-      "floral",
-      "romantic",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, cushion cut, floral mounting, petal mo"
+    ]
   },
   {
     "id": "FIA-140",
-    "FileName": "FIA-140.jpeg",
+    "FileName": "FIA-140.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "grey sapphire",
-      "rose cut",
-      "hexagonal",
-      "cluster",
-      "multi-stone",
-      "bezel setting",
-      "bohemian",
-      "artisan",
-      "organic",
-      "fashion"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, grey sapphire, rose cut, hexagonal, cl"
+    ]
   },
   {
     "id": "FIA-141",
-    "FileName": "FIA-141.jpeg",
+    "FileName": "FIA-141.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "blue sapphire",
-      "morganite",
-      "rose cut",
-      "round",
-      "cluster",
-      "multi-stone",
-      "mixed stones",
-      "bohemian",
-      "statement",
-      "romantic",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, blue sapphire, morganite, rose cut, ro"
+    ]
   },
   {
     "id": "FIA-142",
-    "FileName": "FIA-142.jpeg",
+    "FileName": "FIA-142.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "double band",
-      "wide bypass band",
-      "brushed",
-      "matte",
-      "4-prong",
-      "sculptural",
-      "statement",
-      "contemporary",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, double band, wide bypas"
+    ]
   },
   {
     "id": "FIA-143",
-    "FileName": "FIA-143.jpeg",
+    "FileName": "FIA-143.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "bypass shank",
-      "wave band",
-      "polished",
-      "4-prong",
-      "sculptural",
-      "contemporary",
-      "solitaire",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, bypass shank, wave band"
+    ]
   },
   {
     "id": "FIA-144",
-    "FileName": "FIA-144.jpeg",
+    "FileName": "FIA-144.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "platinum",
-      "diamond",
-      "oval cut",
-      "bypass shank",
-      "wave shank",
-      "4-prong",
-      "polished",
-      "sculptural",
-      "contemporary",
-      "solitaire",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, platinum, diamond, oval cut, bypass shank, wav"
+    ]
   },
   {
     "id": "FIA-145",
-    "FileName": "FIA-145.jpeg",
+    "FileName": "FIA-145.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear cut",
-      "3-stone",
-      "pear side stones",
-      "plain band",
-      "polished",
-      "classic",
-      "elegant",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear cut, 3-stone, pear side stones,"
+    ]
   },
   {
     "id": "FIA-146",
-    "FileName": "FIA-146.jpeg",
+    "FileName": "FIA-146.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear cut",
-      "bezel setting",
-      "bypass shank",
-      "wave shank",
-      "polished",
-      "sculptural",
-      "minimalist",
-      "solitaire",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear cut, bezel setting, bypass shan"
+    ]
   },
   {
     "id": "FIA-148",
-    "FileName": "FIA-148.jpeg",
+    "FileName": "FIA-148.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "emerald",
-      "oval cut",
-      "4-prong",
-      "leaf shank",
-      "twisted shank",
-      "scattered diamonds",
-      "nature-inspired",
-      "bohemian",
-      "organic",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, yellow gold, emerald, oval cut, 4-prong, leaf shank, twist"
+    ]
   },
   {
     "id": "FIA-149",
-    "FileName": "FIA-149.jpeg",
+    "FileName": "FIA-149.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "rose cut",
-      "round",
-      "bezel setting",
-      "wide band",
-      "brushed",
-      "matte",
-      "minimalist",
-      "statement",
-      "contemporary",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, rose cut, round, bezel setting, wide b"
+    ]
   },
   {
     "id": "FIA-150",
-    "FileName": "FIA-150.jpeg",
+    "FileName": "FIA-150.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "rose cut",
-      "oval",
-      "tension setting",
-      "wide band",
-      "polished",
-      "sculptural",
-      "statement",
-      "contemporary",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, rose cut, oval, tension setting, wide "
+    ]
   },
   {
     "id": "FIA-151",
-    "FileName": "FIA-151.jpeg",
+    "FileName": "FIA-151.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "platinum",
-      "diamond",
-      "rose cut",
-      "round",
-      "tension setting",
-      "wide band",
-      "brushed",
-      "matte",
-      "minimalist",
-      "architectural",
-      "contemporary",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, platinum, diamond, rose cut, round, tension se"
+    ]
   },
   {
     "id": "FIA-152",
-    "FileName": "FIA-152.jpeg",
+    "FileName": "FIA-152.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "platinum",
-      "diamond",
-      "rose cut",
-      "round",
-      "tension setting",
-      "double band",
-      "wide band",
-      "polished",
-      "architectural",
-      "statement",
-      "contemporary",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, platinum, diamond, rose cut, round, tension se"
+    ]
   },
   {
     "id": "FIA-153",
-    "FileName": "FIA-153.jpeg",
+    "FileName": "FIA-153.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "rose gold",
-      "morganite",
-      "round",
-      "channel setting",
-      "half bezel",
-      "plain band",
-      "polished",
-      "minimalist",
-      "contemporary",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, white gold, rose gold, morganite, round, channel setting, "
+    ]
   },
   {
     "id": "FIA-154",
-    "FileName": "FIA-154.jpeg",
+    "FileName": "FIA-154.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "platinum",
-      "diamond",
-      "rose cut",
-      "round",
-      "tension setting",
-      "domed band",
-      "plain band",
-      "polished",
-      "minimalist",
-      "contemporary",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, platinum, diamond, rose cut, round, tension se"
+    ]
   },
   {
     "id": "FIA-155",
-    "FileName": "FIA-155.jpeg",
+    "FileName": "FIA-155.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "blue sapphire",
-      "cushion cut",
-      "4-prong",
-      "split shank",
-      "pave band",
-      "statement",
-      "romantic",
-      "elegant",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, rose gold, blue sapphire, cushion cut, 4-prong, split shan"
+    ]
   },
   {
     "id": "FIA-156",
-    "FileName": "FIA-156.jpeg",
+    "FileName": "FIA-156.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "blue sapphire",
-      "cushion cut",
-      "4-prong",
-      "split shank",
-      "pave band",
-      "statement",
-      "romantic",
-      "elegant",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, rose gold, blue sapphire, cushion cut, 4-prong, split shan"
+    ]
   },
   {
     "id": "FIA-157",
-    "FileName": "FIA-157.jpeg",
+    "FileName": "FIA-157.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "marquise cut",
-      "horizontal set",
-      "bezel setting",
-      "marquise cluster",
-      "round bezel",
-      "plain band",
-      "nature-inspired",
-      "statement",
-      "bohemian",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, marquise cut, horizontal set, bezel "
+    ]
   },
   {
     "id": "FIA-158",
-    "FileName": "FIA-158.jpeg",
+    "FileName": "FIA-158.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "marquise cut",
-      "marquise cluster crown",
-      "round side diamonds",
-      "plain thin band",
-      "floral",
-      "nature-inspired",
-      "romantic",
-      "bohemian",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, marquise cut, marquise cluster crown"
+    ]
   },
   {
     "id": "FIA-159",
-    "FileName": "FIA-159.jpeg",
+    "FileName": "FIA-159.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval cut",
-      "4-prong",
-      "plain thin band",
-      "polished",
-      "minimalist",
-      "classic",
-      "solitaire",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval cut, 4-prong, plain thin band, "
+    ]
   },
   {
     "id": "FIA-160",
-    "FileName": "FIA-160.jpeg",
+    "FileName": "FIA-160.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval cut",
-      "4-prong",
-      "plain band",
-      "polished",
-      "minimalist",
-      "classic",
-      "solitaire",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval cut, 4-prong, plain band, polis"
+    ]
   },
   {
     "id": "FIA-161",
-    "FileName": "FIA-161.jpeg",
+    "FileName": "FIA-161.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "platinum",
-      "blue sapphire",
-      "oval cut",
-      "3-stone",
-      "round side diamonds",
-      "leaf engraved band",
-      "classic",
-      "nature-inspired",
-      "elegant",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, white gold, platinum, blue sapphire, oval cut, 3-stone, ro"
+    ]
   },
   {
     "id": "FIA-162",
-    "FileName": "FIA-162.jpeg",
+    "FileName": "FIA-162.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "platinum",
-      "blue sapphire",
-      "oval cut",
-      "4-prong",
-      "marquise cluster shoulders",
-      "round side diamonds",
-      "leaf shank",
-      "nature-inspired",
-      "bohemian",
-      "romantic",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, white gold, platinum, blue sapphire, oval cut, 4-prong, ma"
+    ]
   },
   {
     "id": "FIA-163",
-    "FileName": "FIA-163.jpeg",
+    "FileName": "FIA-163.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "emerald",
-      "round",
-      "round halo",
-      "pave halo",
-      "plain thin band",
-      "4-prong",
-      "minimalist",
-      "delicate",
-      "romantic",
-      "colored stone"
-    ],
-    "Caption": ""
+      "ring, yellow gold, emerald, round, round halo, pave halo, plain "
+    ]
   },
   {
     "id": "FIA-164",
-    "FileName": "FIA-164.jpeg",
+    "FileName": "FIA-164.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "cushion cut",
-      "4-prong",
-      "plain band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, cushion cut, 4-prong, plain band, po"
+    ]
   },
   {
     "id": "FIA-165",
-    "FileName": "FIA-165.jpeg",
+    "FileName": "FIA-165.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "plain band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, 4-prong, plain band, polished"
+    ]
   },
   {
     "id": "FIA-166",
-    "FileName": "FIA-166.jpeg",
+    "FileName": "FIA-166.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "halo",
-      "diamond pavé",
-      "split shank",
-      "double band",
-      "polished",
-      "glamour",
-      "statement",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
-  },
-  {
-    "id": "FIA-167",
-    "FileName": "FIA-167.jpeg",
-    "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "halo",
-      "diamond pavé",
-      "split shank",
-      "double band",
-      "polished",
-      "romantic",
-      "glamour",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, 4-prong, halo, diamond pavé, "
+    ]
   },
   {
     "id": "FIA-168",
-    "FileName": "FIA-168.jpeg",
+    "FileName": "FIA-168.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "6-prong",
-      "diamond pavé",
-      "wide band",
-      "double band",
-      "polished",
-      "classic",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, 6-prong, diamond pavé, wide "
+    ]
   },
   {
     "id": "FIA-169",
-    "FileName": "FIA-169.jpeg",
+    "FileName": "FIA-169.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "6-prong",
-      "diamond pavé",
-      "wide band",
-      "double band",
-      "polished",
-      "classic",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 6-prong, diamond pavé, wide b"
+    ]
   },
   {
     "id": "FIA-170",
-    "FileName": "FIA-170.jpeg",
+    "FileName": "FIA-170.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval",
-      "6-prong",
-      "diamond pavé",
-      "wide band",
-      "double band",
-      "polished",
-      "classic",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, oval, 6-prong, diamond pavé, wide ba"
+    ]
   },
   {
     "id": "FIA-171",
-    "FileName": "FIA-171.jpeg",
+    "FileName": "FIA-171.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "diamond pavé",
-      "wide band",
-      "double band",
-      "polished",
-      "classic",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, 4-prong, diamond pavé, wide b"
+    ]
   },
   {
     "id": "FIA-172",
-    "FileName": "FIA-172.jpeg",
+    "FileName": "FIA-172.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval",
-      "6-prong",
-      "diamond pavé",
-      "thin band",
-      "polished",
-      "classic",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, oval, 6-prong, diamond pavé, thin ba"
+    ]
   },
   {
     "id": "FIA-173",
-    "FileName": "FIA-173.jpeg",
+    "FileName": "FIA-173.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "plain band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 4-prong, plain band, polished,"
+    ]
   },
   {
     "id": "FIA-174",
-    "FileName": "FIA-174.jpeg",
+    "FileName": "FIA-174.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "cushion cut",
-      "bezel setting",
-      "plain band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "contemporary",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, cushion cut, bezel setting, plain ba"
+    ]
   },
   {
     "id": "FIA-175",
-    "FileName": "FIA-175.jpeg",
+    "FileName": "FIA-175.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "cushion cut",
-      "half bezel",
-      "plain band",
-      "diamond pavé",
-      "polished",
-      "double band",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, cushion cut, half bezel, plain band,"
+    ]
   },
   {
     "id": "FIA-176",
-    "FileName": "FIA-176.jpeg",
+    "FileName": "FIA-176.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "cushion cut",
-      "half bezel",
-      "plain band",
-      "polished",
-      "double band",
-      "minimalist",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, cushion cut, half bezel, plain band,"
+    ]
   },
   {
     "id": "FIA-177",
-    "FileName": "FIA-177.jpeg",
+    "FileName": "FIA-177.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "cushion cut",
-      "half bezel",
-      "plain band",
-      "diamond pavé",
-      "double band",
-      "polished",
-      "romantic",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, cushion cut, half bezel, plain band,"
+    ]
   },
   {
     "id": "FIA-178",
-    "FileName": "FIA-178.jpeg",
+    "FileName": "FIA-178.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "bypass shank",
-      "plain band",
-      "polished",
-      "solitaire",
-      "sculptural",
-      "contemporary",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 4-prong, bypass shank, plain b"
+    ]
   },
   {
     "id": "FIA-179",
-    "FileName": "FIA-179.jpeg",
+    "FileName": "FIA-179.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "oval",
-      "6-prong",
-      "plain band",
-      "polished",
-      "solitaire",
-      "romantic",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, oval, 6-prong, plain band, polished, s"
+    ]
   },
   {
     "id": "FIA-180",
-    "FileName": "FIA-180.jpeg",
+    "FileName": "FIA-180.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "bezel setting",
-      "diamond pavé",
-      "thin band",
-      "side diamonds",
-      "polished",
-      "classic",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, bezel setting, diamond pavé, "
+    ]
   },
   {
     "id": "FIA-181",
-    "FileName": "FIA-181.jpeg",
+    "FileName": "FIA-181.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "marquise",
-      "6-prong",
-      "plain band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "statement",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, marquise, 6-prong, plain band, polis"
+    ]
   },
   {
     "id": "FIA-182",
-    "FileName": "FIA-182.jpeg",
+    "FileName": "FIA-182.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "plain band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 4-prong, plain band, polished,"
+    ]
   },
   {
     "id": "FIA-183",
-    "FileName": "FIA-183.jpeg",
+    "FileName": "FIA-183.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "6-prong",
-      "plain band",
-      "polished",
-      "solitaire",
-      "double band",
-      "minimalist",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, 6-prong, plain band, polished"
+    ]
   },
   {
     "id": "FIA-184",
-    "FileName": "FIA-184.jpeg",
+    "FileName": "FIA-184.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "bezel setting",
-      "twisted band",
-      "solitaire",
-      "polished",
-      "minimalist",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, bezel setting, twisted band, s"
+    ]
   },
   {
     "id": "FIA-185",
-    "FileName": "FIA-185.jpeg",
+    "FileName": "FIA-185.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "cushion cut",
-      "4-prong",
-      "diamond pavé",
-      "thin band",
-      "polished",
-      "classic",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, cushion cut, 4-prong, diamond pavé,"
+    ]
   },
   {
     "id": "FIA-186",
-    "FileName": "FIA-186.jpeg",
+    "FileName": "FIA-186.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "cushion cut",
-      "4-prong",
-      "side diamonds",
-      "plain band",
-      "engraved",
-      "ornate",
-      "vintage",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, cushion cut, 4-prong, side diamonds, "
+    ]
   },
   {
     "id": "FIA-187",
-    "FileName": "FIA-187.jpeg",
+    "FileName": "FIA-187.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "6-prong",
-      "plain band",
-      "hammered",
-      "solitaire",
-      "nature-inspired",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, 6-prong, plain band, hammered"
+    ]
   },
   {
     "id": "FIA-188",
-    "FileName": "FIA-188.jpeg",
+    "FileName": "FIA-188.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "radiant cut",
-      "4-prong",
-      "thin band",
-      "plain band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, radiant cut, 4-prong, thin band, plai"
+    ]
   },
   {
     "id": "FIA-189",
-    "FileName": "FIA-189.jpeg",
+    "FileName": "FIA-189.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "radiant cut",
-      "4-prong",
-      "plain band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, radiant cut, 4-prong, plain band, pol"
+    ]
   },
   {
     "id": "FIA-190",
-    "FileName": "FIA-190.jpeg",
+    "FileName": "FIA-190.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "radiant cut",
-      "4-prong",
-      "split shank",
-      "polished",
-      "solitaire",
-      "romantic",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, radiant cut, 4-prong, split shank, p"
+    ]
   },
   {
     "id": "FIA-191",
-    "FileName": "FIA-191.jpeg",
+    "FileName": "FIA-191.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "6-prong",
-      "double band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 6-prong, double band, polished"
+    ]
   },
   {
     "id": "FIA-192",
-    "FileName": "FIA-192.jpeg",
+    "FileName": "FIA-192.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "halo",
-      "diamond pavé",
-      "thin band",
-      "polished",
-      "romantic",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 4-prong, halo, diamond pavé, "
+    ]
   },
   {
     "id": "FIA-193",
-    "FileName": "FIA-193.jpeg",
+    "FileName": "FIA-193.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear",
-      "bezel setting",
-      "twisted band",
-      "polished",
-      "solitaire",
-      "bohemian",
-      "nature-inspired",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear, bezel setting, twisted band, p"
+    ]
   },
   {
     "id": "FIA-194",
-    "FileName": "FIA-194.jpeg",
+    "FileName": "FIA-194.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear",
-      "half bezel",
-      "bypass shank",
-      "wide band",
-      "polished",
-      "solitaire",
-      "sculptural",
-      "contemporary",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear, half bezel, bypass shank, wide"
+    ]
   },
   {
     "id": "FIA-195",
-    "FileName": "FIA-195.jpeg",
+    "FileName": "FIA-195.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "6-prong",
-      "cluster shoulders",
-      "side diamonds",
-      "plain band",
-      "polished",
-      "romantic",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 6-prong, cluster shoulders, si"
+    ]
   },
   {
     "id": "FIA-196",
-    "FileName": "FIA-196.jpeg",
+    "FileName": "FIA-196.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "6-prong",
-      "cluster shoulders",
-      "side diamonds",
-      "plain band",
-      "polished",
-      "romantic",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 6-prong, cluster shoulders, si"
+    ]
   },
   {
     "id": "FIA-197",
-    "FileName": "FIA-197.jpeg",
+    "FileName": "FIA-197.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "3-stone",
-      "side diamonds",
-      "plain band",
-      "polished",
-      "classic",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 4-prong, 3-stone, side diamond"
+    ]
   },
   {
     "id": "FIA-198",
-    "FileName": "FIA-198.jpeg",
+    "FileName": "FIA-198.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "6-prong",
-      "side diamonds",
-      "plain band",
-      "polished",
-      "classic",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, 6-prong, side diamonds, plain"
+    ]
   },
   {
     "id": "FIA-199",
-    "FileName": "FIA-199.jpeg",
+    "FileName": "FIA-199.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "marquise",
-      "prong setting",
-      "halo",
-      "diamond pavé",
-      "thin band",
-      "polished",
-      "glamour",
-      "statement",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, marquise, prong setting, halo, diamon"
+    ]
   },
   {
     "id": "FIA-200",
-    "FileName": "FIA-200.jpeg",
+    "FileName": "FIA-200.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "cushion cut",
-      "4-prong",
-      "side diamonds",
-      "plain band",
-      "polished",
-      "classic",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, cushion cut, 4-prong, side diamonds, "
+    ]
   },
   {
     "id": "FIA-201",
-    "FileName": "FIA-201.jpeg",
+    "FileName": "FIA-201.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "6-prong",
-      "plain band",
-      "engraved",
-      "solitaire",
-      "minimalist",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
-  },
-  {
-    "id": "FIA-202",
-    "FileName": "FIA-202.jpeg",
-    "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "side diamonds",
-      "channel setting",
-      "plain band",
-      "polished",
-      "art deco",
-      "geometric",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 6-prong, plain band, engraved,"
+    ]
   },
   {
     "id": "FIA-203",
-    "FileName": "FIA-203.jpeg",
+    "FileName": "FIA-203.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "twisted band",
-      "polished",
-      "solitaire",
-      "romantic",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 4-prong, twisted band, polishe"
+    ]
   },
   {
     "id": "FIA-204",
-    "FileName": "FIA-204.jpeg",
+    "FileName": "FIA-204.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "bezel setting",
-      "plain band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "contemporary",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, bezel setting, plain band, pol"
+    ]
   },
   {
     "id": "FIA-205",
-    "FileName": "FIA-205.jpeg",
+    "FileName": "FIA-205.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "bezel setting",
-      "plain band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "contemporary",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, bezel setting, plain band, pol"
+    ]
   },
   {
     "id": "FIA-206",
-    "FileName": "FIA-206.jpeg",
+    "FileName": "FIA-206.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "3-stone",
-      "baguette shoulders",
-      "plain band",
-      "polished",
-      "classic",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, 4-prong, 3-stone, baguette sh"
+    ]
   },
   {
     "id": "FIA-207",
-    "FileName": "FIA-207.jpeg",
+    "FileName": "FIA-207.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval",
-      "6-prong",
-      "3-stone",
-      "baguette shoulders",
-      "plain band",
-      "polished",
-      "classic",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, oval, 6-prong, 3-stone, baguette shou"
+    ]
   },
   {
     "id": "FIA-208",
-    "FileName": "FIA-208.jpeg",
+    "FileName": "FIA-208.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "6-prong",
-      "plain band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "timeless",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 6-prong, plain band, polished,"
+    ]
   },
   {
     "id": "FIA-209",
-    "FileName": "FIA-209.jpeg",
+    "FileName": "FIA-209.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear",
-      "prong setting",
-      "plain band",
-      "polished",
-      "solitaire",
-      "horizontal set",
-      "minimalist",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear, prong setting, plain band, pol"
+    ]
   },
   {
     "id": "FIA-210",
-    "FileName": "FIA-210.jpeg",
+    "FileName": "FIA-210.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear",
-      "prong setting",
-      "plain band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear, prong setting, plain band, pol"
+    ]
   },
   {
     "id": "FIA-211",
-    "FileName": "FIA-211.jpeg",
+    "FileName": "FIA-211.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "twisted band",
-      "polished",
-      "solitaire",
-      "romantic",
-      "nature-inspired",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, 4-prong, twisted band, polish"
+    ]
   },
   {
     "id": "FIA-212",
-    "FileName": "FIA-212.jpeg",
+    "FileName": "FIA-212.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "6-prong",
-      "twisted band",
-      "polished",
-      "solitaire",
-      "romantic",
-      "nature-inspired",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 6-prong, twisted band, polishe"
+    ]
   },
   {
     "id": "FIA-213",
-    "FileName": "FIA-213.jpeg",
+    "FileName": "FIA-213.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "twisted band",
-      "polished",
-      "solitaire",
-      "romantic",
-      "nature-inspired",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, round, 4-prong, twisted band, polished"
+    ]
   },
   {
     "id": "FIA-214",
-    "FileName": "FIA-214.jpeg",
+    "FileName": "FIA-214.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "plain band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 4-prong, plain band, polished,"
+    ]
   },
   {
     "id": "FIA-215",
-    "FileName": "FIA-215.jpeg",
+    "FileName": "FIA-215.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "plain band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 4-prong, plain band, polished,"
+    ]
   },
   {
     "id": "FIA-216",
-    "FileName": "FIA-216.jpeg",
+    "FileName": "FIA-216.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "marquise",
-      "6-prong",
-      "diamond pavé",
-      "thin band",
-      "polished",
-      "solitaire",
-      "statement",
-      "glamour",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, marquise, 6-prong, diamond pavé, thi"
+    ]
   },
   {
     "id": "FIA-217",
-    "FileName": "FIA-217.jpeg",
+    "FileName": "FIA-217.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "plain band",
-      "polished",
-      "solitaire",
-      "minimalist",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 4-prong, plain band, polished,"
+    ]
   },
   {
     "id": "FIA-218",
-    "FileName": "FIA-218.jpeg",
+    "FileName": "FIA-218.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "radiant cut",
-      "4-prong",
-      "split shank",
-      "polished",
-      "solitaire",
-      "sculptural",
-      "contemporary",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, radiant cut, 4-prong, split shank, p"
+    ]
   },
   {
     "id": "FIA-219",
-    "FileName": "FIA-219.jpeg",
+    "FileName": "FIA-219.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "side diamonds",
-      "milgrain",
-      "floral",
-      "thin band",
-      "romantic",
-      "vintage",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, round, 4-prong, side diamonds, milgrai"
+    ]
   },
   {
     "id": "FIA-220",
-    "FileName": "FIA-220.jpeg",
+    "FileName": "FIA-220.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "emerald cut",
-      "bezel setting",
-      "wide band",
-      "triple band",
-      "horizontal set",
-      "polished",
-      "sculptural",
-      "statement",
-      "contemporary",
-      "fashion",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, emerald cut, bezel setting, wide band,"
+    ]
   },
   {
     "id": "FIA-221",
-    "FileName": "FIA-221.jpeg",
+    "FileName": "FIA-221.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval",
-      "6-prong",
-      "twisted band",
-      "split shank",
-      "polished",
-      "solitaire",
-      "romantic",
-      "bridal",
-      "engagement"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, oval, 6-prong, twisted band, split sh"
+    ]
   },
   {
     "id": "FIA-222",
-    "FileName": "FIA-222.jpeg",
+    "FileName": "FIA-222.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "marquise",
-      "4-prong",
-      "halo",
-      "diamond pavé",
-      "thin band",
-      "engagement",
-      "romantic",
-      "glamour"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, marquise, 4-prong, halo, diamond pav"
+    ]
   },
   {
     "id": "FIA-223",
-    "FileName": "FIA-223.jpeg",
+    "FileName": "FIA-223.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "cluster shoulders",
-      "double band",
-      "split shank",
-      "engagement",
-      "romantic",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, 4-prong, cluster shoulders, do"
+    ]
   },
   {
     "id": "FIA-224",
-    "FileName": "FIA-224.jpeg",
+    "FileName": "FIA-224.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "cluster shoulders",
-      "double band",
-      "split shank",
-      "engagement",
-      "romantic",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, 4-prong, cluster shoulders, do"
+    ]
   },
   {
     "id": "FIA-225",
-    "FileName": "FIA-225.jpeg",
+    "FileName": "FIA-225.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "4-prong",
-      "bypass shank",
-      "plain band",
-      "solitaire",
-      "engagement",
-      "contemporary",
-      "minimalist"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, 4-prong, bypass shank, "
+    ]
   },
   {
     "id": "FIA-226",
-    "FileName": "FIA-226.jpeg",
+    "FileName": "FIA-226.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "bezel setting",
-      "bypass shank",
-      "plain band",
-      "solitaire",
-      "engagement",
-      "minimalist",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, bezel setting, bypass s"
+    ]
   },
   {
     "id": "FIA-227",
-    "FileName": "FIA-227.jpeg",
+    "FileName": "FIA-227.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "heart",
-      "prong setting",
-      "bypass shank",
-      "diamond pavé",
-      "thin band",
-      "engagement",
-      "romantic",
-      "fashion"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, heart, prong setting, bypass shank, d"
+    ]
   },
   {
     "id": "FIA-228",
-    "FileName": "FIA-228.jpeg",
+    "FileName": "FIA-228.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "halo",
-      "bypass shank",
-      "diamond pavé",
-      "thin band",
-      "engagement",
-      "romantic",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, 4-prong, halo, bypass shank, "
+    ]
   },
   {
     "id": "FIA-229",
-    "FileName": "FIA-229.jpeg",
+    "FileName": "FIA-229.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear",
-      "pavé",
-      "bypass shank",
-      "diamond pavé",
-      "thin band",
-      "fashion",
-      "statement",
-      "glamour"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear, pavé, bypass shank, diamond p"
+    ]
   },
   {
     "id": "FIA-230",
-    "FileName": "FIA-230.jpeg",
+    "FileName": "FIA-230.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "side diamonds",
-      "plain band",
-      "engagement",
-      "classic",
-      "timeless"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, 4-prong, side diamonds, plain"
+    ]
   },
   {
     "id": "FIA-231",
-    "FileName": "FIA-231.jpeg",
+    "FileName": "FIA-231.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "diamond pavé",
-      "wide band",
-      "engagement",
-      "glamour",
-      "classic"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, 4-prong, diamond pavé, wide b"
+    ]
   },
   {
     "id": "FIA-232",
-    "FileName": "FIA-232.jpeg",
+    "FileName": "FIA-232.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "diamond pavé",
-      "wide band",
-      "engagement",
-      "glamour",
-      "classic"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, 4-prong, diamond pavé, wide b"
+    ]
   },
   {
     "id": "FIA-233",
-    "FileName": "FIA-233.jpeg",
+    "FileName": "FIA-233.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "6-prong",
-      "diamond pavé",
-      "wide band",
-      "engagement",
-      "glamour",
-      "classic"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, 6-prong, diamond pavé, wide "
+    ]
   },
   {
     "id": "FIA-234",
-    "FileName": "FIA-234.jpeg",
+    "FileName": "FIA-234.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval",
-      "6-prong",
-      "diamond pavé",
-      "thin band",
-      "engagement",
-      "classic",
-      "timeless"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, oval, 6-prong, diamond pavé, thin ba"
+    ]
   },
   {
     "id": "FIA-235",
-    "FileName": "FIA-235.jpeg",
+    "FileName": "FIA-235.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "prong setting",
-      "halo",
-      "thin band",
-      "engagement",
-      "contemporary",
-      "minimalist"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, prong setting, halo, th"
+    ]
   },
   {
     "id": "FIA-236",
-    "FileName": "FIA-236.jpeg",
+    "FileName": "FIA-236.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "pear",
-      "round",
-      "prong setting",
-      "bypass shank",
-      "twisted band",
-      "fashion",
-      "contemporary",
-      "romantic"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, pear, round, prong setting, bypass sh"
+    ]
   },
   {
     "id": "FIA-237",
-    "FileName": "FIA-237.jpeg",
+    "FileName": "FIA-237.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear",
-      "oval",
-      "prong setting",
-      "bypass shank",
-      "plain band",
-      "fashion",
-      "contemporary",
-      "romantic"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear, oval, prong setting, bypass sh"
+    ]
   },
   {
     "id": "FIA-238",
-    "FileName": "FIA-238.jpeg",
+    "FileName": "FIA-238.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "prong setting",
-      "halo",
-      "split shank",
-      "diamond pavé",
-      "engagement",
-      "romantic",
-      "glamour"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, prong setting, halo, split sha"
+    ]
   },
   {
     "id": "FIA-239",
-    "FileName": "FIA-239.jpeg",
+    "FileName": "FIA-239.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "cushion cut",
-      "prong setting",
-      "halo",
-      "split shank",
-      "diamond pavé",
-      "engagement",
-      "glamour",
-      "romantic"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, cushion cut, prong setting, halo, spl"
+    ]
   },
   {
     "id": "FIA-240",
-    "FileName": "FIA-240.jpeg",
+    "FileName": "FIA-240.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "radiant cut",
-      "4-prong",
-      "plain band",
-      "split shank",
-      "solitaire",
-      "engagement",
-      "minimalist",
-      "classic"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, radiant cut, 4-prong, plain band, spl"
+    ]
   },
   {
     "id": "FIA-241",
-    "FileName": "FIA-241.jpeg",
+    "FileName": "FIA-241.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "pear",
-      "round",
-      "prong setting",
-      "bypass shank",
-      "plain band",
-      "fashion",
-      "contemporary",
-      "romantic"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, pear, round, prong setting, bypass sh"
+    ]
   },
   {
     "id": "FIA-242",
-    "FileName": "FIA-242.jpeg",
+    "FileName": "FIA-242.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "floral prongs",
-      "halo",
-      "double band",
-      "diamond pavé",
-      "milgrain",
-      "engagement",
-      "vintage",
-      "romantic"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, floral prongs, halo, double ba"
+    ]
   },
   {
     "id": "FIA-243",
-    "FileName": "FIA-243.jpeg",
+    "FileName": "FIA-243.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "floral prongs",
-      "halo",
-      "plain band",
-      "ornate",
-      "engagement",
-      "vintage",
-      "floral"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, floral prongs, halo, plain ban"
+    ]
   },
   {
     "id": "FIA-244",
-    "FileName": "FIA-244.jpeg",
+    "FileName": "FIA-244.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "halo",
-      "split shank",
-      "diamond pavé",
-      "engagement",
-      "romantic",
-      "glamour"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 4-prong, halo, split shank, di"
+    ]
   },
   {
     "id": "FIA-245",
-    "FileName": "FIA-245.jpeg",
+    "FileName": "FIA-245.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear",
-      "prong setting",
-      "plain band",
-      "double band",
-      "bezel setting",
-      "engagement",
-      "romantic",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear, prong setting, plain band, dou"
+    ]
   },
   {
     "id": "FIA-246",
-    "FileName": "FIA-246.jpeg",
+    "FileName": "FIA-246.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear",
-      "bezel setting",
-      "bypass shank",
-      "double band",
-      "plain band",
-      "engagement",
-      "minimalist",
-      "contemporary",
-      "sculptural"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear, bezel setting, bypass shank, d"
+    ]
   },
   {
     "id": "FIA-247",
-    "FileName": "FIA-247.jpeg",
+    "FileName": "FIA-247.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear",
-      "prong setting",
-      "bypass shank",
-      "double band",
-      "bezel setting",
-      "side diamonds",
-      "engagement",
-      "romantic",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear, prong setting, bypass shank, d"
+    ]
   },
   {
     "id": "FIA-248",
-    "FileName": "FIA-248.jpeg",
+    "FileName": "FIA-248.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "half bezel",
-      "bypass shank",
-      "plain band",
-      "solitaire",
-      "engagement",
-      "minimalist",
-      "contemporary",
-      "sculptural"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, half bezel, bypass shank, plai"
+    ]
   },
   {
     "id": "FIA-249",
-    "FileName": "FIA-249.jpeg",
+    "FileName": "FIA-249.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "bezel setting",
-      "twisted band",
-      "plain band",
-      "solitaire",
-      "engagement",
-      "minimalist",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, bezel setting, twisted band, p"
+    ]
   },
   {
     "id": "FIA-250",
-    "FileName": "FIA-250.jpeg",
+    "FileName": "FIA-250.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "halo",
-      "split shank",
-      "diamond pavé",
-      "wide band",
-      "engagement",
-      "glamour",
-      "high jewelry"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, oval, 4-prong, halo, split shank, dia"
+    ]
   },
   {
     "id": "FIA-251",
-    "FileName": "FIA-251.jpeg",
+    "FileName": "FIA-251.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "floral prongs",
-      "halo",
-      "split shank",
-      "diamond pavé",
-      "wide band",
-      "engagement",
-      "glamour",
-      "ornate"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, floral prongs, halo, split sha"
+    ]
   },
   {
     "id": "FIA-252",
-    "FileName": "FIA-252.jpeg",
+    "FileName": "FIA-252.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "cluster shoulders",
-      "diamond pavé",
-      "wide band",
-      "engagement",
-      "glamour",
-      "high jewelry"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, 4-prong, cluster shoulders, di"
+    ]
   },
   {
     "id": "FIA-253",
-    "FileName": "FIA-253.jpeg",
+    "FileName": "FIA-253.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "cluster shoulders",
-      "plain band",
-      "engagement",
-      "romantic",
-      "nature-inspired"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 4-prong, cluster shoulders, pl"
+    ]
   },
   {
     "id": "FIA-254",
-    "FileName": "FIA-254.jpeg",
+    "FileName": "FIA-254.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "marquise",
-      "floral prongs",
-      "cluster shoulders",
-      "plain band",
-      "engagement",
-      "romantic",
-      "nature-inspired"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, marquise, floral prongs, cluster sho"
+    ]
   },
   {
     "id": "FIA-255",
-    "FileName": "FIA-255.jpeg",
+    "FileName": "FIA-255.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "radiant cut",
-      "6-prong",
-      "cluster shoulders",
-      "plain band",
-      "engagement",
-      "geometric",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, radiant cut, 6-prong, cluster should"
+    ]
   },
   {
     "id": "FIA-256",
-    "FileName": "FIA-256.jpeg",
+    "FileName": "FIA-256.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "radiant cut",
-      "6-prong",
-      "cluster shoulders",
-      "split shank",
-      "double band",
-      "engagement",
-      "geometric",
-      "contemporary",
-      "nature-inspired"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, radiant cut, 6-prong, cluster should"
+    ]
   },
   {
     "id": "FIA-257",
-    "FileName": "FIA-257.jpeg",
+    "FileName": "FIA-257.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear",
-      "prong setting",
-      "bypass shank",
-      "double band",
-      "diamond pavé",
-      "engagement",
-      "romantic",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear, prong setting, bypass shank, d"
+    ]
   },
   {
     "id": "FIA-258",
-    "FileName": "FIA-258.jpeg",
+    "FileName": "FIA-258.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear",
-      "4-prong",
-      "halo",
-      "plain band",
-      "double band",
-      "diamond pavé",
-      "engagement",
-      "romantic",
-      "glamour"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear, 4-prong, halo, plain band, dou"
+    ]
   },
   {
     "id": "FIA-259",
-    "FileName": "FIA-259.jpeg",
+    "FileName": "FIA-259.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear",
-      "prong setting",
-      "cluster shoulders",
-      "plain band",
-      "engagement",
-      "romantic",
-      "nature-inspired"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear, prong setting, cluster shoulde"
+    ]
   },
   {
     "id": "FIA-260",
-    "FileName": "FIA-260.jpeg",
+    "FileName": "FIA-260.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear",
-      "4-prong",
-      "halo",
-      "double band",
-      "cluster shoulders",
-      "diamond pavé",
-      "engagement",
-      "romantic",
-      "glamour",
-      "nature-inspired"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear, 4-prong, halo, double band, cl"
+    ]
   },
   {
     "id": "FIA-261",
-    "FileName": "FIA-261.jpeg",
+    "FileName": "FIA-261.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "cluster shoulders",
-      "plain band",
-      "engagement",
-      "romantic",
-      "nature-inspired"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 4-prong, cluster shoulders, pl"
+    ]
   },
   {
     "id": "FIA-262",
-    "FileName": "FIA-262.jpeg",
+    "FileName": "FIA-262.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "halo",
-      "double band",
-      "diamond pavé",
-      "milgrain",
-      "engagement",
-      "vintage",
-      "glamour"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, 4-prong, halo, double band, di"
+    ]
   },
   {
     "id": "FIA-263",
-    "FileName": "FIA-263.jpeg",
+    "FileName": "FIA-263.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "halo",
-      "split shank",
-      "diamond pavé",
-      "engagement",
-      "glamour",
-      "romantic"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, 4-prong, halo, split shank, d"
+    ]
   },
   {
     "id": "FIA-264",
-    "FileName": "FIA-264.jpeg",
+    "FileName": "FIA-264.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "halo",
-      "split shank",
-      "diamond pavé",
-      "wide band",
-      "engagement",
-      "glamour",
-      "high jewelry"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, 4-prong, halo, split shank, di"
+    ]
   },
   {
     "id": "FIA-265",
-    "FileName": "FIA-265.jpeg",
+    "FileName": "FIA-265.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "halo",
-      "split shank",
-      "diamond pavé",
-      "wide band",
-      "engagement",
-      "glamour",
-      "high jewelry"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, 4-prong, halo, split shank, di"
+    ]
   },
   {
     "id": "FIA-266",
-    "FileName": "FIA-266.jpeg",
+    "FileName": "FIA-266.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "baguette shoulders",
-      "plain band",
-      "engagement",
-      "classic",
-      "art deco"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 4-prong, baguette shoulders, p"
+    ]
   },
   {
     "id": "FIA-267",
-    "FileName": "FIA-267.jpeg",
+    "FileName": "FIA-267.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "bypass shank",
-      "plain band",
-      "solitaire",
-      "engagement",
-      "sculptural",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, 4-prong, bypass shank, plain "
+    ]
   },
   {
     "id": "FIA-268",
-    "FileName": "FIA-268.jpeg",
+    "FileName": "FIA-268.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "cushion cut",
-      "4-prong",
-      "bypass shank",
-      "plain band",
-      "solitaire",
-      "engagement",
-      "sculptural",
-      "statement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, cushion cut, 4-prong, bypass shank, "
+    ]
   },
   {
     "id": "FIA-269",
-    "FileName": "FIA-269.jpeg",
+    "FileName": "FIA-269.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "halo",
-      "plain band",
-      "baguette shoulders",
-      "engagement",
-      "art deco",
-      "vintage"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 4-prong, halo, plain band, bag"
+    ]
   },
   {
     "id": "FIA-270",
-    "FileName": "FIA-270.jpeg",
+    "FileName": "FIA-270.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "4-prong",
-      "halo",
-      "plain band",
-      "baguette shoulders",
-      "side diamonds",
-      "engagement",
-      "art deco",
-      "vintage"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, 4-prong, halo, plain band, bag"
+    ]
   },
   {
     "id": "FIA-271",
-    "FileName": "FIA-271.jpeg",
+    "FileName": "FIA-271.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "halo",
-      "plain band",
-      "baguette shoulders",
-      "engagement",
-      "art deco",
-      "vintage"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, 4-prong, halo, plain band, ba"
+    ]
   },
   {
     "id": "FIA-272",
-    "FileName": "FIA-272.jpeg",
+    "FileName": "FIA-272.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "radiant cut",
-      "6-prong",
-      "3-stone",
-      "double band",
-      "diamond pavé",
-      "engagement",
-      "geometric",
-      "art deco",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, radiant cut, 6-prong, 3-stone, double "
+    ]
   },
   {
     "id": "FIA-273",
-    "FileName": "FIA-273.jpeg",
+    "FileName": "FIA-273.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "4-prong",
-      "halo",
-      "plain band",
-      "engagement",
-      "classic",
-      "timeless"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, 4-prong, halo, plain ba"
+    ]
   },
   {
     "id": "FIA-274",
-    "FileName": "FIA-274.jpeg",
+    "FileName": "FIA-274.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "floral prongs",
-      "halo",
-      "plain band",
-      "engagement",
-      "classic",
-      "timeless"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, floral prongs, halo, pl"
+    ]
   },
   {
     "id": "FIA-275",
-    "FileName": "FIA-275.jpeg",
+    "FileName": "FIA-275.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "4-prong",
-      "halo",
-      "plain band",
-      "channel setting",
-      "baguette shoulders",
-      "engagement",
-      "art deco",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, 4-prong, halo, plain ba"
+    ]
   },
   {
     "id": "FIA-276",
-    "FileName": "FIA-276.jpeg",
+    "FileName": "FIA-276.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval",
-      "floral prongs",
-      "3-stone",
-      "plain band",
-      "engagement",
-      "classic",
-      "romantic",
-      "timeless"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, oval, floral prongs, 3-stone, plain b"
+    ]
   },
   {
     "id": "FIA-277",
-    "FileName": "FIA-277.jpeg",
+    "FileName": "FIA-277.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "4-prong",
-      "3-stone",
-      "halo",
-      "plain band",
-      "diamond pavé",
-      "engagement",
-      "art deco",
-      "glamour"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, 4-prong, 3-stone, halo,"
+    ]
   },
   {
     "id": "FIA-278",
-    "FileName": "FIA-278.jpeg",
+    "FileName": "FIA-278.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "emerald cut",
-      "4-prong",
-      "3-stone",
-      "halo",
-      "plain band",
-      "diamond pavé",
-      "engagement",
-      "art deco",
-      "classic"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, emerald cut, 4-prong, 3-stone, halo, "
+    ]
   },
   {
     "id": "FIA-279",
-    "FileName": "FIA-279.jpeg",
+    "FileName": "FIA-279.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "emerald cut",
-      "4-prong",
-      "3-stone",
-      "halo",
-      "diamond pavé",
-      "wide band",
-      "engagement",
-      "art deco",
-      "glamour",
-      "high jewelry"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, emerald cut, 4-prong, 3-stone, halo, "
+    ]
   },
   {
     "id": "FIA-280",
-    "FileName": "FIA-280.jpeg",
+    "FileName": "FIA-280.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "emerald cut",
-      "bezel setting",
-      "halo",
-      "channel setting",
-      "wide band",
-      "baguette shoulders",
-      "engagement",
-      "art deco",
-      "high jewelry",
-      "statement"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, emerald cut, bezel setting, halo, cha"
+    ]
   },
   {
     "id": "FIA-281",
-    "FileName": "FIA-281.jpeg",
+    "FileName": "FIA-281.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "bezel setting",
-      "halo",
-      "plain band",
-      "baguette shoulders",
-      "engagement",
-      "art deco",
-      "minimalist"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, bezel setting, halo, pl"
+    ]
   },
   {
     "id": "FIA-282",
-    "FileName": "FIA-282.jpeg",
+    "FileName": "FIA-282.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "bezel setting",
-      "plain band",
-      "split shank",
-      "solitaire",
-      "engagement",
-      "minimalist",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, bezel setting, plain ba"
+    ]
   },
   {
     "id": "FIA-283",
-    "FileName": "FIA-283.jpeg",
+    "FileName": "FIA-283.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "bezel setting",
-      "plain band",
-      "solitaire",
-      "engagement",
-      "minimalist",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, bezel setting, plain ba"
+    ]
   },
   {
     "id": "FIA-284",
-    "FileName": "FIA-284.jpeg",
+    "FileName": "FIA-284.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "cushion cut",
-      "half bezel",
-      "plain band",
-      "milgrain",
-      "solitaire",
-      "engagement",
-      "vintage",
-      "minimalist"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, cushion cut, half bezel, plain band,"
+    ]
   },
   {
     "id": "FIA-285",
-    "FileName": "FIA-285.jpeg",
+    "FileName": "FIA-285.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "cushion cut",
-      "floral prongs",
-      "plain band",
-      "split shank",
-      "solitaire",
-      "engagement",
-      "romantic",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, cushion cut, floral prongs, plain ba"
+    ]
   },
   {
     "id": "FIA-286",
-    "FileName": "FIA-286.jpeg",
+    "FileName": "FIA-286.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "cushion cut",
-      "floral prongs",
-      "twisted band",
-      "solitaire",
-      "engagement",
-      "romantic",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, cushion cut, floral prongs, twisted "
+    ]
   },
   {
     "id": "FIA-287",
-    "FileName": "FIA-287.jpeg",
+    "FileName": "FIA-287.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "split shank",
-      "twisted band",
-      "diamond pavé",
-      "engagement",
-      "romantic",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, round, 4-prong, split shank, twisted b"
+    ]
   },
   {
     "id": "FIA-288",
-    "FileName": "FIA-288.jpeg",
+    "FileName": "FIA-288.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "double band",
-      "split shank",
-      "diamond pavé",
-      "engagement",
-      "romantic",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, 4-prong, double band, split sh"
+    ]
   },
   {
     "id": "FIA-289",
-    "FileName": "FIA-289.jpeg",
+    "FileName": "FIA-289.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "emerald cut",
-      "bezel setting",
-      "halo",
-      "plain band",
-      "baguette shoulders",
-      "engagement",
-      "art deco",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, emerald cut, bezel setting, halo, pla"
+    ]
   },
   {
     "id": "FIA-290",
-    "FileName": "FIA-290.jpeg",
+    "FileName": "FIA-290.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "bezel setting",
-      "halo",
-      "channel setting",
-      "wide band",
-      "baguette shoulders",
-      "engagement",
-      "art deco",
-      "high jewelry",
-      "statement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, bezel setting, halo, ch"
+    ]
   },
   {
     "id": "FIA-291",
-    "FileName": "FIA-291.jpeg",
+    "FileName": "FIA-291.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "half bezel",
-      "wide band",
-      "diamond pavé",
-      "horizontal set",
-      "engagement",
-      "glamour",
-      "high jewelry"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, half bezel, wide band, diamon"
+    ]
   },
   {
     "id": "FIA-292",
-    "FileName": "FIA-292.jpeg",
+    "FileName": "FIA-292.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "bezel setting",
-      "wide band",
-      "diamond pavé",
-      "engagement",
-      "glamour",
-      "high jewelry",
-      "statement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, bezel setting, wide band, diam"
+    ]
   },
   {
     "id": "FIA-293",
-    "FileName": "FIA-293.jpeg",
+    "FileName": "FIA-293.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "bezel setting",
-      "wide band",
-      "diamond pavé",
-      "engagement",
-      "glamour",
-      "high jewelry",
-      "statement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, bezel setting, wide band, diam"
+    ]
   },
   {
     "id": "FIA-294",
-    "FileName": "FIA-294.jpeg",
+    "FileName": "FIA-294.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "bezel setting",
-      "wide band",
-      "diamond pavé",
-      "engagement",
-      "glamour",
-      "high jewelry",
-      "statement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, bezel setting, wide band, dia"
+    ]
   },
   {
     "id": "FIA-295",
-    "FileName": "FIA-295.jpeg",
+    "FileName": "FIA-295.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "bezel setting",
-      "wide band",
-      "openwork",
-      "filigree",
-      "diamond pavé",
-      "floral",
-      "engagement",
-      "romantic",
-      "high jewelry",
-      "ornate"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, bezel setting, wide band, open"
+    ]
   },
   {
     "id": "FIA-296",
-    "FileName": "FIA-296.jpeg",
+    "FileName": "FIA-296.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "bezel setting",
-      "wide band",
-      "openwork",
-      "filigree",
-      "diamond pavé",
-      "floral",
-      "engagement",
-      "romantic",
-      "high jewelry",
-      "ornate"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, bezel setting, wide band, open"
+    ]
   },
   {
     "id": "FIA-297",
-    "FileName": "FIA-297.jpeg",
+    "FileName": "FIA-297.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "half bezel",
-      "wide band",
-      "openwork",
-      "filigree",
-      "diamond pavé",
-      "floral",
-      "engagement",
-      "romantic",
-      "high jewelry",
-      "ornate"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, half bezel, wide band, openwor"
+    ]
   },
   {
     "id": "FIA-298",
-    "FileName": "FIA-298.jpeg",
+    "FileName": "FIA-298.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "half bezel",
-      "wide band",
-      "openwork",
-      "filigree",
-      "diamond pavé",
-      "floral",
-      "engagement",
-      "romantic",
-      "high jewelry",
-      "ornate"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, half bezel, wide band, openwor"
+    ]
   },
   {
     "id": "FIA-299",
-    "FileName": "FIA-299.jpeg",
+    "FileName": "FIA-299.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "bezel setting",
-      "wide band",
-      "openwork",
-      "filigree",
-      "diamond pavé",
-      "floral",
-      "engagement",
-      "romantic",
-      "high jewelry",
-      "ornate"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, bezel setting, wide band, ope"
+    ]
   },
   {
     "id": "FIA-300",
-    "FileName": "FIA-300.jpeg",
+    "FileName": "FIA-300.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "round",
-      "bezel setting",
-      "wide band",
-      "openwork",
-      "filigree",
-      "diamond pavé",
-      "floral",
-      "engagement",
-      "romantic",
-      "high jewelry",
-      "ornate"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, round, bezel setting, wide band, openw"
+    ]
   },
   {
     "id": "FIA-301",
-    "FileName": "FIA-301.jpeg",
+    "FileName": "FIA-301.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "bezel setting",
-      "wide band",
-      "openwork",
-      "filigree",
-      "diamond pavé",
-      "floral",
-      "engagement",
-      "romantic",
-      "high jewelry",
-      "ornate"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, bezel setting, wide band, open"
+    ]
   },
   {
     "id": "FIA-302",
-    "FileName": "FIA-302.jpeg",
+    "FileName": "FIA-302.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "cushion cut",
-      "4-prong",
-      "split shank",
-      "side diamonds",
-      "thin band",
-      "engagement",
-      "romantic",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, cushion cut, 4-prong, split shank, sid"
+    ]
   },
   {
     "id": "FIA-303",
-    "FileName": "FIA-303.jpeg",
+    "FileName": "FIA-303.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "halo",
-      "plain band",
-      "milgrain",
-      "engagement",
-      "vintage",
-      "romantic"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, round, 4-prong, halo, plain band, milg"
+    ]
   },
   {
     "id": "FIA-304",
-    "FileName": "FIA-304.jpeg",
+    "FileName": "FIA-304.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "round",
-      "bezel setting",
-      "halo",
-      "thin band",
-      "diamond pavé",
-      "engagement",
-      "glamour",
-      "romantic"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, round, bezel setting, halo, thin band,"
+    ]
   },
   {
     "id": "FIA-305",
-    "FileName": "FIA-305.jpeg",
+    "FileName": "FIA-305.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "cushion cut",
-      "4-prong",
-      "split shank",
-      "diamond pavé",
-      "thin band",
-      "engagement",
-      "romantic",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, cushion cut, 4-prong, split shank, dia"
+    ]
   },
   {
     "id": "FIA-306",
-    "FileName": "FIA-306.jpeg",
+    "FileName": "FIA-306.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "halo",
-      "plain band",
-      "engagement",
-      "minimalist",
-      "contemporary"
-    ],
-    "Caption": ""
-  },
-  {
-    "id": "FIA-307",
-    "FileName": "FIA-307.jpeg",
-    "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "channel setting",
-      "baguette shoulders",
-      "plain band",
-      "engagement",
-      "art deco",
-      "classic"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, 4-prong, halo, plain band, eng"
+    ]
   },
   {
     "id": "FIA-308",
-    "FileName": "FIA-308.jpeg",
+    "FileName": "FIA-308.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "cushion cut",
-      "4-prong",
-      "baguette shoulders",
-      "plain band",
-      "engagement",
-      "classic",
-      "art deco"
-    ],
-    "Caption": ""
-  },
-  {
-    "id": "FIA-309",
-    "FileName": "FIA-309.jpeg",
-    "Keywords": [
-      "ring",
-      "rose gold",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "wide band",
-      "diamond pavé",
-      "black diamond",
-      "engagement",
-      "statement",
-      "contemporary",
-      "glamour"
-    ],
-    "Caption": ""
-  },
-  {
-    "id": "FIA-310",
-    "FileName": "FIA-310.jpeg",
-    "Keywords": [
-      "ring",
-      "white gold",
-      "rose gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "wide band",
-      "diamond pavé",
-      "black diamond",
-      "engagement",
-      "statement",
-      "contemporary",
-      "glamour"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, cushion cut, 4-prong, baguette shoulde"
+    ]
   },
   {
     "id": "FIA-311",
-    "FileName": "FIA-311.jpeg",
+    "FileName": "FIA-311.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "channel setting",
-      "baguette shoulders",
-      "plain band",
-      "engagement",
-      "art deco",
-      "classic"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, 4-prong, channel setting, bagu"
+    ]
   },
   {
     "id": "FIA-312",
-    "FileName": "FIA-312.jpeg",
+    "FileName": "FIA-312.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "4-prong",
-      "plain band",
-      "thin band",
-      "solitaire",
-      "engagement",
-      "minimalist",
-      "classic"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, 4-prong, plain band, th"
+    ]
   },
   {
     "id": "FIA-313",
-    "FileName": "FIA-313.jpeg",
+    "FileName": "FIA-313.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "4-prong",
-      "plain band",
-      "thin band",
-      "solitaire",
-      "engagement",
-      "minimalist",
-      "classic"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, 4-prong, plain band, th"
+    ]
   },
   {
     "id": "FIA-314",
-    "FileName": "FIA-314.jpeg",
+    "FileName": "FIA-314.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "cushion cut",
-      "4-prong",
-      "split shank",
-      "plain band",
-      "solitaire",
-      "engagement",
-      "minimalist",
-      "romantic"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, cushion cut, 4-prong, split shank, pla"
+    ]
   },
   {
     "id": "FIA-315",
-    "FileName": "FIA-315.jpeg",
+    "FileName": "FIA-315.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "wide band",
-      "diamond pavé",
-      "solitaire",
-      "engagement",
-      "statement",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, round, 4-prong, wide band, diamond pav"
+    ]
   },
   {
     "id": "FIA-316",
-    "FileName": "FIA-316.jpeg",
+    "FileName": "FIA-316.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "wide band",
-      "plain band",
-      "solitaire",
-      "engagement",
-      "minimalist",
-      "statement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, 4-prong, wide band, plain ban"
+    ]
   },
   {
     "id": "FIA-317",
-    "FileName": "FIA-317.jpeg",
+    "FileName": "FIA-317.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "radiant cut",
-      "4-prong",
-      "wide band",
-      "plain band",
-      "solitaire",
-      "engagement",
-      "minimalist",
-      "statement"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, radiant cut, 4-prong, wide band, plain"
+    ]
   },
   {
     "id": "FIA-318",
-    "FileName": "FIA-318.jpeg",
+    "FileName": "FIA-318.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "cushion cut",
-      "4-prong",
-      "split shank",
-      "side diamonds",
-      "thin band",
-      "engagement",
-      "romantic",
-      "contemporary"
-    ],
-    "Caption": ""
-  },
-  {
-    "id": "FIA-319",
-    "FileName": "FIA-319.jpeg",
-    "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "channel setting",
-      "baguette shoulders",
-      "plain band",
-      "engagement",
-      "art deco",
-      "classic"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, cushion cut, 4-prong, split shank, si"
+    ]
   },
   {
     "id": "FIA-320",
-    "FileName": "FIA-320.jpeg",
+    "FileName": "FIA-320.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "wide band",
-      "plain band",
-      "solitaire",
-      "engagement",
-      "minimalist",
-      "statement"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, 4-prong, wide band, plain ban"
+    ]
   },
   {
     "id": "FIA-321",
-    "FileName": "FIA-321.jpeg",
+    "FileName": "FIA-321.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "cushion cut",
-      "4-prong",
-      "split shank",
-      "side diamonds",
-      "thin band",
-      "engagement",
-      "romantic",
-      "contemporary"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, cushion cut, 4-prong, split shank, si"
+    ]
   },
   {
     "id": "FIA-322",
-    "FileName": "FIA-322.jpeg",
+    "FileName": "FIA-322.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "oval",
-      "bezel setting",
-      "split shank",
-      "diamond pavé",
-      "side diamonds",
-      "romantic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, oval, bezel setting, split shank, diam"
+    ]
   },
   {
     "id": "FIA-323",
-    "FileName": "FIA-323.jpeg",
+    "FileName": "FIA-323.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval",
-      "pear",
-      "prong setting",
-      "4-prong",
-      "thin band",
-      "3-stone",
-      "classic",
-      "timeless",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, oval, pear, prong setting, 4-prong, t"
+    ]
   },
   {
     "id": "FIA-324",
-    "FileName": "FIA-324.jpeg",
+    "FileName": "FIA-324.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "prong setting",
-      "wide band",
-      "polished",
-      "minimalist",
-      "classic",
-      "solitaire",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, 4-prong, prong setting, wide b"
+    ]
   },
   {
     "id": "FIA-325",
-    "FileName": "FIA-325.jpeg",
+    "FileName": "FIA-325.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "4-prong",
-      "prong setting",
-      "plain band",
-      "polished",
-      "minimalist",
-      "classic",
-      "timeless",
-      "solitaire",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, 4-prong, prong setting, plain "
+    ]
   },
   {
     "id": "FIA-326",
-    "FileName": "FIA-326.jpeg",
+    "FileName": "FIA-326.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval",
-      "prong setting",
-      "6-prong",
-      "thin band",
-      "halo",
-      "diamond pavé",
-      "cluster shoulders",
-      "blue sapphire",
-      "glamour",
-      "statement",
-      "romantic",
-      "colored stone",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, blue sapphire, oval, prong setting, 6"
+    ]
   },
   {
     "id": "FIA-327",
-    "FileName": "FIA-327.jpeg",
+    "FileName": "FIA-327.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval",
-      "prong setting",
-      "6-prong",
-      "thin band",
-      "halo",
-      "diamond pavé",
-      "cluster shoulders",
-      "blue sapphire",
-      "glamour",
-      "statement",
-      "romantic",
-      "colored stone",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, blue sapphire, oval, prong setting, 6"
+    ]
   },
   {
     "id": "FIA-328",
-    "FileName": "FIA-328.jpeg",
+    "FileName": "FIA-328.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "round",
-      "prong setting",
-      "4-prong",
-      "wide band",
-      "double band",
-      "halo",
-      "diamond pavé",
-      "glamour",
-      "statement",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, round, prong setting, 4-prong, wide ba"
+    ]
   },
   {
     "id": "FIA-329",
-    "FileName": "FIA-329.jpeg",
+    "FileName": "FIA-329.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "prong setting",
-      "4-prong",
-      "wide band",
-      "double band",
-      "halo",
-      "diamond pavé",
-      "glamour",
-      "statement",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, prong setting, 4-prong, wide b"
+    ]
   },
   {
     "id": "FIA-330",
-    "FileName": "FIA-330.jpeg",
+    "FileName": "FIA-330.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "oval",
-      "prong setting",
-      "4-prong",
-      "wide band",
-      "halo",
-      "diamond pavé",
-      "baguette shoulders",
-      "channel setting",
-      "art deco",
-      "glamour",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, oval, prong setting, 4-prong, wide ban"
+    ]
   },
   {
     "id": "FIA-331",
-    "FileName": "FIA-331.jpeg",
+    "FileName": "FIA-331.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "round",
-      "bezel setting",
-      "wide band",
-      "baguette shoulders",
-      "channel setting",
-      "art deco",
-      "classic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, round, bezel setting, wide band, bague"
+    ]
   },
   {
     "id": "FIA-332",
-    "FileName": "FIA-332.jpeg",
+    "FileName": "FIA-332.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "oval",
-      "prong setting",
-      "4-prong",
-      "wide band",
-      "halo",
-      "diamond pavé",
-      "baguette shoulders",
-      "channel setting",
-      "art deco",
-      "glamour",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, oval, prong setting, 4-prong, wide ban"
+    ]
   },
   {
     "id": "FIA-333",
-    "FileName": "FIA-333.jpeg",
+    "FileName": "FIA-333.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "rose gold",
-      "diamond",
-      "round",
-      "prong setting",
-      "4-prong",
-      "split shank",
-      "halo",
-      "diamond pavé",
-      "romantic",
-      "glamour",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, rose gold, diamond, round, prong setting, 4-pr"
+    ]
   },
   {
     "id": "FIA-334",
-    "FileName": "FIA-334.jpeg",
+    "FileName": "FIA-334.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "prong setting",
-      "4-prong",
-      "twisted band",
-      "halo",
-      "diamond pavé",
-      "romantic",
-      "nature-inspired",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, prong setting, 4-prong, twiste"
+    ]
   },
   {
     "id": "FIA-335",
-    "FileName": "FIA-335.jpeg",
+    "FileName": "FIA-335.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "prong setting",
-      "4-prong",
-      "split shank",
-      "double band",
-      "halo",
-      "diamond pavé",
-      "glamour",
-      "statement",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, prong setting, 4-prong, split "
+    ]
   },
   {
     "id": "FIA-336",
-    "FileName": "FIA-336.jpeg",
+    "FileName": "FIA-336.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "emerald cut",
-      "prong setting",
-      "4-prong",
-      "split shank",
-      "halo",
-      "diamond pavé",
-      "glamour",
-      "high jewelry",
-      "statement",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, emerald cut, prong setting, 4-prong, "
+    ]
   },
   {
     "id": "FIA-337",
-    "FileName": "FIA-337.jpeg",
+    "FileName": "FIA-337.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "half bezel",
-      "wide band",
-      "side diamonds",
-      "brushed",
-      "matte",
-      "contemporary",
-      "minimalist",
-      "solitaire",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, half bezel, wide band, "
+    ]
   },
   {
     "id": "FIA-339",
-    "FileName": "FIA-339.jpeg",
+    "FileName": "FIA-339.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "cushion cut",
-      "bezel setting",
-      "plain band",
-      "milgrain",
-      "polished",
-      "vintage",
-      "romantic",
-      "solitaire",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, cushion cut, bezel setting, plain ba"
+    ]
   },
   {
     "id": "FIA-340",
-    "FileName": "FIA-340.jpeg",
+    "FileName": "FIA-340.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "half bezel",
-      "wide band",
-      "matte",
-      "brushed",
-      "minimalist",
-      "contemporary",
-      "solitaire",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, half bezel, wide band, matte, "
+    ]
   },
   {
     "id": "FIA-341",
-    "FileName": "FIA-341.jpeg",
+    "FileName": "FIA-341.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "emerald cut",
-      "4-prong",
-      "prong setting",
-      "wide band",
-      "diamond pavé",
-      "side diamonds",
-      "high jewelry",
-      "statement",
-      "glamour",
-      "solitaire",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, emerald cut, 4-prong, prong setting, "
+    ]
   },
   {
     "id": "FIA-342",
-    "FileName": "FIA-342.jpeg",
+    "FileName": "FIA-342.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "rose gold",
-      "diamond",
-      "oval",
-      "bezel setting",
-      "split shank",
-      "halo",
-      "diamond pavé",
-      "3-stone",
-      "milgrain",
-      "vintage",
-      "romantic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, rose gold, diamond, oval, bezel setting, spli"
+    ]
   },
   {
     "id": "FIA-343",
-    "FileName": "FIA-343.jpeg",
+    "FileName": "FIA-343.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "oval",
-      "bezel setting",
-      "thin band",
-      "diamond pavé",
-      "3-stone",
-      "milgrain",
-      "vintage",
-      "romantic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, oval, bezel setting, thin band, diamon"
+    ]
   },
   {
     "id": "FIA-344",
-    "FileName": "FIA-344.jpeg",
+    "FileName": "FIA-344.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "bezel setting",
-      "plain band",
-      "3-stone",
-      "milgrain",
-      "vintage",
-      "classic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, bezel setting, plain band, 3-s"
+    ]
   },
   {
     "id": "FIA-345",
-    "FileName": "FIA-345.jpeg",
+    "FileName": "FIA-345.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "oval",
-      "bezel setting",
-      "split shank",
-      "diamond pavé",
-      "3-stone",
-      "milgrain",
-      "vintage",
-      "romantic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, oval, bezel setting, split shank, diam"
+    ]
   },
   {
     "id": "FIA-346",
-    "FileName": "FIA-346.jpeg",
+    "FileName": "FIA-346.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "pear",
-      "prong setting",
-      "6-prong",
-      "plain band",
-      "3-stone",
-      "classic",
-      "timeless",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, pear, prong setting, 6-prong, plain b"
+    ]
   },
   {
     "id": "FIA-347",
-    "FileName": "FIA-347.jpeg",
+    "FileName": "FIA-347.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "pear",
-      "prong setting",
-      "thin band",
-      "diamond pavé",
-      "3-stone",
-      "romantic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, pear, prong setting, thin band, diamon"
+    ]
   },
   {
     "id": "FIA-348",
-    "FileName": "FIA-348.jpeg",
+    "FileName": "FIA-348.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "pear",
-      "marquise",
-      "prong setting",
-      "plain band",
-      "3-stone",
-      "contemporary",
-      "minimalist",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, pear, marquise, prong setting, plain "
+    ]
   },
   {
     "id": "FIA-349",
-    "FileName": "FIA-349.jpeg",
+    "FileName": "FIA-349.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "emerald cut",
-      "prong setting",
-      "4-prong",
-      "thin band",
-      "halo",
-      "diamond pavé",
-      "3-stone",
-      "milgrain",
-      "art deco",
-      "glamour",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, emerald cut, prong setting, 4-prong, t"
+    ]
   },
   {
     "id": "FIA-350",
-    "FileName": "FIA-350.jpeg",
+    "FileName": "FIA-350.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "cushion cut",
-      "prong setting",
-      "4-prong",
-      "plain band",
-      "halo",
-      "diamond pavé",
-      "3-stone",
-      "geometric",
-      "contemporary",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, cushion cut, prong setting, 4-prong, p"
+    ]
   },
   {
     "id": "FIA-351",
-    "FileName": "FIA-351.jpeg",
+    "FileName": "FIA-351.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "pear",
-      "floral prongs",
-      "prong setting",
-      "thin band",
-      "diamond pavé",
-      "3-stone",
-      "openwork",
-      "nature-inspired",
-      "floral",
-      "romantic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, pear, floral prongs, pr"
+    ]
   },
   {
     "id": "FIA-352",
-    "FileName": "FIA-352.jpeg",
+    "FileName": "FIA-352.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "prong setting",
-      "4-prong",
-      "thin band",
-      "diamond pavé",
-      "3-stone",
-      "classic",
-      "timeless",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, prong setting, 4-prong,"
+    ]
   },
   {
     "id": "FIA-353",
-    "FileName": "FIA-353.jpeg",
+    "FileName": "FIA-353.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "emerald cut",
-      "round",
-      "prong setting",
-      "4-prong",
-      "thin band",
-      "diamond pavé",
-      "3-stone",
-      "classic",
-      "timeless",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, emerald cut, round, prong setting, 4"
+    ]
   },
   {
     "id": "FIA-354",
-    "FileName": "FIA-354.jpeg",
+    "FileName": "FIA-354.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "pear",
-      "prong setting",
-      "6-prong",
-      "plain band",
-      "3-stone",
-      "classic",
-      "timeless",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, pear, prong setting, 6-prong,"
+    ]
   },
   {
     "id": "FIA-355",
-    "FileName": "FIA-355.jpeg",
+    "FileName": "FIA-355.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "pear",
-      "prong setting",
-      "6-prong",
-      "plain band",
-      "3-stone",
-      "classic",
-      "timeless",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, pear, prong setting, 6-prong, "
+    ]
   },
   {
     "id": "FIA-356",
-    "FileName": "FIA-356.jpeg",
+    "FileName": "FIA-356.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "prong setting",
-      "6-prong",
-      "plain band",
-      "baguette shoulders",
-      "3-stone",
-      "art deco",
-      "timeless",
-      "classic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, prong setting, 6-prong, plain "
+    ]
   },
   {
     "id": "FIA-357",
-    "FileName": "FIA-357.jpeg",
+    "FileName": "FIA-357.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "prong setting",
-      "6-prong",
-      "thin band",
-      "baguette shoulders",
-      "3-stone",
-      "art deco",
-      "minimalist",
-      "timeless",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, prong setting, 6-prong, thin b"
+    ]
   },
   {
     "id": "FIA-358",
-    "FileName": "FIA-358.jpeg",
+    "FileName": "FIA-358.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "round",
-      "pear",
-      "prong setting",
-      "4-prong",
-      "thin band",
-      "halo",
-      "diamond pavé",
-      "3-stone",
-      "milgrain",
-      "romantic",
-      "vintage",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, round, pear, prong setting, 4-prong, t"
+    ]
   },
   {
     "id": "FIA-359",
-    "FileName": "FIA-359.jpeg",
+    "FileName": "FIA-359.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "bezel setting",
-      "plain band",
-      "polished",
-      "minimalist",
-      "contemporary",
-      "solitaire",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, bezel setting, plain band, po"
+    ]
   },
   {
     "id": "FIA-360",
-    "FileName": "FIA-360.jpeg",
+    "FileName": "FIA-360.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "prong setting",
-      "4-prong",
-      "plain band",
-      "baguette shoulders",
-      "3-stone",
-      "art deco",
-      "classic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, prong setting, 4-prong, plain "
+    ]
   },
   {
     "id": "FIA-361",
-    "FileName": "FIA-361.jpeg",
+    "FileName": "FIA-361.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval",
-      "prong setting",
-      "4-prong",
-      "plain band",
-      "baguette shoulders",
-      "channel setting",
-      "3-stone",
-      "art deco",
-      "classic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, oval, prong setting, 4-prong, plain b"
+    ]
   },
   {
     "id": "FIA-362",
-    "FileName": "FIA-362.jpeg",
+    "FileName": "FIA-362.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "oval",
-      "pear",
-      "prong setting",
-      "4-prong",
-      "split shank",
-      "halo",
-      "diamond pavé",
-      "3-stone",
-      "milgrain",
-      "vintage",
-      "romantic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, oval, pear, prong setting, 4-prong, sp"
+    ]
   },
   {
     "id": "FIA-363",
-    "FileName": "FIA-363.jpeg",
+    "FileName": "FIA-363.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "oval",
-      "pear",
-      "prong setting",
-      "6-prong",
-      "plain band",
-      "3-stone",
-      "classic",
-      "timeless",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, oval, pear, prong setting, 6-prong, pl"
+    ]
   },
   {
     "id": "FIA-364",
-    "FileName": "FIA-364.jpeg",
+    "FileName": "FIA-364.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "pear",
-      "prong setting",
-      "6-prong",
-      "plain band",
-      "3-stone",
-      "classic",
-      "timeless",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, pear, prong setting, 6-prong,"
+    ]
   },
   {
     "id": "FIA-365",
-    "FileName": "FIA-365.jpeg",
+    "FileName": "FIA-365.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "round",
-      "pear",
-      "prong setting",
-      "6-prong",
-      "plain band",
-      "openwork",
-      "3-stone",
-      "classic",
-      "timeless",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, round, pear, prong setting, 6-prong,"
+    ]
   },
   {
     "id": "FIA-366",
-    "FileName": "FIA-366.jpeg",
+    "FileName": "FIA-366.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "radiant cut",
-      "prong setting",
-      "4-prong",
-      "plain band",
-      "3-stone",
-      "geometric",
-      "contemporary",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, radiant cut, prong setting, 4-prong, p"
+    ]
   },
   {
     "id": "FIA-367",
-    "FileName": "FIA-367.jpeg",
+    "FileName": "FIA-367.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "emerald cut",
-      "prong setting",
-      "4-prong",
-      "plain band",
-      "3-stone",
-      "classic",
-      "timeless",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, emerald cut, prong setting, 4-prong, p"
+    ]
   },
   {
     "id": "FIA-368",
-    "FileName": "FIA-368.jpeg",
+    "FileName": "FIA-368.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "round",
-      "pear",
-      "prong setting",
-      "4-prong",
-      "plain band",
-      "halo",
-      "diamond pavé",
-      "3-stone",
-      "milgrain",
-      "romantic",
-      "vintage",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, round, pear, prong setting, 4-prong, p"
+    ]
   },
   {
     "id": "FIA-369",
-    "FileName": "FIA-369.jpeg",
+    "FileName": "FIA-369.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "round",
-      "pear",
-      "prong setting",
-      "6-prong",
-      "plain band",
-      "3-stone",
-      "classic",
-      "timeless",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, round, pear, prong setting, 6-prong, "
+    ]
   },
   {
     "id": "FIA-370",
-    "FileName": "FIA-370.jpeg",
+    "FileName": "FIA-370.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "oval",
-      "pear",
-      "prong setting",
-      "4-prong",
-      "split shank",
-      "diamond pavé",
-      "3-stone",
-      "romantic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, oval, pear, prong setting, 4-prong, sp"
+    ]
   },
   {
     "id": "FIA-371",
-    "FileName": "FIA-371.jpeg",
+    "FileName": "FIA-371.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "round",
-      "pear",
-      "prong setting",
-      "6-prong",
-      "plain band",
-      "3-stone",
-      "classic",
-      "romantic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, round, pear, prong setting, 6-prong, p"
+    ]
   },
   {
     "id": "FIA-372",
-    "FileName": "FIA-372.jpeg",
+    "FileName": "FIA-372.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "round",
-      "prong setting",
-      "4-prong",
-      "plain band",
-      "3-stone",
-      "classic",
-      "timeless",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, round, prong setting, 4-prong,"
+    ]
   },
   {
     "id": "FIA-373",
-    "FileName": "FIA-373.jpeg",
+    "FileName": "FIA-373.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "round",
-      "prong setting",
-      "4-prong",
-      "plain band",
-      "3-stone",
-      "classic",
-      "timeless",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, round, prong setting, 4-prong,"
+    ]
   },
   {
     "id": "FIA-374",
-    "FileName": "FIA-374.jpeg",
+    "FileName": "FIA-374.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval",
-      "bezel setting",
-      "bypass shank",
-      "wide band",
-      "side diamonds",
-      "channel setting",
-      "diamond pavé",
-      "sculptural",
-      "statement",
-      "contemporary",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, oval, bezel setting, bypass shank, wi"
+    ]
   },
   {
     "id": "FIA-375",
-    "FileName": "FIA-375.jpeg",
+    "FileName": "FIA-375.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "pear",
-      "bezel setting",
-      "wide band",
-      "polished",
-      "minimalist",
-      "contemporary",
-      "sculptural",
-      "solitaire",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, pear, bezel setting, wide band, poli"
+    ]
   },
   {
     "id": "FIA-376",
-    "FileName": "FIA-376.jpeg",
+    "FileName": "FIA-376.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "oval",
-      "prong setting",
-      "4-prong",
-      "thin band",
-      "halo",
-      "diamond pavé",
-      "baguette shoulders",
-      "art deco",
-      "romantic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, oval, prong setting, 4-prong, thin ban"
+    ]
   },
   {
     "id": "FIA-377",
-    "FileName": "FIA-377.jpeg",
+    "FileName": "FIA-377.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "prong setting",
-      "4-prong",
-      "plain band",
-      "halo",
-      "diamond pavé",
-      "baguette shoulders",
-      "art deco",
-      "classic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, prong setting, 4-prong, plain "
+    ]
   },
   {
     "id": "FIA-378",
-    "FileName": "FIA-378.jpeg",
+    "FileName": "FIA-378.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "prong setting",
-      "4-prong",
-      "plain band",
-      "halo",
-      "diamond pavé",
-      "baguette shoulders",
-      "art deco",
-      "classic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, prong setting, 4-prong, plain "
+    ]
   },
   {
     "id": "FIA-379",
-    "FileName": "FIA-379.jpeg",
+    "FileName": "FIA-379.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "diamond",
-      "oval",
-      "pear",
-      "prong setting",
-      "4-prong",
-      "wide band",
-      "openwork",
-      "3-stone",
-      "sculptural",
-      "contemporary",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, diamond, oval, pear, prong setting, 4-prong, "
+    ]
   },
   {
     "id": "FIA-380",
-    "FileName": "FIA-380.jpeg",
+    "FileName": "FIA-380.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval",
-      "bezel setting",
-      "bypass shank",
-      "wide band",
-      "side diamonds",
-      "diamond pavé",
-      "3-stone",
-      "sculptural",
-      "statement",
-      "contemporary",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, oval, bezel setting, bypass shank, wi"
+    ]
   },
   {
     "id": "FIA-381",
-    "FileName": "FIA-381.jpeg",
+    "FileName": "FIA-381.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval",
-      "prong setting",
-      "4-prong",
-      "plain band",
-      "3-stone",
-      "contemporary",
-      "geometric",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, oval, prong setting, 4-prong, plain b"
+    ]
   },
   {
     "id": "FIA-382",
-    "FileName": "FIA-382.jpeg",
+    "FileName": "FIA-382.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "round",
-      "bezel setting",
-      "split shank",
-      "double band",
-      "halo",
-      "diamond pavé",
-      "sculptural",
-      "statement",
-      "glamour",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, round, bezel setting, split shank, dou"
+    ]
   },
   {
     "id": "FIA-383",
-    "FileName": "FIA-383.jpeg",
+    "FileName": "FIA-383.jpg",
     "Keywords": [
-      "ring",
-      "rose gold",
-      "diamond",
-      "round",
-      "bezel setting",
-      "split shank",
-      "halo",
-      "diamond pavé",
-      "sculptural",
-      "romantic",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, rose gold, diamond, round, bezel setting, split shank, hal"
+    ]
   },
   {
     "id": "FIA-384",
-    "FileName": "FIA-384.jpeg",
+    "FileName": "FIA-384.jpg",
     "Keywords": [
-      "ring",
-      "yellow gold",
-      "white gold",
-      "diamond",
-      "round",
-      "bezel setting",
-      "bypass shank",
-      "wide band",
-      "polished",
-      "sculptural",
-      "minimalist",
-      "contemporary",
-      "solitaire",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, yellow gold, white gold, diamond, round, bezel setting, by"
+    ]
   },
   {
     "id": "FIA-385",
-    "FileName": "FIA-385.jpeg",
+    "FileName": "FIA-385.jpg",
     "Keywords": [
-      "ring",
-      "white gold",
-      "diamond",
-      "oval",
-      "pear",
-      "prong setting",
-      "4-prong",
-      "plain band",
-      "3-stone",
-      "classic",
-      "timeless",
-      "engagement",
-      "bridal"
-    ],
-    "Caption": ""
+      "ring, white gold, diamond, oval, pear, prong setting, 4-prong, p"
+    ]
+  },
+  {
+    "id": "FIA-386",
+    "FileName": "FIA-386.jpg",
+    "Keywords": []
+  },
+  {
+    "id": "FIA-387",
+    "FileName": "FIA-387.jpg",
+    "Keywords": []
+  },
+  {
+    "id": "FIA-388",
+    "FileName": "FIA-388.jpg",
+    "Keywords": []
+  },
+  {
+    "id": "FIA-389",
+    "FileName": "FIA-389.jpg",
+    "Keywords": []
+  },
+  {
+    "id": "FIA-390",
+    "FileName": "FIA-390.jpg",
+    "Keywords": []
+  },
+  {
+    "id": "FIA-391",
+    "FileName": "FIA-391.jpg",
+    "Keywords": []
+  },
+  {
+    "id": "FIA-392",
+    "FileName": "FIA-392.jpg",
+    "Keywords": []
+  },
+  {
+    "id": "FIA-393",
+    "FileName": "FIA-393.jpg",
+    "Keywords": []
+  },
+  {
+    "id": "FIA-394",
+    "FileName": "FIA-394.jpg",
+    "Keywords": []
+  },
+  {
+    "id": "FIA-395",
+    "FileName": "FIA-395.jpg",
+    "Keywords": []
   }
 ]
