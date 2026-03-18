@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>Style Diagnostic — Origine Paris</title>
+<title>Style.ID — Origine Paris</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <style>
@@ -337,6 +337,34 @@
   .chip-tooltip { display: none; position: fixed; background: var(--black); color: var(--white); font-size: 11px; padding: 10px 14px; border-radius: 8px; max-width: 250px; width: max-content; text-align: left; line-height: 1.5; z-index: 1000; pointer-events: none; box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
   .chip-tooltip.visible { display: block; }
 
+  /* GOLD COLOR CARDS */
+  .gold-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .gold-card {
+    border: 1.5px solid var(--gray-mid); border-radius: var(--radius); padding: 24px 12px;
+    text-align: center; cursor: pointer; transition: all 0.2s; background: var(--white);
+  }
+  .gold-card.selected { border-color: var(--gold); border-width: 2px; }
+  .gold-card:active { transform: scale(0.97); }
+  .gold-swatch { width: 48px; height: 48px; border-radius: 50%; margin: 0 auto 12px; border: 1px solid var(--gray-mid); }
+  .gold-label { font-size: 11px; font-weight: 500; letter-spacing: 0.05em; color: var(--black); display: block; }
+
+  /* IDENTITY SCREEN */
+  .identity-hero { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 40px 32px; }
+  .identity-title { font-family: 'QuinnDisplay','Cormorant Garamond',serif; font-size: 32px; font-weight: 300; line-height: 1.2; margin-bottom: 32px; color: var(--black); }
+  .identity-field { width: 100%; padding: 14px 0; border: none; border-bottom: 1px solid var(--gray-mid); font-family: 'Avenir Next','Avenir',sans-serif; font-size: 18px; font-weight: 300; background: transparent; color: var(--black); outline: none; margin-bottom: 20px; }
+  .identity-field:focus { border-bottom-color: var(--gold); }
+  .identity-field::placeholder { color: var(--gray-mid); }
+
+  /* CATEGORY CARDS LARGE */
+  .cat-grid-large { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .cat-card-lg { border: 1.5px solid var(--gray-mid); border-radius: var(--radius); padding: 28px 16px; text-align: center; cursor: pointer; transition: all 0.2s; background: var(--white); }
+  .cat-card-lg.selected { border-color: var(--gold); border-width: 2px; }
+  .cat-card-lg.unavailable { opacity: 0.3; pointer-events: none; }
+  .cat-card-lg:active { transform: scale(0.97); }
+  .cat-card-lg .cat-icon { font-size: 28px; margin-bottom: 10px; display: block; }
+  .cat-card-lg .cat-name { font-size: 12px; font-weight: 500; }
+  .cat-card-lg.full { grid-column: span 2; }
+
   /* TOAST */
   .toast { position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%) scale(0.8); background: var(--white); border: 1px solid var(--gold); border-radius: 16px; padding: 28px 36px; text-align: center; z-index: 100; opacity: 0; transition: all 0.3s; pointer-events: none; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
   .toast.show { opacity: 1; transform: translate(-50%,-50%) scale(1); }
@@ -353,28 +381,8 @@
     <img src="sigle_noir_sur_fond_transparent.png" class="sigle" alt="">
     <p class="home-desc">Votre goût est unique.<br>Prenez un instant pour le découvrir<br>et le garder en mémoire.</p>
     <div class="onboarding-btns">
-      <button class="btn-white" onclick="show('screen-categories')">Commencer</button>
+      <button class="btn-white" onclick="show('screen-identity')">Commencer</button>
       <button class="btn-outline-white">Connexion</button>
-    </div>
-  </div>
-
-  <!-- CATEGORIES -->
-  <div id="screen-categories" class="screen">
-    <button class="back-btn" onclick="show('screen-home')">← Retour</button>
-    <div class="header">
-      <div class="logo">Origine Paris</div>
-      <h2 class="screen-title">Choisissez une catégorie</h2>
-    </div>
-    <div class="scroll-content">
-      <div class="cat-grid">
-        <div class="cat-card featured" onclick="startCategory('bdf')" style="grid-column: span 2;">
-          <span class="cat-name">Bagues de fiançailles</span>
-        </div>
-        <div class="cat-card disabled"><span class="cat-name">Bagues</span><span class="cat-soon">bientôt</span></div>
-        <div class="cat-card disabled"><span class="cat-name">Boucles d'oreilles</span><span class="cat-soon">bientôt</span></div>
-        <div class="cat-card disabled"><span class="cat-name">Colliers</span><span class="cat-soon">bientôt</span></div>
-        <div class="cat-card disabled"><span class="cat-name">Bracelets</span><span class="cat-soon">bientôt</span></div>
-      </div>
     </div>
   </div>
 
@@ -384,72 +392,115 @@
     <div class="toast-text">Fiche exportée avec succès</div>
   </div>
 
-  <!-- CLIENT -->
-  <div id="screen-client" class="screen">
-    <button class="back-btn" onclick="show('screen-categories')">← Retour</button>
+  <!-- ÉTAPE 0 — IDENTITÉ -->
+  <div id="screen-identity" class="screen">
+    <button class="back-btn" onclick="show('screen-home')">← Retour</button>
+    <div class="identity-hero">
+      <div class="logo" style="margin-bottom:24px">Origine Paris</div>
+      <h2 class="identity-title">Comment vous<br>appelez-vous ?</h2>
+      <input class="identity-field" id="client-prenom" placeholder="Prénom" autocomplete="off"/>
+      <input class="identity-field" id="client-nom" placeholder="Nom" autocomplete="off"/>
+    </div>
+    <div class="footer">
+      <button class="btn-primary" onclick="goCategories()">Continuer →</button>
+    </div>
+  </div>
+
+  <!-- ÉTAPE 0b — CATÉGORIE -->
+  <div id="screen-categories" class="screen">
+    <button class="back-btn" onclick="show('screen-identity')">← Retour</button>
     <div class="header">
-      <div class="logo">Origine Paris · Bagues de fiançailles</div>
-      <h2 class="screen-title">La cliente</h2>
-      <p class="screen-sub">Commençons par noter son identité.</p>
+      <div class="logo">Origine Paris</div>
+      <h2 class="screen-title">Qu'est-ce qui vous intéresse ?</h2>
+      <p class="screen-sub">Vous pouvez sélectionner plusieurs catégories</p>
     </div>
     <div class="scroll-content">
-      <div class="input-row">
-        <div class="input-wrap">
-          <label class="input-label">Prénom</label>
-          <input class="input-field" id="client-prenom" placeholder="Sophie" autocomplete="off"/>
+      <div class="cat-grid-large">
+        <div class="cat-card-lg full" id="cat-bdf" onclick="toggleCat(this)">
+          <span class="cat-icon">◇</span>
+          <span class="cat-name">Bagues de fiançailles</span>
         </div>
-        <div class="input-wrap">
-          <label class="input-label">Nom</label>
-          <input class="input-field" id="client-nom" placeholder="Martin" autocomplete="off"/>
+        <div class="cat-card-lg unavailable"><span class="cat-icon">◇</span><span class="cat-name">Bagues</span></div>
+        <div class="cat-card-lg unavailable"><span class="cat-icon">◈</span><span class="cat-name">Boucles d'oreilles</span></div>
+        <div class="cat-card-lg unavailable"><span class="cat-icon">○</span><span class="cat-name">Colliers</span></div>
+        <div class="cat-card-lg unavailable"><span class="cat-icon">⌀</span><span class="cat-name">Bracelets</span></div>
+      </div>
+    </div>
+    <div class="footer"><button class="btn-primary" onclick="goStep1()">Continuer →</button></div>
+  </div>
+
+  <!-- ÉTAPE 1 — STYLE -->
+  <div id="screen-step1" class="screen">
+    <button class="back-btn" onclick="show('screen-categories')">← Retour</button>
+    <div class="progress-wrap">
+      <div class="progress-steps"><div class="step-dot active"></div><div class="step-dot"></div><div class="step-dot"></div><div class="step-dot"></div><div class="step-dot"></div></div>
+      <div class="step-label">Étape 1 sur 5 — Style</div>
+    </div>
+    <div class="header">
+      <div class="logo">Origine Paris</div>
+      <h2 class="screen-title">Quel style vous correspond ?</h2>
+      <p class="screen-sub">Vous pouvez choisir autant d'options que vous souhaitez</p>
+    </div>
+    <div class="scroll-content"><div class="chip-grid" id="style-chips"></div></div>
+    <div class="footer"><button class="btn-primary" onclick="goStep1b()">Continuer →</button></div>
+  </div>
+
+  <!-- ÉTAPE 1b — COULEUR D'OR -->
+  <div id="screen-step1b" class="screen">
+    <button class="back-btn" onclick="show('screen-step1')">← Retour</button>
+    <div class="progress-wrap">
+      <div class="progress-steps"><div class="step-dot done"></div><div class="step-dot active"></div><div class="step-dot"></div><div class="step-dot"></div><div class="step-dot"></div></div>
+      <div class="step-label">Étape 2 sur 5 — Couleur d'or</div>
+    </div>
+    <div class="header">
+      <div class="logo">Origine Paris</div>
+      <h2 class="screen-title">Quelle couleur d'or vous attire ?</h2>
+      <p class="screen-sub">Vous pouvez choisir plusieurs options</p>
+    </div>
+    <div class="scroll-content">
+      <div class="gold-grid">
+        <div class="gold-card" onclick="this.classList.toggle('selected')" data-gold="blanc">
+          <div class="gold-swatch" style="background:#E8E8E8"></div>
+          <span class="gold-label">Or blanc</span>
+        </div>
+        <div class="gold-card" onclick="this.classList.toggle('selected')" data-gold="jaune">
+          <div class="gold-swatch" style="background:#C4A265"></div>
+          <span class="gold-label">Or jaune</span>
+        </div>
+        <div class="gold-card" onclick="this.classList.toggle('selected')" data-gold="rose">
+          <div class="gold-swatch" style="background:#E8B4A0"></div>
+          <span class="gold-label">Or rose</span>
         </div>
       </div>
     </div>
-    <div class="footer">
-      <button class="btn-primary" onclick="goStep1()">Commencer le diagnostic →</button>
-    </div>
+    <div class="footer"><button class="btn-primary" onclick="goStep2()">Continuer →</button></div>
   </div>
 
-  <!-- STEP 1 — STYLE -->
-  <div id="screen-step1" class="screen">
-    <button class="back-btn" onclick="show('screen-client')">← Retour</button>
-    <div class="progress-wrap">
-      <div class="progress-steps"><div class="step-dot active"></div><div class="step-dot"></div><div class="step-dot"></div><div class="step-dot"></div></div>
-      <div class="step-label">Étape 1 sur 4 — Style</div>
-    </div>
-    <div class="header">
-      <div class="logo">Origine Paris</div>
-      <h2 class="screen-title">Quel est son style ?</h2>
-      <p class="screen-sub">Sélectionnez tous les mots qui lui correspondent.</p>
-    </div>
-    <div class="scroll-content"><div class="chip-grid" id="style-chips"></div></div>
-    <div class="footer"><button class="btn-primary" onclick="goStep2()">Suivant →</button></div>
-  </div>
-
-  <!-- STEP 2 — MODÈLES -->
+  <!-- ÉTAPE 2 — MODÈLES -->
   <div id="screen-step2" class="screen">
-    <button class="back-btn" onclick="show('screen-step1')">← Retour</button>
+    <button class="back-btn" onclick="show('screen-step1b')">← Retour</button>
     <div class="progress-wrap">
-      <div class="progress-steps"><div class="step-dot done"></div><div class="step-dot active"></div><div class="step-dot"></div><div class="step-dot"></div></div>
-      <div class="step-label">Étape 2 sur 4 — Modèles</div>
+      <div class="progress-steps"><div class="step-dot done"></div><div class="step-dot done"></div><div class="step-dot active"></div><div class="step-dot"></div><div class="step-dot"></div></div>
+      <div class="step-label">Étape 3 sur 5 — Modèles</div>
     </div>
     <div class="header">
       <div class="logo">Origine Paris</div>
-      <h2 class="screen-title">Quels modèles l'attirent ?</h2>
-      <p class="screen-sub">Sélectionnez tous les types qui l'intéressent.</p>
+      <h2 class="screen-title">Quels modèles vous attirent ?</h2>
+      <p class="screen-sub">Vous pouvez choisir autant d'options que vous souhaitez</p>
     </div>
     <div class="scroll-content">
       <div class="sel-count" id="model-sel-count">0 sélectionné(s)</div>
       <div class="model-grid" id="model-grid"></div>
     </div>
-    <div class="footer"><button class="btn-primary" onclick="goSwipe()">Suivant →</button></div>
+    <div class="footer"><button class="btn-primary" onclick="goSwipe()">Continuer →</button></div>
   </div>
 
-  <!-- STEP 3 — SWIPE -->
+  <!-- ÉTAPE 3 — SWIPE -->
   <div id="screen-swipe" class="screen">
     <button class="back-btn" onclick="show('screen-step2')">← Retour</button>
     <div class="progress-wrap">
-      <div class="progress-steps"><div class="step-dot done"></div><div class="step-dot done"></div><div class="step-dot active"></div><div class="step-dot"></div></div>
-      <div class="step-label" id="swipe-step-label">Étape 3 sur 4 — Swipe · 0 / 0</div>
+      <div class="progress-steps"><div class="step-dot done"></div><div class="step-dot done"></div><div class="step-dot done"></div><div class="step-dot active"></div><div class="step-dot"></div></div>
+      <div class="step-label" id="swipe-step-label">Étape 4 sur 5 — Swipe · 0 / 0</div>
     </div>
     <div class="swipe-area" id="swipe-area">
       <div class="swipe-card" id="swipe-card">
@@ -475,14 +526,17 @@
       <button class="action-btn like-btn" onclick="swipeAction('like')">♥</button>
     </div>
     <div class="swipe-hint">Glissez ou utilisez les boutons</div>
-    <div class="swipe-footer"><button class="btn-gold" onclick="skipToProfile()">Voir mon profil →</button></div>
+    <div class="swipe-footer">
+      <button class="btn-gold" onclick="skipToProfile()">Voir mon profil →</button>
+      <div style="font-size:9px;color:var(--gray-text);text-align:center;margin-top:8px;letter-spacing:0.03em;">Vous pouvez voir votre profil à tout moment</div>
+    </div>
   </div>
 
   <!-- STEP 4 — PROFILE -->
   <div id="screen-profile" class="screen">
     <div class="progress-wrap">
       <div class="progress-steps"><div class="step-dot done"></div><div class="step-dot done"></div><div class="step-dot done"></div><div class="step-dot active"></div></div>
-      <div class="step-label">Étape 4 sur 4 — Profil goût</div>
+      <div class="step-label">Étape 5 sur 5 — Profil goût</div>
     </div>
     <div class="scroll-content">
       <div class="profile-header">
@@ -637,7 +691,7 @@ const MODELS = [
 // ============================================================
 let state = {
   clientPrenom:'', clientNom:'',
-  selectedStyles:[], selectedModels:[],
+  selectedStyles:[], selectedModels:[], selectedGold:[],
   swipeQueue:[], swipeLiked:[], coupsDeCœur:[], swipeCurrent:0,
   styleCounts:{}, modelCounts:{}, tagScores:{},
   seenIds: new Set(), undoStack:[]
@@ -694,7 +748,15 @@ function show(id) {
   document.getElementById(id).classList.add('active');
 }
 
-function startCategory(cat) { if (cat === 'bdf') show('screen-client'); }
+function goCategories() {
+  state.clientPrenom = document.getElementById('client-prenom').value.trim() || 'Cliente';
+  state.clientNom    = document.getElementById('client-nom').value.trim();
+  show('screen-categories');
+}
+
+function toggleCat(el) { el.classList.toggle('selected'); }
+
+function startCategory(cat) { if (cat === 'bdf') show('screen-identity'); }
 
 function showToast() {
   const t = document.getElementById('export-toast');
@@ -703,14 +765,18 @@ function showToast() {
 }
 
 function goStep1() {
-  state.clientPrenom = document.getElementById('client-prenom').value.trim() || 'Cliente';
-  state.clientNom    = document.getElementById('client-nom').value.trim();
   buildStyleChips();
   show('screen-step1');
 }
 
-function goStep2() {
+function goStep1b() {
   state.selectedStyles = [...document.querySelectorAll('#style-chips .chip.selected')].map(e => e.textContent);
+  show('screen-step1b');
+}
+
+function goStep2() {
+  // Read gold color selections
+  state.selectedGold = [...document.querySelectorAll('.gold-card.selected')].map(e => e.dataset.gold);
   buildModelGrid();
   show('screen-step2');
 }
@@ -813,6 +879,17 @@ function filterAndSort(allImages) {
 
   // Step 1: exclude colored stones unless opted in
   let pool = includeColor ? allImages : allImages.filter(img => !hasColoredStone(img));
+
+  // Step 1b: filter by gold color
+  const goldMap = { blanc: ['or blanc','white gold','platinum'], jaune: ['or jaune','yellow gold'], rose: ['or rose','rose gold'] };
+  if (state.selectedGold.length > 0) {
+    const goldTerms = state.selectedGold.flatMap(g => goldMap[g] || []);
+    const goldFiltered = pool.filter(img => {
+      const text = imageText(img);
+      return goldTerms.some(t => text.includes(t));
+    });
+    if (goldFiltered.length > 10) pool = goldFiltered;
+  }
 
   // Step 2: AND filter
   if (hasModels && hasStyles) {
@@ -959,7 +1036,7 @@ function renderSwipeCard() {
   const img = state.swipeQueue[current];
   state.seenIds.add(img.id);
   document.getElementById('swipe-step-label').textContent =
-    `Étape 3 sur 4 — Swipe · ${current + 1} / ${total}`;
+    `Étape 4 sur 5 — Swipe · ${current + 1} / ${total}`;
 
   const wrap = document.getElementById('swipe-img-wrap');
   if (img.img) {
@@ -1286,7 +1363,7 @@ async function exportProfile() {
       }
     } catch(e) {
       pdf.setTextColor(26, 26, 26); pdf.setFontSize(14);
-      pdf.text('ORIGINE PARIS', pw/2, 18, { align: 'center' });
+      pdf.text('Style.ID by Origine Paris', pw/2, 18, { align: 'center' });
     }
     y = 34;
 
@@ -1422,8 +1499,8 @@ async function exportProfile() {
 
 function restart() {
   state = { clientPrenom:'', clientNom:'', selectedStyles:[], selectedModels:[],
-    swipeQueue:[], swipeLiked:[], coupsDeCœur:[], swipeCurrent:0, styleCounts:{}, modelCounts:{}, tagScores:{}, seenIds: new Set(), undoStack:[] };
-  show('screen-categories');
+    swipeQueue:[], swipeLiked:[], coupsDeCœur:[], swipeCurrent:0, styleCounts:{}, modelCounts:{}, tagScores:{}, seenIds: new Set(), undoStack:[], selectedGold:[] };
+  show('screen-home');
 }
 </script>
 </body>
