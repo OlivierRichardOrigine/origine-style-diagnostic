@@ -308,9 +308,10 @@
   .profile-date { font-size: 10px; color: var(--gray-text); letter-spacing: 0.08em; margin-top: 2px; }
 
   .radar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; }
-  .radar-card { background: transparent; border-radius: var(--radius); padding: 4px; }
-  .radar-card canvas { width: 100%; height: auto; }
-  .radar-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-text); margin-bottom: 10px; display: block; }
+  .radar-card { background: transparent; border-radius: var(--radius); padding: 0; position: relative; }
+  .radar-card img.radar-bg { width: 100%; height: auto; display: block; }
+  .radar-card canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+  .radar-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-text); margin-bottom: 4px; display: block; }
 
   .section-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-text); margin-bottom: 10px; display: block; }
   .moodboard { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-bottom: 20px; padding-bottom: 20px; }
@@ -636,8 +637,20 @@
       <div class="profile-tags" id="profile-model-tags"></div>
 
       <div class="radar-grid" style="margin-top:8px;">
-        <div class="radar-card"><span class="radar-label">Style</span><canvas id="radar-style" width="260" height="260"></canvas></div>
-        <div class="radar-card"><span class="radar-label">Modèles</span><canvas id="radar-models" width="260" height="260"></canvas></div>
+        <div>
+          <span class="radar-label">Style</span>
+          <div class="radar-card">
+            <img class="radar-bg" src="radar_style_grid_v2.svg" alt="">
+            <canvas id="radar-style" width="500" height="440"></canvas>
+          </div>
+        </div>
+        <div>
+          <span class="radar-label">Modèles</span>
+          <div class="radar-card">
+            <img class="radar-bg" src="radar_models_grid.svg" alt="">
+            <canvas id="radar-models" width="400" height="400"></canvas>
+          </div>
+        </div>
       </div>
 
       <span class="section-label">Images likées</span>
@@ -1351,14 +1364,13 @@ function showProfile() {
   const topModels = Object.entries(state.modelCounts).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k])=>k);
   document.getElementById('profile-model-tags').innerHTML = topModels.map(m=>`<span class="profile-tag">${m}</span>`).join('');
 
-  // Both radars: same size, same params
-  const rCx = 130, rCy = 130, rR = 70;
-  drawRadar('radar-style', STYLES, STYLES.map(s => state.styleCounts[s] || 0), rCx, rCy, rR);
+  // Style radar: SVG is 500x440, center 250,225, radius 140
+  drawRadarShape('radar-style', STYLES, STYLES.map(s => state.styleCounts[s] || 0), 250, 225, 140);
 
-  // Radar models — ALL 20 axes
+  // Models radar: SVG is 400x400, center 200,205, radius 120
   const allModelLabels = MODELS.map(m => m.name);
   const allModelValues = MODELS.map(m => state.modelCounts[m.name] || 0);
-  drawRadar('radar-models', allModelLabels, allModelValues, rCx, rCy, rR);
+  drawRadarShape('radar-models', allModelLabels, allModelValues, 200, 205, 120);
 
   // Moodboard — show up to 20 liked images
   const mb = document.getElementById('moodboard');
@@ -1398,45 +1410,15 @@ function showProfile() {
 // ============================================================
 // RADAR
 // ============================================================
-function drawRadar(canvasId, labels, values, cx, cy, r) {
+// Draw only the gold shape — SVG handles grid + labels
+function drawRadarShape(canvasId, labels, values, cx, cy, r) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
   const n = labels.length;
   if (n < 2) return;
   const max = Math.max(...values, 1);
-  const w = canvas.width, h = canvas.height;
-  ctx.clearRect(0, 0, w, h);
-
-  for (let ring = 1; ring <= 3; ring++) {
-    ctx.beginPath();
-    for (let i = 0; i < n; i++) {
-      const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
-      const rr = r * (ring / 3);
-      i === 0 ? ctx.moveTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle))
-              : ctx.lineTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle));
-    }
-    ctx.closePath(); ctx.strokeStyle = 'rgba(0,0,0,0.07)'; ctx.lineWidth = 0.5; ctx.stroke();
-  }
-
-  for (let i = 0; i < n; i++) {
-    const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
-    ctx.beginPath(); ctx.moveTo(cx, cy);
-    ctx.lineTo(cx + r * Math.cos(angle), cy + r * Math.sin(angle));
-    ctx.strokeStyle = 'rgba(0,0,0,0.07)'; ctx.lineWidth = 0.5; ctx.stroke();
-    const fontSize = n > 12 ? 6 : 8;
-    ctx.font = fontSize + "px 'Avenir Next', sans-serif"; ctx.fillStyle = '#8A8580';
-    const lr = r + (n > 12 ? 12 : 16);
-    const lx = cx + lr * Math.cos(angle);
-    const ly = cy + lr * Math.sin(angle);
-    // Align text based on position around the circle
-    if (angle > Math.PI * 0.4 && angle < Math.PI * 0.6) ctx.textAlign = 'center';
-    else if (Math.cos(angle) > 0.1) ctx.textAlign = 'left';
-    else if (Math.cos(angle) < -0.1) ctx.textAlign = 'right';
-    else ctx.textAlign = 'center';
-    ctx.textBaseline = Math.sin(angle) > 0.3 ? 'top' : Math.sin(angle) < -0.3 ? 'bottom' : 'middle';
-    ctx.fillText(labels[i], lx, ly);
-  }
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ctx.beginPath();
   values.forEach((v, i) => {
@@ -1446,8 +1428,19 @@ function drawRadar(canvasId, labels, values, cx, cy, r) {
             : ctx.lineTo(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle));
   });
   ctx.closePath();
-  ctx.fillStyle = 'rgba(196,162,101,0.15)'; ctx.fill();
-  ctx.strokeStyle = '#C4A265'; ctx.lineWidth = 1.5; ctx.stroke();
+  ctx.fillStyle = 'rgba(196,162,101,0.2)'; ctx.fill();
+  ctx.strokeStyle = '#C4A265'; ctx.lineWidth = 2; ctx.stroke();
+
+  // Dots on vertices
+  values.forEach((v, i) => {
+    if (v > 0) {
+      const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
+      const rr = r * (v / max);
+      ctx.beginPath();
+      ctx.arc(cx + rr * Math.cos(angle), cy + rr * Math.sin(angle), 3, 0, Math.PI * 2);
+      ctx.fillStyle = '#C4A265'; ctx.fill();
+    }
+  });
 }
 
 // ============================================================
