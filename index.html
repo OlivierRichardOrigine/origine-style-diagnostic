@@ -307,7 +307,7 @@
   .profile-name { font-family: 'QuinnDisplay', 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; }
   .profile-date { font-size: 10px; color: var(--gray-text); letter-spacing: 0.08em; margin-top: 2px; }
 
-  .radar-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 20px; }
+  .radar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; }
   .radar-card { background: transparent; border-radius: var(--radius); padding: 4px; }
   .radar-card canvas { width: 100%; height: auto; }
   .radar-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-text); margin-bottom: 10px; display: block; }
@@ -632,8 +632,8 @@
       <span class="section-label">Modèles préférés</span>
       <div class="profile-tags" id="profile-model-tags"></div>
       <div class="radar-grid">
-        <div class="radar-card"><span class="radar-label">Style</span><canvas id="radar-style" width="300" height="300"></canvas></div>
-        <div class="radar-card"><span class="radar-label">Modèles</span><canvas id="radar-models" width="340" height="340"></canvas></div>
+        <div class="radar-card"><span class="radar-label">Style</span><canvas id="radar-style" width="260" height="260"></canvas></div>
+        <div class="radar-card"><span class="radar-label">Modèles</span><canvas id="radar-models" width="260" height="260"></canvas></div>
       </div>
       <span class="section-label">Images likées</span>
       <div class="moodboard" id="moodboard"></div>
@@ -808,19 +808,15 @@ function computeStyleScores(img) {
 }
 
 // Compute model scores for an image based on famille: tag
+// Full-text model matching using MODEL_SEARCH terms
 function computeModelScores(img) {
   const scores = {};
-  img.tags.forEach(tag => {
-    const key = parseTagKey(tag);
-    const val = parseTagValue(tag);
-    if (key === 'famille') {
-      MODELS.forEach(m => {
-        const modelWords = m.name.toLowerCase().split(/[\s\/]+/);
-        if (modelWords.some(w => w.length > 2 && val.includes(w)) || val.includes(m.name.toLowerCase())) {
-          scores[m.name] = (scores[m.name] || 0) + 1;
-        }
-      });
-    }
+  const text = imageText(img);
+  MODELS.forEach(m => {
+    const terms = MODEL_SEARCH[m.name] || [m.name.toLowerCase()];
+    terms.forEach(t => {
+      if (text.includes(t)) scores[m.name] = (scores[m.name] || 0) + 1;
+    });
   });
   return scores;
 }
@@ -1349,13 +1345,14 @@ function showProfile() {
   const topModels = Object.entries(state.modelCounts).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([k])=>k);
   document.getElementById('profile-model-tags').innerHTML = topModels.map(m=>`<span class="profile-tag">${m}</span>`).join('');
 
-  // Radar style
-  drawRadar('radar-style', STYLES, STYLES.map(s => state.styleCounts[s] || 0), 150, 150, 100);
+  // Both radars: same size, same params
+  const rCx = 130, rCy = 130, rR = 70;
+  drawRadar('radar-style', STYLES, STYLES.map(s => state.styleCounts[s] || 0), rCx, rCy, rR);
 
-  // Radar models — ALL 20 axes, always displayed
+  // Radar models — ALL 20 axes
   const allModelLabels = MODELS.map(m => m.name);
   const allModelValues = MODELS.map(m => state.modelCounts[m.name] || 0);
-  drawRadar('radar-models', allModelLabels, allModelValues, 170, 170, 110);
+  drawRadar('radar-models', allModelLabels, allModelValues, rCx, rCy, rR);
 
   // Moodboard — show up to 20 liked images
   const mb = document.getElementById('moodboard');
@@ -1421,10 +1418,18 @@ function drawRadar(canvasId, labels, values, cx, cy, r) {
     ctx.beginPath(); ctx.moveTo(cx, cy);
     ctx.lineTo(cx + r * Math.cos(angle), cy + r * Math.sin(angle));
     ctx.strokeStyle = 'rgba(0,0,0,0.07)'; ctx.lineWidth = 0.5; ctx.stroke();
-    ctx.font = "9px 'Avenir Next', sans-serif"; ctx.fillStyle = '#8A8580';
-    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    const lr = r + 18;
-    ctx.fillText(labels[i].substring(0, 16), cx + lr * Math.cos(angle), cy + lr * Math.sin(angle));
+    const fontSize = n > 12 ? 6 : 8;
+    ctx.font = fontSize + "px 'Avenir Next', sans-serif"; ctx.fillStyle = '#8A8580';
+    const lr = r + (n > 12 ? 12 : 16);
+    const lx = cx + lr * Math.cos(angle);
+    const ly = cy + lr * Math.sin(angle);
+    // Align text based on position around the circle
+    if (angle > Math.PI * 0.4 && angle < Math.PI * 0.6) ctx.textAlign = 'center';
+    else if (Math.cos(angle) > 0.1) ctx.textAlign = 'left';
+    else if (Math.cos(angle) < -0.1) ctx.textAlign = 'right';
+    else ctx.textAlign = 'center';
+    ctx.textBaseline = Math.sin(angle) > 0.3 ? 'top' : Math.sin(angle) < -0.3 ? 'bottom' : 'middle';
+    ctx.fillText(labels[i], lx, ly);
   }
 
   ctx.beginPath();
@@ -1501,19 +1506,20 @@ async function exportProfile() {
         pdf.addImage(c.toDataURL('image/png'), 'PNG', pw/2 - 28, 5, 56, 18.7);
       }
     } catch(e) {}
-    // Style.ID logo under Origine Paris logo
+    // Style.ID logo — large, centered
     try {
       const sidImg = new Image(); sidImg.src = 'styleid_logo.png';
       if (sidImg.complete && sidImg.naturalWidth > 0) {
         const sc = document.createElement('canvas'); sc.width = sidImg.naturalWidth; sc.height = sidImg.naturalHeight;
         sc.getContext('2d').drawImage(sidImg, 0, 0);
-        pdf.addImage(sc.toDataURL('image/png'), 'PNG', pw/2 - 14, 22, 28, 8);
+        // Logo aspect ratio ~4:5, display at ~40mm wide
+        pdf.addImage(sc.toDataURL('image/png'), 'PNG', pw/2 - 16, 20, 32, 10);
       }
     } catch(e) {
-      pdf.setFontSize(8); pdf.setTextColor(196, 162, 101);
+      pdf.setFontSize(10); pdf.setTextColor(196, 162, 101);
       pdf.text('style.ID', pw/2, 28, { align: 'center' });
     }
-    y = 34;
+    y = 36;
 
     // Client
     const name = state.clientPrenom + (state.clientNom ? ' ' + state.clientNom : '');
@@ -1544,20 +1550,17 @@ async function exportProfile() {
     y = addSeparator(pdf, y);
 
     // Radars — same size for both
+    // Radars side by side, same size
+    const radarW = 80;
     pdf.setFontSize(7); pdf.setTextColor(138, 133, 128);
-    pdf.text('STYLE', mx, y); y += 2;
+    pdf.text('STYLE', mx + radarW/2, y, { align: 'center' });
+    pdf.text('MODÈLES', pw - mx - radarW/2, y, { align: 'center' });
+    y += 2;
     const rs = document.getElementById('radar-style');
-    if (rs) pdf.addImage(rs.toDataURL('image/png'), 'PNG', mx, y, 80, 80);
-    y += 82;
-    pdf.setFontSize(7); pdf.setTextColor(138, 133, 128);
-    pdf.text('MODÈLES', mx, y); y += 2;
     const rm = document.getElementById('radar-models');
-    if (rm) {
-      // Check remaining space on page
-      const rmSize = Math.min(130, ph - y - 30);
-      pdf.addImage(rm.toDataURL('image/png'), 'PNG', pw/2 - rmSize/2, y, rmSize, rmSize);
-      y += rmSize + 4;
-    }
+    if (rs) pdf.addImage(rs.toDataURL('image/png'), 'PNG', mx - 4, y, radarW, radarW);
+    if (rm) pdf.addImage(rm.toDataURL('image/png'), 'PNG', pw - mx - radarW + 4, y, radarW, radarW);
+    y += radarW + 6;
 
     y = addSeparator(pdf, y);
 
