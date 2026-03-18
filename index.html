@@ -545,63 +545,63 @@ const STYLE_DEFS = {
   'Pierres de couleur': 'Inclure les bagues avec saphirs, rubis, émeraudes et autres pierres colorées'
 };
 
-// Map UI style names → actual IPTC style: and silhouette: tag values
+// Map UI style names → search terms (FR structured tags + EN flat tags)
 const STYLE_KEYWORDS = {
-  'Minimaliste':  ['moderne épuré','minimal','épuré','fine','classique'],
-  'Sophistiqué':  ['glamour opulent','royale luxueux','riche'],
-  'Délicat':      ['romantique délicat','romantique','fine','délicate'],
-  'Volumineux':   ['glamour opulent','royale luxueux','riche','statement','double halo','cluster'],
-  'Symétrique':   ['classique intemporel','classique','solitaire classique','halo','trois pierres'],
-  'Asymétrique':  ['bypass','organique','torsadé','asymétrique','east-west'],
-  'Graphique':    ['moderne épuré','géométrique','sculptural moderne','east-west','bezel'],
-  'Organique':    ['nature organique','organique','floral','torsadé','sculptural'],
-  'Arrondi':      ['romantique','romantique délicat','halo','classique','ovale','coussin'],
-  'Audacieux':    ['sculptural moderne','glamour opulent','géométrique','statement'],
-  'Contemporain': ['moderne épuré','sculptural moderne','géométrique'],
-  'Romantique':   ['romantique','romantique délicat','nature organique','floral'],
-  'Vintage':      ['vintage','filigrane','milgrain','retro'],
-  'Classique':    ['classique intemporel','classique','solitaire classique','cathédrale']
+  'Minimaliste':  ['minimalist','moderne épuré','minimal','épuré','plain band','thin band','simple','clean'],
+  'Sophistiqué':  ['intricate','glamour opulent','royale luxueux','riche','high jewelry','ornate','filigree'],
+  'Délicat':      ['delicate','romantique délicat','fine','feminine','thin band','dainty'],
+  'Volumineux':   ['volumous','statement','glamour opulent','bold','chunky','double halo','cluster','high jewelry'],
+  'Symétrique':   ['symmetrical','classique intemporel','classique','solitaire','classic','balanced'],
+  'Asymétrique':  ['asymmetrical','bypass','asymétrique','toi et moi','wrap','organic'],
+  'Graphique':    ['graphic','géométrique','geometric','architectural','moderne épuré','angular','bezel'],
+  'Organique':    ['organic','nature organique','nature-inspired','floral','leaf','vine','twisted','sculptural'],
+  'Arrondi':      ['rounded','romantique','romantic','halo','oval','cushion','round','soft'],
+  'Audacieux':    ['edgy','sculptural moderne','avant-garde','bold','statement','architectural','geometric'],
+  'Contemporain': ['contemporary','moderne épuré','modern','sleek','sculptural moderne'],
+  'Romantique':   ['romantic','romantique','romantique délicat','floral','feminine','soft','nature-inspired'],
+  'Vintage':      ['vintage','retro','milgrain','filigree','filigrane','art deco','antique'],
+  'Classique':    ['classic','classique intemporel','classique','timeless','cathedral','cathédrale','traditional','bridal']
 };
 
 const STYLE_OPPOSITES = {
-  'Minimaliste':  ['glamour opulent','royale luxueux','riche','cluster','statement'],
-  'Sophistiqué':  ['minimal','épuré','moderne épuré','fine'],
-  'Délicat':      ['statement','glamour opulent','cluster','sculptural moderne'],
-  'Volumineux':   ['minimal','fine','épuré','moderne épuré'],
-  'Organique':    ['géométrique','bezel géométrique'],
-  'Graphique':    ['nature organique','floral','romantique'],
-  'Arrondi':      ['géométrique','east-west','bezel géométrique'],
-  'Audacieux':    ['romantique','classique intemporel','romantique délicat'],
-  'Symétrique':   ['bypass','asymétrique','torsadé'],
-  'Asymétrique':  ['classique','symétrique','solitaire classique'],
-  'Contemporain': ['vintage','retro','filigrane'],
-  'Romantique':   ['sculptural moderne','géométrique','brutaliste'],
-  'Vintage':      ['moderne épuré','sculptural moderne'],
-  'Classique':    ['sculptural moderne','bypass','asymétrique']
+  'Minimaliste':  ['intricate','glamour opulent','statement','cluster','bold','high jewelry','ornate'],
+  'Sophistiqué':  ['minimalist','plain band','thin band','simple','clean'],
+  'Délicat':      ['statement','bold','chunky','cluster','volumous','high jewelry'],
+  'Volumineux':   ['minimalist','thin band','plain band','simple','dainty','delicate'],
+  'Organique':    ['geometric','géométrique','architectural','angular'],
+  'Graphique':    ['nature-inspired','floral','romantic','organic','romantique'],
+  'Arrondi':      ['geometric','angular','east-west'],
+  'Audacieux':    ['romantic','romantique','classic','classique','timeless','delicate'],
+  'Symétrique':   ['asymmetrical','bypass','asymétrique','toi et moi'],
+  'Asymétrique':  ['symmetrical','classic','solitaire','classique','balanced'],
+  'Contemporain': ['vintage','retro','antique','art deco','filigree'],
+  'Romantique':   ['edgy','geometric','architectural','bold','angular'],
+  'Vintage':      ['modern','contemporary','minimalist','sleek'],
+  'Classique':    ['edgy','avant-garde','bold','asymmetrical']
 };
 
-// Model search terms — searched across ALL tag values (not just famille:)
+// Model search terms — searched across ALL tag values
 const MODEL_SEARCH = {
-  'Solitaire classique':             ['solitaire classique','solitaire','classic solitaire'],
+  'Solitaire classique':             ['solitaire classique','solitaire','classic solitaire','4 prong','6 prong'],
   'Solitaire cathédrale':            ['solitaire cathédrale','cathedral'],
   'Halo':                            ['halo'],
   'Double halo':                     ['double halo'],
-  'Trois pierres':                   ['trois pierres','three stone','3 stone'],
-  'Cinq pierres':                    ['cinq pierres','five stone','multi-pierres'],
+  'Trois pierres':                   ['trois pierres','three stone','3 stone','trilogy'],
+  'Cinq pierres':                    ['cinq pierres','five stone','multi-pierres','graduated'],
   'Toi et Moi':                      ['toi et moi','toi & moi','two stone'],
-  'Pavé band':                       ['pavé band','pave band','pavé','pave'],
+  'Pavé band':                       ['pavé band','pave band','diamond pave','pavé','full pave'],
   'Hidden halo':                     ['hidden halo','halo caché'],
-  'Split shank':                     ['split shank','split band'],
-  'Bypass':                          ['bypass','by pass'],
-  'Tension':                         ['tension','serti tension'],
-  'Bezel / Clos':                    ['bezel','serti clos'],
-  'East-West':                       ['east-west','east west','horizontal'],
-  'Cluster':                         ['cluster','grappe'],
-  'Vintage filigrane':               ['vintage','filigrane','filigree','milgrain','retro'],
-  'Nature / Floral':                 ['nature','floral','leaf','flower','feuille'],
-  'Sculptural moderne':              ['sculptural','statement','cocktail'],
-  'Solitaire organique asymétrique': ['organique asymétrique','asymmetric','organic'],
-  'Organique fin structuré':         ['organique fin','bohème','bohemian','organic']
+  'Split shank':                     ['split shank','split band','double band'],
+  'Bypass':                          ['bypass','by pass','wrap'],
+  'Tension':                         ['tension','serti tension','tension set'],
+  'Bezel / Clos':                    ['bezel','serti clos','bezel set'],
+  'East-West':                       ['east-west','east west','horizontal set'],
+  'Cluster':                         ['cluster','grappe','multi stone'],
+  'Vintage filigrane':               ['vintage','filigrane','filigree','milgrain','retro','art deco','antique'],
+  'Nature / Floral':                 ['nature','floral','leaf','flower','feuille','vine','botanical','nature-inspired'],
+  'Sculptural moderne':              ['sculptural','statement','cocktail','architectural','modern art'],
+  'Solitaire organique asymétrique': ['organique asymétrique','asymmetric','organic','twisted'],
+  'Organique fin structuré':         ['organique fin','bohème','bohemian','textured band','hammered']
 };
 
 // Colored stone keywords for filter
