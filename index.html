@@ -524,6 +524,8 @@ const STYLES = [
   'Symétrique','Asymétrique','Graphique','Organique','Arrondi','Audacieux',
   'Contemporain','Romantique','Vintage','Classique'
 ];
+// Special toggle (not a style per se)
+const SPECIAL_FILTERS = ['Pierres de couleur'];
 
 const STYLE_DEFS = {
   'Sophistiqué':  'Détails travaillés, pavé, filigrane, motifs floraux',
@@ -539,7 +541,8 @@ const STYLE_DEFS = {
   'Contemporain': 'Design actuel, moderne épuré, lignes nettes',
   'Romantique':   'Doux, féminin, halo délicat, pierres rondes',
   'Vintage':      'Rétro, milgrain, filigrane, art déco',
-  'Classique':    'Intemporel, solitaire, cathédrale, élégance pure'
+  'Classique':    'Intemporel, solitaire, cathédrale, élégance pure',
+  'Pierres de couleur': 'Inclure les bagues avec saphirs, rubis, émeraudes et autres pierres colorées'
 };
 
 // Map UI style names → actual IPTC style: and silhouette: tag values
@@ -577,29 +580,34 @@ const STYLE_OPPOSITES = {
   'Classique':    ['sculptural moderne','bypass','asymétrique']
 };
 
-// Map UI model names → IPTC famille: tag values to match
-const MODEL_TAGS = {
-  'Solitaire classique':             ['solitaire classique'],
-  'Solitaire cathédrale':            ['solitaire cathédrale'],
-  'Halo':                            ['halo','halo pavé band','halo split shank','halo vintage','halo vintage filigrane'],
-  'Double halo':                     ['double halo','double halo pavé band','double halo split shank'],
-  'Trois pierres':                   ['trois pierres'],
-  'Cinq pierres':                    ['cinq pierres','multi-pierres graduées'],
-  'Toi et Moi':                      ['toi et moi'],
-  'Pavé band':                       ['pavé band','pavé band east-west','halo pavé band','double halo pavé band'],
-  'Hidden halo':                     ['halo caché','hidden halo'],
-  'Split shank':                     ['split shank','split shank pavé','halo split shank','double halo split shank'],
-  'Bypass':                          ['bypass'],
+// Model search terms — searched across ALL tag values (not just famille:)
+const MODEL_SEARCH = {
+  'Solitaire classique':             ['solitaire classique','solitaire','classic solitaire'],
+  'Solitaire cathédrale':            ['solitaire cathédrale','cathedral'],
+  'Halo':                            ['halo'],
+  'Double halo':                     ['double halo'],
+  'Trois pierres':                   ['trois pierres','three stone','3 stone'],
+  'Cinq pierres':                    ['cinq pierres','five stone','multi-pierres'],
+  'Toi et Moi':                      ['toi et moi','toi & moi','two stone'],
+  'Pavé band':                       ['pavé band','pave band','pavé','pave'],
+  'Hidden halo':                     ['hidden halo','halo caché'],
+  'Split shank':                     ['split shank','split band'],
+  'Bypass':                          ['bypass','by pass'],
   'Tension':                         ['tension','serti tension'],
-  'Bezel / Clos':                    ['bezel','bezel géométrique','serti clos'],
-  'East-West':                       ['east-west','pavé band east-west'],
-  'Cluster':                         ['cluster','cluster étoilé'],
-  'Vintage filigrane':               ['vintage filigrane','halo vintage filigrane','halo vintage','vintage'],
-  'Nature / Floral':                 ['nature / floral','nature floral','floral'],
-  'Sculptural moderne':              ['sculptural moderne','cocktail statement'],
-  'Solitaire organique asymétrique': ['solitaire organique asymétrique','solitaire asymétrique'],
-  'Organique fin structuré':         ['organique fin structuré','bohème']
+  'Bezel / Clos':                    ['bezel','serti clos'],
+  'East-West':                       ['east-west','east west','horizontal'],
+  'Cluster':                         ['cluster','grappe'],
+  'Vintage filigrane':               ['vintage','filigrane','filigree','milgrain','retro'],
+  'Nature / Floral':                 ['nature','floral','leaf','flower','feuille'],
+  'Sculptural moderne':              ['sculptural','statement','cocktail'],
+  'Solitaire organique asymétrique': ['organique asymétrique','asymmetric','organic'],
+  'Organique fin structuré':         ['organique fin','bohème','bohemian','organic']
 };
+
+// Colored stone keywords for filter
+const COLOR_STONE_TAGS = ['saphir','rubis','émeraude','sapphire','ruby','emerald',
+  'pierres couleur','colored stone','pink sapphire','morganite','tanzanite',
+  'saphir rose','saphir bleu','pierre couleur'];
 
 const MODELS = [
   { id:'FIA-LA-01', name:'Solitaire classique',              img:'images/line-art/Solitaire Classique.png' },
@@ -650,13 +658,11 @@ function parseTagKey(tag) {
 
 function computeStyleScores(img) {
   const scores = {};
-  const tagValues = img.tags.map(parseTagValue);
+  const text = imageText(img);
   STYLES.forEach(style => {
-    const keywords = STYLE_KEYWORDS[style] || [];
+    const kws = STYLE_KEYWORDS[style] || [];
     let score = 0;
-    tagValues.forEach(val => {
-      keywords.forEach(kw => { if (val.includes(kw) || kw.includes(val)) score++; });
-    });
+    kws.forEach(kw => { if (text.includes(kw)) score++; });
     if (score > 0) scores[style] = score;
   });
   return scores;
@@ -757,59 +763,87 @@ async function loadImages() {
   } catch { return []; }
 }
 
+// Fisher-Yates shuffle
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// Full-text search across ALL tags of an image
+function imageText(img) {
+  return img._text || (img._text = img.tags.join(' ').toLowerCase());
+}
+
+function imageMatchesModel(img, modelName) {
+  const terms = MODEL_SEARCH[modelName] || [modelName.toLowerCase()];
+  const text = imageText(img);
+  return terms.some(t => text.includes(t));
+}
+
+function imageStyleScore(img, selStyles) {
+  let score = 0, penalty = 0;
+  const text = imageText(img);
+  selStyles.forEach(style => {
+    const kws = STYLE_KEYWORDS[style] || [];
+    kws.forEach(kw => { if (text.includes(kw)) score += 5; });
+    const opps = STYLE_OPPOSITES[style] || [];
+    opps.forEach(opp => { if (text.includes(opp)) penalty += 3; });
+  });
+  // Adaptive boost from likes
+  Object.entries(state.tagScores).forEach(([val, sc]) => {
+    if (text.includes(val)) score += sc * 2;
+  });
+  return score - penalty;
+}
+
+function hasColoredStone(img) {
+  const text = imageText(img);
+  return COLOR_STONE_TAGS.some(t => text.includes(t));
+}
+
 function filterAndSort(allImages) {
-  const selStyles = state.selectedStyles;
+  const selStyles = state.selectedStyles.filter(s => !SPECIAL_FILTERS.includes(s));
   const selModels = state.selectedModels;
+  const includeColor = state.selectedStyles.includes('Pierres de couleur');
   const hasModels = selModels.length > 0;
   const hasStyles = selStyles.length > 0;
 
-  // Does image match at least one selected model via MODEL_TAGS?
-  function matchesModel(img) {
-    const familleTags = img.tags.filter(t => parseTagKey(t) === 'famille').map(parseTagValue);
-    return selModels.some(model => {
-      const targets = MODEL_TAGS[model] || [model.toLowerCase()];
-      return familleTags.some(fam => targets.some(t => fam.includes(t) || t.includes(fam)));
-    });
-  }
+  // Step 1: exclude colored stones unless opted in
+  let pool = includeColor ? allImages : allImages.filter(img => !hasColoredStone(img));
 
-  // Style score: search STYLE_KEYWORDS in ALL tag values (style:, silhouette:, ornement:, etc.)
-  function styleScore(img) {
-    let score = 0, penalty = 0;
-    const tagValues = img.tags.map(parseTagValue);
-    selStyles.forEach(style => {
-      const kws = STYLE_KEYWORDS[style] || [];
-      tagValues.forEach(val => { kws.forEach(kw => { if (val.includes(kw) || kw.includes(val)) score += 5; }); });
-      const opps = STYLE_OPPOSITES[style] || [];
-      tagValues.forEach(val => { opps.forEach(opp => { if (val.includes(opp)) penalty += 8; }); });
-    });
-    tagValues.forEach(val => { score += (state.tagScores[val] || 0) * 2; });
-    return score - penalty;
-  }
-
-  // AND logic
-  let pool;
+  // Step 2: AND filter
   if (hasModels && hasStyles) {
-    pool = allImages.filter(img => matchesModel(img) && styleScore(img) > 0);
+    pool = pool.filter(img =>
+      selModels.some(m => imageMatchesModel(img, m)) &&
+      imageStyleScore(img, selStyles) > 0
+    );
   } else if (hasModels) {
-    pool = allImages.filter(matchesModel);
+    pool = pool.filter(img => selModels.some(m => imageMatchesModel(img, m)));
   } else if (hasStyles) {
-    pool = allImages.filter(img => styleScore(img) > 0);
-  } else {
-    pool = [...allImages];
+    pool = pool.filter(img => imageStyleScore(img, selStyles) > 0);
   }
 
-  const scored = pool.map(img => ({ ...img, _score: styleScore(img) }));
-  scored.sort((a, b) => b._score - a._score + (Math.random() - 0.5) * 3);
+  // Score and sort
+  const scored = pool.map(img => ({ ...img, _score: imageStyleScore(img, selStyles) }));
+  scored.sort((a, b) => b._score - a._score);
 
-  // Minimum 30
+  // Minimum 30 guaranteed
   if (scored.length < 30 && (hasModels || hasStyles)) {
     const poolIds = new Set(scored.map(i => i.id));
-    const rest = allImages.filter(i => !poolIds.has(i.id))
-      .map(img => ({ ...img, _score: styleScore(img) }))
+    const rest = allImages.filter(i => !poolIds.has(i.id) && (includeColor || !hasColoredStone(i)))
+      .map(img => ({ ...img, _score: imageStyleScore(img, selStyles) }))
       .sort((a, b) => b._score - a._score);
     scored.push(...rest.slice(0, 30 - scored.length));
   }
 
+  // Shuffle within same-score groups for variety
+  shuffle(scored);
+  scored.sort((a, b) => b._score - a._score + (Math.random() - 0.5) * 2);
+
+  console.log(`[Filter] styles=${selStyles} models=${selModels} colorStones=${includeColor} → ${scored.length} images`);
   return scored;
 }
 
@@ -819,14 +853,14 @@ function adaptiveResort() {
   if (remaining.length < 2) return;
   remaining.forEach(img => {
     let boost = 0;
-    img.tags.forEach(tag => { boost += (state.tagScores[parseTagValue(tag)] || 0); });
+    const text = imageText(img);
+    Object.entries(state.tagScores).forEach(([val, sc]) => {
+      if (text.includes(val)) boost += sc;
+    });
     STYLES.forEach(style => {
       if ((state.styleCounts[style] || 0) > 0) {
         const kws = STYLE_KEYWORDS[style] || [];
-        img.tags.forEach(tag => {
-          const val = parseTagValue(tag);
-          kws.forEach(kw => { if (val.includes(kw)) boost += state.styleCounts[style]; });
-        });
+        kws.forEach(kw => { if (text.includes(kw)) boost += state.styleCounts[style]; });
       }
     });
     img._boost = boost;
@@ -842,11 +876,12 @@ function adaptiveResort() {
 // ============================================================
 function buildStyleChips() {
   const c = document.getElementById('style-chips'); c.innerHTML = '';
-  STYLES.forEach(s => {
+  [...STYLES, ...SPECIAL_FILTERS].forEach(s => {
     const wrap = document.createElement('div');
     wrap.className = 'chip-wrap';
     const chip = document.createElement('div');
     chip.className = 'chip'; chip.textContent = s;
+    chip.dataset.name = s;
     chip.onclick = () => chip.classList.toggle('selected');
     wrap.appendChild(chip);
     if (STYLE_DEFS[s]) {
