@@ -322,10 +322,8 @@
   .profile-tag { font-size: 10px; color: var(--gold); background: var(--white); border: 1px solid var(--gold-light); border-radius: 12px; padding: 4px 12px; letter-spacing: 0.05em; }
 
   /* ONBOARDING */
-  .onboarding { background: var(--black); flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .onboarding { background: var(--black); flex-direction: column; align-items: center; justify-content: center; text-align: center; padding-bottom: 20%; }
   .onboarding.active { display: flex; }
-  .onboarding .logo-block { background: transparent; margin-bottom: 16px; }
-  .onboarding .logo-block img { filter: brightness(0) invert(1); width: 200px; }
   .onboarding .sigle { width: 40px; margin-bottom: 24px; filter: brightness(0) invert(1); }
   .onboarding .home-desc { color: #8A8580; margin-bottom: 40px; }
   .onboarding-btns { width: 100%; padding: 0 32px; }
@@ -408,8 +406,7 @@
   <!-- ONBOARDING -->
   <div id="screen-home" class="screen active onboarding">
     <button class="lock-btn" onclick="showAdmin()">🔒</button>
-    <div class="logo-block"><img src="logo_origine_paris.png" alt="Origine Paris"></div>
-    <img src="styleid_logo.png" alt="Style.ID" style="width:140px;margin-bottom:24px;">
+    <img src="styleid_logo.png" alt="Style.ID" style="width:160px;margin-bottom:24px;">
     <p class="home-desc">Votre goût est unique.<br>Prenez un instant pour le découvrir<br>et le garder en mémoire.</p>
     <div class="onboarding-btns">
       <button class="btn-white" onclick="show('screen-identity')">Commencer</button>
