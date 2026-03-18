@@ -298,7 +298,7 @@
   .swipe-hint { font-size: 10px; color: var(--gray-text); text-align: center; letter-spacing: 0.08em; padding-bottom: 4px; flex-shrink: 0; }
 
   /* PROFILE */
-  .profile-header { display: flex; align-items: center; gap: 14px; padding-bottom: 20px; border-bottom: 1px solid var(--gray-mid); margin-bottom: 20px; }
+  .profile-header { display: flex; align-items: center; gap: 14px; padding-bottom: 20px; margin-bottom: 20px; }
   .profile-avatar {
     width: 50px; height: 50px; border-radius: 50%; background: var(--gray-light); border: 1px solid var(--gray-mid);
     display: flex; align-items: center; justify-content: center;
@@ -617,8 +617,8 @@
   <div id="screen-profile" class="screen">
     <div class="scroll-content" style="padding: 24px 28px;">
       <!-- Logo Style.ID centré -->
-      <div style="text-align:center;padding:20px 0 16px;">
-        <img src="styleid_logo.png" alt="Style.ID" style="height:40px;opacity:0.8;">
+      <div style="text-align:center;padding:30px 0 24px;">
+        <img src="styleid_logo_black.png" alt="Style.ID by Origine Paris" style="height:80px;">
       </div>
 
       <div class="profile-header">
@@ -1464,10 +1464,7 @@ async function exportProfile() {
     let y = 0;
 
     function addSeparator(pdf, y) {
-      pdf.setDrawColor(196, 162, 101);
-      pdf.setLineWidth(0.3);
-      pdf.line(pw/2 - 20, y + 2, pw/2 + 20, y + 2);
-      return y + 6;
+      return y + 6; // spacing only, no line
     }
 
     function addBeigeBg(pdf) {
@@ -1476,8 +1473,6 @@ async function exportProfile() {
     }
 
     function addFooter(pdf) {
-      pdf.setDrawColor(196, 162, 101); pdf.setLineWidth(0.3);
-      pdf.line(mx, ph - 18, pw - mx, ph - 18);
       pdf.setFontSize(7); pdf.setTextColor(138, 133, 128);
       pdf.text('Origine Paris · Bijoux sur-mesure · origineparis.com', pw/2, ph - 12, { align:'center' });
       pdf.setFontSize(6);
@@ -1500,32 +1495,21 @@ async function exportProfile() {
     // ===================== PAGE 1 — PROFIL =====================
     addBeigeBg(pdf);
 
-    // Header bar
-    pdf.setFillColor(236, 230, 223);
-    pdf.rect(0, 0, pw, 30, 'F');
+    // Logo Style.ID by Origine Paris — black version, centered with spacing
     try {
-      const logoImg = document.querySelector('.logo-block img');
-      if (logoImg && logoImg.complete) {
+      const blackLogo = document.querySelector('#screen-profile img[src*="styleid_logo_black"]');
+      if (blackLogo && blackLogo.complete && blackLogo.naturalWidth > 0) {
         const c = document.createElement('canvas');
-        c.width = logoImg.naturalWidth; c.height = logoImg.naturalHeight;
-        c.getContext('2d').drawImage(logoImg, 0, 0);
-        pdf.addImage(c.toDataURL('image/png'), 'PNG', pw/2 - 28, 5, 56, 18.7);
-      }
-    } catch(e) {}
-    // Style.ID logo — large, centered
-    try {
-      const sidImg = new Image(); sidImg.src = 'styleid_logo.png';
-      if (sidImg.complete && sidImg.naturalWidth > 0) {
-        const sc = document.createElement('canvas'); sc.width = sidImg.naturalWidth; sc.height = sidImg.naturalHeight;
-        sc.getContext('2d').drawImage(sidImg, 0, 0);
-        // Logo aspect ratio ~4:5, display at ~40mm wide
-        pdf.addImage(sc.toDataURL('image/png'), 'PNG', pw/2 - 16, 20, 32, 10);
+        c.width = blackLogo.naturalWidth; c.height = blackLogo.naturalHeight;
+        c.getContext('2d').drawImage(blackLogo, 0, 0);
+        const logoH = 24, logoW = logoH * (4000/3284);
+        pdf.addImage(c.toDataURL('image/png'), 'PNG', pw/2 - logoW/2, 10, logoW, logoH);
       }
     } catch(e) {
-      pdf.setFontSize(10); pdf.setTextColor(196, 162, 101);
-      pdf.text('style.ID', pw/2, 28, { align: 'center' });
+      pdf.setFontSize(12); pdf.setTextColor(196, 162, 101);
+      pdf.text('style.ID by Origine Paris', pw/2, 22, { align: 'center' });
     }
-    y = 36;
+    y = 42;
 
     // Client
     const name = state.clientPrenom + (state.clientNom ? ' ' + state.clientNom : '');
